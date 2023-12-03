@@ -1,0 +1,48 @@
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Final Project Persy.exe.config
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Final Project Persy.exe
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Final Project Persy.pdb
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Final Project Persy.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Google.Protobuf.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Guna.UI2.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\K4os.Compression.LZ4.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\K4os.Hash.xxHash.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\MySql.Data.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Buffers.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.IO.Pipelines.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Memory.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Numerics.Vectors.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\ZstdSharp.dll
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Google.Protobuf.pdb
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Google.Protobuf.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\K4os.Compression.LZ4.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\K4os.Hash.xxHash.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\MySql.Data.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Buffers.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.IO.Pipelines.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Memory.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Numerics.Vectors.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.vbproj.AssemblyReference.cache
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final_Project_Persy.Login.resources
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final_Project_Persy.Resources.resources
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.vbproj.GenerateResource.cache
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.vbproj.CoreCompileInputs.cache
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.vbproj.CopyComplete
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.exe
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.xml
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.pdb
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final_Project_Persy.Pelanggan_Form.resources
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final_Project_Persy.Admin_Form.resources
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final_Project_Persy.Kasir_Form.resources
