@@ -5,11 +5,6 @@ Public Class Login
     Dim check As Boolean = True
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PersyModule.connection()
-
-        If tgswRemember.Checked = True Then
-        Else
-            PersyModule.Clear(Me)
-        End If
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -43,17 +38,27 @@ Public Class Login
                 da = New MySqlDataAdapter("SELECT * FROM tbl_user WHERE username = '" & tbxUserLogin.Text & "' AND user_password ='" & tbxPassLogin.Text & "';", conn)
                 da.Fill(ds, "data")
 
-                accessLevel = ds.Tables("data").Rows(0)("role").ToString()
-                Me.Hide()
-                If accessLevel = "Pelanggan" Then
-                    Pelanggan_Form.Show()
-                ElseIf accessLevel = "Kasir" Then
-                    Kasir_Form.Show()
-                ElseIf accessLevel = "Admin" Then
-                    Admin_Form.Show()
+                If ds.Tables("Data").Rows.Count > 0 Then
+                    accessLevel = ds.Tables("data").Rows(0)("role").ToString()
+                    Me.Hide()
+                    If accessLevel = "Pelanggan" Then
+                        Pelanggan_Form.Show()
+                    ElseIf accessLevel = "Kasir" Then
+                        Kasir_Form.Show()
+                    ElseIf accessLevel = "Admin" Then
+                        Admin_Form.Show()
+                    End If
+
+                    If tgswRemember.Checked = False Then
+                        PersyModule.Clear(panelLogin)
+                    End If
+                Else
+                    UNPFalse.Visible = True
                 End If
+
             Catch ex As Exception
-                UNPFalse.Visible = True
+                MessageBox.Show(ex.Message)
+            Finally
             End Try
         End If
     End Sub
@@ -100,7 +105,7 @@ Public Class Login
             Dim code As String
             If cbRoles.SelectedItem = "Pelanggan" Then
                 code = "CST"
-            ElseIf cbRoles.SelectedItem = "Cashier" Then
+            ElseIf cbRoles.SelectedItem = "Kasir" Then
                 code = "CSR"
             ElseIf cbRoles.SelectedItem = "Admin" Then
                 code = "ADM"
@@ -126,6 +131,7 @@ Public Class Login
             da.SelectCommand.Parameters.AddWithValue("role", cbRoles.Text)
             da.Fill(ds, "Data")
 
+            PersyModule.Clear(panelRegister)
             panelFPass.Hide()
             panelRegister.Hide()
             panelLogin.Show()
@@ -164,16 +170,16 @@ Public Class Login
                 emailNotFound.Visible = False
                 ds.Clear()
                 da = New MySqlDataAdapter("UPDATE tbl_user SET user_password = ? WHERE email = '" & tbxFPEmail.Text & "'", conn)
-                da.Fill(ds, "Data")
                 da.SelectCommand.Parameters.AddWithValue("user_password", tbxFPPass.Text)
+                da.Fill(ds, "Data")
 
+                PersyModule.Clear(panelFPass)
                 panelFPass.Hide()
                 panelRegister.Hide()
                 panelLogin.Show()
             Catch ex As Exception
                 emailNotFound.Visible = True
             End Try
-
         End If
     End Sub
 
@@ -195,6 +201,7 @@ Public Class Login
 
     Private Sub lkForgot_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lkForgot.LinkClicked
         panelLogin.Hide()
+        panelRegister.Hide()
         panelFPass.Show()
     End Sub
 
