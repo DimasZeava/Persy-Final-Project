@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Pelanggan_Form
+Partial Class Owner_Form
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,17 +24,17 @@ Partial Class Pelanggan_Form
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pelanggan_Form))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Owner_Form))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelControl = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.btnClose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelMenu = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnCart = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.btnReport = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.btnDetail = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.btnLogout = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnProfile = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.btnMenu = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnHome = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
@@ -90,11 +90,11 @@ Partial Class Pelanggan_Form
         'panelMenu
         '
         Me.panelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.panelMenu.Controls.Add(Me.btnCart)
+        Me.panelMenu.Controls.Add(Me.btnReport)
+        Me.panelMenu.Controls.Add(Me.btnDetail)
         Me.panelMenu.Controls.Add(Me.Guna2Separator1)
         Me.panelMenu.Controls.Add(Me.btnLogout)
         Me.panelMenu.Controls.Add(Me.btnProfile)
-        Me.panelMenu.Controls.Add(Me.btnMenu)
         Me.panelMenu.Controls.Add(Me.btnHome)
         Me.panelMenu.Controls.Add(Me.Guna2PictureBox1)
         Me.transitionFormP.SetDecoration(Me.panelMenu, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -103,36 +103,67 @@ Partial Class Pelanggan_Form
         Me.panelMenu.Size = New System.Drawing.Size(46, 548)
         Me.panelMenu.TabIndex = 11
         '
-        'btnCart
+        'btnReport
         '
-        Me.btnCart.Animated = True
-        Me.btnCart.BackColor = System.Drawing.Color.Transparent
-        Me.btnCart.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.transitionFormP.SetDecoration(Me.btnCart, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnCart.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnCart.FillColor = System.Drawing.Color.Transparent
-        Me.btnCart.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnCart.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnCart.ForeColor = System.Drawing.Color.White
-        Me.btnCart.HoverState.BorderColor = System.Drawing.Color.Black
-        Me.btnCart.HoverState.FillColor = System.Drawing.Color.White
-        Me.btnCart.HoverState.FillColor2 = System.Drawing.Color.White
-        Me.btnCart.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.btnCart.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.cart
-        Me.btnCart.Image = Global.Final_Project_Persy.My.Resources.Resources.output_onlinepngtools1
-        Me.btnCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnCart.Location = New System.Drawing.Point(3, 218)
-        Me.btnCart.Name = "btnCart"
-        Me.btnCart.Size = New System.Drawing.Size(202, 45)
-        Me.btnCart.TabIndex = 6
-        Me.btnCart.Text = "Keranjang"
-        Me.btnCart.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnCart.TextOffset = New System.Drawing.Point(10, 0)
-        Me.btnCart.UseTransparentBackground = True
+        Me.btnReport.Animated = True
+        Me.btnReport.BackColor = System.Drawing.Color.Transparent
+        Me.btnReport.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.transitionFormP.SetDecoration(Me.btnReport, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnReport.FillColor = System.Drawing.Color.Transparent
+        Me.btnReport.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnReport.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnReport.ForeColor = System.Drawing.Color.White
+        Me.btnReport.HoverState.BorderColor = System.Drawing.Color.Black
+        Me.btnReport.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnReport.HoverState.FillColor2 = System.Drawing.Color.White
+        Me.btnReport.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.btnReport.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.report
+        Me.btnReport.Image = Global.Final_Project_Persy.My.Resources.Resources.Laporan
+        Me.btnReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnReport.Location = New System.Drawing.Point(3, 167)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Size = New System.Drawing.Size(202, 45)
+        Me.btnReport.TabIndex = 14
+        Me.btnReport.Text = "Laporan"
+        Me.btnReport.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnReport.TextOffset = New System.Drawing.Point(10, 0)
+        Me.btnReport.UseTransparentBackground = True
+        '
+        'btnDetail
+        '
+        Me.btnDetail.Animated = True
+        Me.btnDetail.BackColor = System.Drawing.Color.Transparent
+        Me.btnDetail.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.transitionFormP.SetDecoration(Me.btnDetail, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnDetail.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnDetail.FillColor = System.Drawing.Color.Transparent
+        Me.btnDetail.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnDetail.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnDetail.ForeColor = System.Drawing.Color.White
+        Me.btnDetail.HoverState.BorderColor = System.Drawing.Color.Black
+        Me.btnDetail.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnDetail.HoverState.FillColor2 = System.Drawing.Color.White
+        Me.btnDetail.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.btnDetail.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.history
+        Me.btnDetail.Image = Global.Final_Project_Persy.My.Resources.Resources.history_white
+        Me.btnDetail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnDetail.Location = New System.Drawing.Point(3, 218)
+        Me.btnDetail.Name = "btnDetail"
+        Me.btnDetail.Size = New System.Drawing.Size(202, 45)
+        Me.btnDetail.TabIndex = 6
+        Me.btnDetail.Text = "Detail Transaksi"
+        Me.btnDetail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnDetail.TextOffset = New System.Drawing.Point(10, 0)
+        Me.btnDetail.UseTransparentBackground = True
         '
         'Guna2Separator1
         '
@@ -203,37 +234,6 @@ Partial Class Pelanggan_Form
         Me.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnProfile.TextOffset = New System.Drawing.Point(10, 0)
         Me.btnProfile.UseTransparentBackground = True
-        '
-        'btnMenu
-        '
-        Me.btnMenu.Animated = True
-        Me.btnMenu.BackColor = System.Drawing.Color.Transparent
-        Me.btnMenu.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.transitionFormP.SetDecoration(Me.btnMenu, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnMenu.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnMenu.FillColor = System.Drawing.Color.Transparent
-        Me.btnMenu.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnMenu.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnMenu.ForeColor = System.Drawing.Color.White
-        Me.btnMenu.HoverState.BorderColor = System.Drawing.Color.Black
-        Me.btnMenu.HoverState.FillColor = System.Drawing.Color.White
-        Me.btnMenu.HoverState.FillColor2 = System.Drawing.Color.White
-        Me.btnMenu.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.btnMenu.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.menu
-        Me.btnMenu.Image = Global.Final_Project_Persy.My.Resources.Resources.menu_white
-        Me.btnMenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnMenu.Location = New System.Drawing.Point(3, 167)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(202, 45)
-        Me.btnMenu.TabIndex = 2
-        Me.btnMenu.Text = "Menu"
-        Me.btnMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnMenu.TextOffset = New System.Drawing.Point(10, 0)
-        Me.btnMenu.UseTransparentBackground = True
         '
         'btnHome
         '
@@ -346,7 +346,7 @@ Partial Class Pelanggan_Form
         Animation1.TransparencyCoeff = 0!
         Me.transitionFormP.DefaultAnimation = Animation1
         '
-        'Pelanggan_Form
+        'Owner_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -358,7 +358,7 @@ Partial Class Pelanggan_Form
         Me.Controls.Add(Me.panelControl)
         Me.transitionFormP.SetDecoration(Me, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Pelanggan_Form"
+        Me.Name = "Owner_Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pelanggan_Form"
         Me.panelControl.ResumeLayout(False)
@@ -380,9 +380,9 @@ Partial Class Pelanggan_Form
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents btnProfile As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents btnMenu As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents btnCart As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents btnDetail As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents shortenPage As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents extendPage As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents transitionFormP As Guna.UI2.WinForms.Guna2Transition
+    Friend WithEvents btnReport As Guna.UI2.WinForms.Guna2GradientButton
 End Class

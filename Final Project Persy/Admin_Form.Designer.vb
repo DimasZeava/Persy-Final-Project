@@ -23,11 +23,10 @@ Partial Class Admin_Form
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Admin_Form))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelMenu = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnReport = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.btnLogout = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnDetail = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -54,7 +53,6 @@ Partial Class Admin_Form
         'panelMenu
         '
         Me.panelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.panelMenu.Controls.Add(Me.btnReport)
         Me.panelMenu.Controls.Add(Me.Guna2Separator1)
         Me.panelMenu.Controls.Add(Me.btnLogout)
         Me.panelMenu.Controls.Add(Me.btnDetail)
@@ -65,37 +63,6 @@ Partial Class Admin_Form
         Me.panelMenu.Name = "panelMenu"
         Me.panelMenu.Size = New System.Drawing.Size(46, 548)
         Me.panelMenu.TabIndex = 15
-        '
-        'btnReport
-        '
-        Me.btnReport.Animated = True
-        Me.btnReport.BackColor = System.Drawing.Color.Transparent
-        Me.btnReport.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.transitionFormP.SetDecoration(Me.btnReport, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnReport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnReport.FillColor = System.Drawing.Color.Transparent
-        Me.btnReport.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnReport.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnReport.ForeColor = System.Drawing.Color.White
-        Me.btnReport.HoverState.BorderColor = System.Drawing.Color.Black
-        Me.btnReport.HoverState.FillColor = System.Drawing.Color.White
-        Me.btnReport.HoverState.FillColor2 = System.Drawing.Color.White
-        Me.btnReport.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.btnReport.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.report
-        Me.btnReport.Image = Global.Final_Project_Persy.My.Resources.Resources.Laporan
-        Me.btnReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnReport.Location = New System.Drawing.Point(3, 218)
-        Me.btnReport.Name = "btnReport"
-        Me.btnReport.Size = New System.Drawing.Size(202, 45)
-        Me.btnReport.TabIndex = 6
-        Me.btnReport.Text = "Laporan"
-        Me.btnReport.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnReport.TextOffset = New System.Drawing.Point(10, 0)
-        Me.btnReport.UseTransparentBackground = True
         '
         'Guna2Separator1
         '
@@ -162,7 +129,7 @@ Partial Class Admin_Form
         Me.btnDetail.Name = "btnDetail"
         Me.btnDetail.Size = New System.Drawing.Size(202, 45)
         Me.btnDetail.TabIndex = 2
-        Me.btnDetail.Text = "Menu"
+        Me.btnDetail.Text = "Detail Transaksi"
         Me.btnDetail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnDetail.TextOffset = New System.Drawing.Point(10, 0)
         Me.btnDetail.UseTransparentBackground = True
@@ -253,22 +220,22 @@ Partial Class Admin_Form
         '
         Me.transitionFormP.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide
         Me.transitionFormP.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.transitionFormP.DefaultAnimation = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.transitionFormP.DefaultAnimation = Animation1
         '
         'extendPage
         '
@@ -337,7 +304,6 @@ Partial Class Admin_Form
     Friend WithEvents extendPage As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents shortenPage As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents panelMenu As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents btnReport As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents btnDetail As Guna.UI2.WinForms.Guna2GradientButton

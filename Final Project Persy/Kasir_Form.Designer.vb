@@ -23,26 +23,26 @@ Partial Class Kasir_Form
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Kasir_Form))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelMenu = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.panelControl = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.btnClose = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.transitionFormP = New Guna.UI2.WinForms.Guna2Transition()
-        Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
-        Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
-        Me.extendPage = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.shortenPage = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.btnLogout = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnHistory = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnBilling = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.panelControl = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.btnClose = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.transitionFormP = New Guna.UI2.WinForms.Guna2Transition()
+        Me.extendPage = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.shortenPage = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
+        Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.panelMenu.SuspendLayout()
-        Me.panelControl.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelControl.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -71,109 +71,6 @@ Partial Class Kasir_Form
         Me.Guna2Separator1.Name = "Guna2Separator1"
         Me.Guna2Separator1.Size = New System.Drawing.Size(164, 10)
         Me.Guna2Separator1.TabIndex = 5
-        '
-        'panelControl
-        '
-        Me.panelControl.BackColor = System.Drawing.Color.Transparent
-        Me.panelControl.Controls.Add(Me.btnMinimize)
-        Me.panelControl.Controls.Add(Me.btnClose)
-        Me.transitionFormP.SetDecoration(Me.panelControl, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.panelControl.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelControl.Location = New System.Drawing.Point(0, 0)
-        Me.panelControl.Name = "panelControl"
-        Me.panelControl.Size = New System.Drawing.Size(918, 38)
-        Me.panelControl.TabIndex = 14
-        '
-        'btnMinimize
-        '
-        Me.btnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.transitionFormP.SetDecoration(Me.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnMinimize.FillColor = System.Drawing.Color.Transparent
-        Me.btnMinimize.IconColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnMinimize.Location = New System.Drawing.Point(841, 3)
-        Me.btnMinimize.Name = "btnMinimize"
-        Me.btnMinimize.Size = New System.Drawing.Size(33, 29)
-        Me.btnMinimize.TabIndex = 1
-        '
-        'btnClose
-        '
-        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.transitionFormP.SetDecoration(Me.btnClose, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnClose.FillColor = System.Drawing.Color.Transparent
-        Me.btnClose.IconColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnClose.Location = New System.Drawing.Point(880, 3)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(33, 29)
-        Me.btnClose.TabIndex = 0
-        '
-        'transitionFormP
-        '
-        Me.transitionFormP.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide
-        Me.transitionFormP.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.transitionFormP.DefaultAnimation = Animation1
-        '
-        'Guna2AnimateWindow1
-        '
-        Me.Guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND
-        '
-        'extendPage
-        '
-        Me.extendPage.Animated = True
-        Me.extendPage.BackColor = System.Drawing.Color.Transparent
-        Me.extendPage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.transitionFormP.SetDecoration(Me.extendPage, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.extendPage.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.extendPage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.extendPage.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.extendPage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.extendPage.FillColor = System.Drawing.Color.White
-        Me.extendPage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.extendPage.ForeColor = System.Drawing.Color.White
-        Me.extendPage.Image = Global.Final_Project_Persy.My.Resources.Resources.right_arrow1
-        Me.extendPage.Location = New System.Drawing.Point(24, 366)
-        Me.extendPage.Name = "extendPage"
-        Me.extendPage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.extendPage.Size = New System.Drawing.Size(45, 45)
-        Me.extendPage.TabIndex = 17
-        Me.extendPage.UseTransparentBackground = True
-        '
-        'shortenPage
-        '
-        Me.shortenPage.Animated = True
-        Me.shortenPage.BackColor = System.Drawing.Color.Transparent
-        Me.shortenPage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.transitionFormP.SetDecoration(Me.shortenPage, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.shortenPage.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.shortenPage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.shortenPage.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.shortenPage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.shortenPage.FillColor = System.Drawing.Color.White
-        Me.shortenPage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.shortenPage.ForeColor = System.Drawing.Color.White
-        Me.shortenPage.Image = Global.Final_Project_Persy.My.Resources.Resources.left_arrow
-        Me.shortenPage.Location = New System.Drawing.Point(182, 366)
-        Me.shortenPage.Name = "shortenPage"
-        Me.shortenPage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.shortenPage.Size = New System.Drawing.Size(45, 45)
-        Me.shortenPage.TabIndex = 16
-        Me.shortenPage.UseTransparentBackground = True
-        Me.shortenPage.Visible = False
         '
         'btnLogout
         '
@@ -280,6 +177,109 @@ Partial Class Kasir_Form
         Me.Guna2PictureBox1.TabIndex = 0
         Me.Guna2PictureBox1.TabStop = False
         '
+        'panelControl
+        '
+        Me.panelControl.BackColor = System.Drawing.Color.Transparent
+        Me.panelControl.Controls.Add(Me.btnMinimize)
+        Me.panelControl.Controls.Add(Me.btnClose)
+        Me.transitionFormP.SetDecoration(Me.panelControl, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.panelControl.Dock = System.Windows.Forms.DockStyle.Top
+        Me.panelControl.Location = New System.Drawing.Point(0, 0)
+        Me.panelControl.Name = "panelControl"
+        Me.panelControl.Size = New System.Drawing.Size(918, 38)
+        Me.panelControl.TabIndex = 14
+        '
+        'btnMinimize
+        '
+        Me.btnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.transitionFormP.SetDecoration(Me.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnMinimize.FillColor = System.Drawing.Color.Transparent
+        Me.btnMinimize.IconColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnMinimize.Location = New System.Drawing.Point(841, 3)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Size = New System.Drawing.Size(33, 29)
+        Me.btnMinimize.TabIndex = 1
+        '
+        'btnClose
+        '
+        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.transitionFormP.SetDecoration(Me.btnClose, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnClose.FillColor = System.Drawing.Color.Transparent
+        Me.btnClose.IconColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnClose.Location = New System.Drawing.Point(880, 3)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(33, 29)
+        Me.btnClose.TabIndex = 0
+        '
+        'transitionFormP
+        '
+        Me.transitionFormP.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide
+        Me.transitionFormP.Cursor = Nothing
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.transitionFormP.DefaultAnimation = Animation2
+        '
+        'extendPage
+        '
+        Me.extendPage.Animated = True
+        Me.extendPage.BackColor = System.Drawing.Color.Transparent
+        Me.extendPage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.transitionFormP.SetDecoration(Me.extendPage, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.extendPage.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.extendPage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.extendPage.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.extendPage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.extendPage.FillColor = System.Drawing.Color.White
+        Me.extendPage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.extendPage.ForeColor = System.Drawing.Color.White
+        Me.extendPage.Image = Global.Final_Project_Persy.My.Resources.Resources.right_arrow1
+        Me.extendPage.Location = New System.Drawing.Point(24, 366)
+        Me.extendPage.Name = "extendPage"
+        Me.extendPage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.extendPage.Size = New System.Drawing.Size(45, 45)
+        Me.extendPage.TabIndex = 17
+        Me.extendPage.UseTransparentBackground = True
+        '
+        'shortenPage
+        '
+        Me.shortenPage.Animated = True
+        Me.shortenPage.BackColor = System.Drawing.Color.Transparent
+        Me.shortenPage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.transitionFormP.SetDecoration(Me.shortenPage, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.shortenPage.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.shortenPage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.shortenPage.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.shortenPage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.shortenPage.FillColor = System.Drawing.Color.White
+        Me.shortenPage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.shortenPage.ForeColor = System.Drawing.Color.White
+        Me.shortenPage.Image = Global.Final_Project_Persy.My.Resources.Resources.left_arrow
+        Me.shortenPage.Location = New System.Drawing.Point(182, 366)
+        Me.shortenPage.Name = "shortenPage"
+        Me.shortenPage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.shortenPage.Size = New System.Drawing.Size(45, 45)
+        Me.shortenPage.TabIndex = 16
+        Me.shortenPage.UseTransparentBackground = True
+        Me.shortenPage.Visible = False
+        '
+        'Guna2AnimateWindow1
+        '
+        Me.Guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND
+        '
         'Kasir_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -295,8 +295,8 @@ Partial Class Kasir_Form
         Me.Name = "Kasir_Form"
         Me.Text = "Kasir_Form"
         Me.panelMenu.ResumeLayout(False)
-        Me.panelControl.ResumeLayout(False)
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panelControl.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

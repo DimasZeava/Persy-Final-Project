@@ -43,6 +43,6 @@ D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Fina
 D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.exe
 D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.xml
 D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final Project Persy.pdb
-D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final_Project_Persy.Pelanggan_Form.resources
 D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final_Project_Persy.Admin_Form.resources
 D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final_Project_Persy.Kasir_Form.resources
+D:\Programming Stuff\Microsoft Visual Studio\Repository\Final Project Persy\Final Project Persy\obj\Debug\Final_Project_Persy.Owner_Form.resources

@@ -4,18 +4,28 @@
     End Sub
 
     Private Sub btnBilling_Click(sender As Object, e As EventArgs) Handles btnBilling.Click
-        btnBilling.FillColor = Color.White
-        btnBilling.FillColor2 = Color.White
-        btnBilling.ForeColor = Color.Black
+        PersyModule.Clicked_Color(btnBilling)
+        PersyModule.Restore_Color(btnHistory)
+
         btnBilling.Image = My.Resources.cashier_machine
+        btnHistory.Image = My.Resources.history_white
+    End Sub
+
+    Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
+        PersyModule.Clicked_Color(btnHistory)
+        PersyModule.Restore_Color(btnBilling)
+
+        btnHistory.Image = My.Resources.history
+        btnBilling.Image = My.Resources.cashier_machine_white
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Me.Hide()
-        btnBilling.FillColor = Color.Transparent
-        btnBilling.FillColor2 = Color.Transparent
-        btnBilling.ForeColor = Color.White
+        PersyModule.Restore_Color(btnBilling)
+        PersyModule.Restore_Color(btnHistory)
+
         btnBilling.Image = My.Resources.cashier_machine_white
+        btnHistory.Image = My.Resources.history_white
+        Me.Hide()
         Login.Show()
     End Sub
 
@@ -36,4 +46,9 @@
 
         transitionFormP.ShowSync(panelMenu)
     End Sub
+
+    Private Sub Kasir_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
 End Class

@@ -4,18 +4,29 @@
     End Sub
 
     Private Sub btnBarang_Click(sender As Object, e As EventArgs) Handles btnBarang.Click
-        btnBarang.FillColor = Color.White
-        btnBarang.FillColor2 = Color.White
-        btnBarang.ForeColor = Color.Black
+        PersyModule.Clicked_Color(btnBarang)
+        PersyModule.Restore_Color(btnDetail)
+
+        btnDetail.Image = My.Resources.transaction_detail
         btnBarang.Image = My.Resources.product
     End Sub
 
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Me.Hide()
-        btnBarang.FillColor = Color.Transparent
-        btnBarang.FillColor2 = Color.Transparent
-        btnBarang.ForeColor = Color.White
+    Private Sub btnDetail_Click(sender As Object, e As EventArgs) Handles btnDetail.Click
+        PersyModule.Clicked_Color(btnDetail)
+        PersyModule.Restore_Color(btnBarang)
+
         btnBarang.Image = My.Resources.Barang
+        btnDetail.Image = My.Resources.transaction_detail1
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        PersyModule.Restore_Color(btnBarang)
+        PersyModule.Restore_Color(btnDetail)
+
+        btnBarang.Image = My.Resources.Barang
+        btnDetail.Image = My.Resources.transaction_detail
+
+        Me.Hide()
         Login.Show()
     End Sub
 
@@ -35,5 +46,9 @@
         panelMenu.Width = 204
 
         transitionFormP.ShowSync(panelMenu)
+    End Sub
+
+    Private Sub Admin_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

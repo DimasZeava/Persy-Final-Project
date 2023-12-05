@@ -41,8 +41,8 @@ Public Class Login
                 If ds.Tables("Data").Rows.Count > 0 Then
                     accessLevel = ds.Tables("data").Rows(0)("role").ToString()
                     Me.Hide()
-                    If accessLevel = "Pelanggan" Then
-                        Pelanggan_Form.Show()
+                    If accessLevel = "Owner" Then
+                        Owner_Form.Show()
                     ElseIf accessLevel = "Kasir" Then
                         Kasir_Form.Show()
                     ElseIf accessLevel = "Admin" Then
@@ -103,12 +103,12 @@ Public Class Login
 
         If check = True Then
             Dim code As String
-            If cbRoles.SelectedItem = "Pelanggan" Then
-                code = "CST"
-            ElseIf cbRoles.SelectedItem = "Kasir" Then
+            If cbRoles.SelectedItem = "Kasir" Then
                 code = "CSR"
             ElseIf cbRoles.SelectedItem = "Admin" Then
                 code = "ADM"
+            ElseIf cbRoles.SelectedItem = "Owner" Then
+                code = "OWN"
             End If
 
             ds.Clear()
