@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Des 2023 pada 09.43
+-- Waktu pembuatan: 05 Des 2023 pada 08.05
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -40,10 +40,9 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id_user`, `username`, `email`, `user_password`, `role`) VALUES
-('002', 'Dimas Kasir', 'cashier@gmail.com', 'kasir', 'Kasir'),
 ('ADM001', 'Dimas Admin', 'admin@gmail.com', 'admin1', 'Admin'),
-('CST001', 'Dimas Irmansyah', 'dimasdummy@gmail.com', 'dimas0101', 'Pelanggan'),
-('CST002', 'Dimas pelanggan', 'customer@gmail.com', 'customer', 'Pelanggan');
+('CSR001', 'Kasir', 'kasir@gmail.com', 'kasir', 'Kasir'),
+('OWN001', 'Dimas Irmannsyah', 'dummyowner@gmail.com', 'owner', 'Owner');
 
 --
 -- Indexes for dumped tables
