@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Des 2023 pada 08.05
+-- Waktu pembuatan: 06 Des 2023 pada 02.30
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -20,6 +20,46 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_persy2`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_detailtransaksi`
+--
+
+CREATE TABLE `tbl_detailtransaksi` (
+  `id_detail` int(11) NOT NULL,
+  `no_invoice` varchar(50) DEFAULT NULL,
+  `id_produk` varchar(50) DEFAULT NULL,
+  `jumlah` int(11) DEFAULT NULL,
+  `subtotal` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_produk`
+--
+
+CREATE TABLE `tbl_produk` (
+  `id_produk` varchar(50) NOT NULL,
+  `nama_produk` varchar(50) DEFAULT NULL,
+  `harga` int(11) DEFAULT NULL,
+  `stock` int(11) DEFAULT NULL,
+  `kategori` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_transaksi`
+--
+
+CREATE TABLE `tbl_transaksi` (
+  `no_invoice` varchar(50) NOT NULL,
+  `nama_pembeli` varchar(100) DEFAULT NULL,
+  `total` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -49,10 +89,51 @@ INSERT INTO `tbl_user` (`id_user`, `username`, `email`, `user_password`, `role`)
 --
 
 --
+-- Indeks untuk tabel `tbl_detailtransaksi`
+--
+ALTER TABLE `tbl_detailtransaksi`
+  ADD PRIMARY KEY (`id_detail`),
+  ADD KEY `no_invoice` (`no_invoice`),
+  ADD KEY `id_produk` (`id_produk`);
+
+--
+-- Indeks untuk tabel `tbl_produk`
+--
+ALTER TABLE `tbl_produk`
+  ADD PRIMARY KEY (`id_produk`);
+
+--
+-- Indeks untuk tabel `tbl_transaksi`
+--
+ALTER TABLE `tbl_transaksi`
+  ADD PRIMARY KEY (`no_invoice`);
+
+--
 -- Indeks untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`id_user`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_detailtransaksi`
+--
+ALTER TABLE `tbl_detailtransaksi`
+  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `tbl_detailtransaksi`
+--
+ALTER TABLE `tbl_detailtransaksi`
+  ADD CONSTRAINT `tbl_detailtransaksi_ibfk_1` FOREIGN KEY (`no_invoice`) REFERENCES `tbl_transaksi` (`no_invoice`),
+  ADD CONSTRAINT `tbl_detailtransaksi_ibfk_2` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produk` (`id_produk`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
