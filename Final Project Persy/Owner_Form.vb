@@ -59,6 +59,7 @@
         PersyModule.Restore_Color(btnReport)
         PersyModule.Restore_Color(btnProfile)
         PersyModule.Restore_Color(btnDetail)
+        PersyModule.HideErrorLogin()
 
         btnHome.Image = My.Resources.output_onlinepngtools
         btnReport.Image = My.Resources.Laporan
@@ -86,9 +87,4 @@
 
         transitionFormP.ShowSync(panelMenu)
     End Sub
-
-    Private Sub Owner_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
 End Class

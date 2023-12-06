@@ -22,6 +22,7 @@
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         PersyModule.Restore_Color(btnBilling)
         PersyModule.Restore_Color(btnHistory)
+        PersyModule.HideErrorLogin()
 
         btnBilling.Image = My.Resources.cashier_machine_white
         btnHistory.Image = My.Resources.history_white

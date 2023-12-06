@@ -2,12 +2,12 @@
 Public Class Login
     Dim id_user As String
     Dim accessLevel As String
-    Dim check As Boolean = True
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PersyModule.connection()
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Dim check As Boolean = True
         If tbxPassLogin.Text = "" And tbxUserLogin.Text = "" Then
             noTextintbx.Visible = True
             passwordIsNot.Visible = False
@@ -64,6 +64,7 @@ Public Class Login
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        Dim check As Boolean = True
         If tbxCUser.Text = "" AndAlso tbxCEmail.Text = "" AndAlso tbxCPass.Text = "" AndAlso cbRoles IsNot Nothing Then
             dataNotAcquire.Visible = True
             userIsNotReg.Visible = False
@@ -136,9 +137,12 @@ Public Class Login
             panelRegister.Hide()
             panelLogin.Show()
         End If
+
+        PersyModule.HideErrorLogin()
     End Sub
 
     Private Sub btnGanti_Click(sender As Object, e As EventArgs) Handles btnGanti.Click
+        Dim check As Boolean = True
         If tbxFPEmail.Text = "" AndAlso tbxFPNewPass.Text = "" AndAlso tbxFPPass.Text = "" Then
             noTextFP.Visible = True
             mailIsNotFP.Visible = False
@@ -181,25 +185,35 @@ Public Class Login
                 emailNotFound.Visible = True
             End Try
         End If
+
+        PersyModule.HideErrorLogin()
     End Sub
 
 
     Private Sub lkRegister_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lkRegister.LinkClicked
+        PersyModule.HideErrorRegister()
+
         panelLogin.Hide()
         panelRegister.Show()
     End Sub
 
     Private Sub btnBacklogin_Click(sender As Object, e As EventArgs) Handles btnBacklogin.Click
+        PersyModule.HideErrorLogin()
+
         panelRegister.Hide()
         panelLogin.Show()
     End Sub
 
     Private Sub btnFPBackLogin_Click(sender As Object, e As EventArgs) Handles btnFPBackLogin.Click
+        PersyModule.HideErrorLogin()
+
         panelFPass.Hide()
         panelLogin.Show()
     End Sub
 
     Private Sub lkForgot_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lkForgot.LinkClicked
+        PersyModule.HideErrorForgorPass()
+
         panelLogin.Hide()
         panelRegister.Hide()
         panelFPass.Show()

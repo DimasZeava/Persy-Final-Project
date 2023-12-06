@@ -33,4 +33,26 @@ Module PersyModule
         button.FillColor2 = Color.Transparent
         button.ForeColor = Color.White
     End Sub
+
+    Public Sub HideErrorLogin()
+        Login.userIsNot.Visible = False
+        Login.passwordIsNot.Visible = False
+        Login.noTextintbx.Visible = False
+        Login.UNPFalse.Visible = False
+    End Sub
+
+    Public Sub HideErrorRegister()
+        Login.dataNotAcquire.Visible = False
+        Login.userIsNotReg.Visible = False
+        Login.mailIsNotReg.Visible = False
+        Login.passwordIsNotReg.Visible = False
+        Login.roleIsNotReg.Visible = False
+    End Sub
+
+    Public Sub HideErrorForgorPass()
+        Login.noTextFP.Visible = False
+        Login.mailIsNotFP.Visible = False
+        Login.passwordIsNotFP.Visible = False
+        Login.rpassIsNotFP.Visible = False
+    End Sub
 End Module

@@ -22,6 +22,7 @@
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         PersyModule.Restore_Color(btnBarang)
         PersyModule.Restore_Color(btnDetail)
+        PersyModule.HideErrorLogin()
 
         btnBarang.Image = My.Resources.Barang
         btnDetail.Image = My.Resources.transaction_detail
