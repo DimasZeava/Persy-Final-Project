@@ -21,7 +21,6 @@ Module PersyModule
             End If
         Next
     End Sub
-
     Public Sub Clicked_Color(ByVal button As Guna2GradientButton)
         button.FillColor = Color.White
         button.FillColor2 = Color.White
@@ -47,6 +46,7 @@ Module PersyModule
         Login.mailIsNotReg.Visible = False
         Login.passwordIsNotReg.Visible = False
         Login.roleIsNotReg.Visible = False
+        Login.emailCheckFalse.Visible = False
     End Sub
 
     Public Sub HideErrorForgorPass()

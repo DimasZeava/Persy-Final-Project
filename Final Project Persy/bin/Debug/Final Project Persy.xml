@@ -102,6 +102,11 @@ Final Project Persy
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Final_Project_Persy.My.Resources.Resources.menu_white1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Final_Project_Persy.My.Resources.Resources.output_onlinepngtools">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

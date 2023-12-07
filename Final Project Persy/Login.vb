@@ -71,6 +71,7 @@ Public Class Login
             mailIsNotReg.Visible = False
             passwordIsNotReg.Visible = False
             roleIsNotReg.Visible = False
+            emailCheckFalse.Visible = False
             check = False
         ElseIf tbxCUser.Text = "" Then
             dataNotAcquire.Visible = False
@@ -78,6 +79,7 @@ Public Class Login
             mailIsNotReg.Visible = False
             passwordIsNotReg.Visible = False
             roleIsNotReg.Visible = False
+            emailCheckFalse.Visible = False
             check = False
         ElseIf tbxCEmail.Text = "" Then
             dataNotAcquire.Visible = False
@@ -85,6 +87,7 @@ Public Class Login
             mailIsNotReg.Visible = True
             passwordIsNotReg.Visible = False
             roleIsNotReg.Visible = False
+            emailCheckFalse.Visible = False
             check = False
         ElseIf tbxCPass.Text = "" Then
             dataNotAcquire.Visible = False
@@ -92,6 +95,7 @@ Public Class Login
             mailIsNotReg.Visible = False
             passwordIsNotReg.Visible = True
             roleIsNotReg.Visible = False
+            emailCheckFalse.Visible = False
             check = False
         ElseIf cbRoles.Text = "" Then
             dataNotAcquire.Visible = False
@@ -99,6 +103,17 @@ Public Class Login
             mailIsNotReg.Visible = False
             passwordIsNotReg.Visible = False
             roleIsNotReg.Visible = True
+            emailCheckFalse.Visible = False
+            check = False
+        End If
+
+        ds.Clear()
+        Dim emailAvailability As String
+        da = New MySqlDataAdapter("Select * From tbl_user Where email ='" & tbxCEmail.Text & "'", conn)
+        da.Fill(ds, "EmailCheck")
+        emailAvailability = ds.Tables("EmailCheck").Rows(0)("email").ToString()
+        If emailAvailability = tbxCEmail.Text Then
+            emailCheckFalse.Visible = True
             check = False
         End If
 
@@ -130,6 +145,7 @@ Public Class Login
             da.SelectCommand.Parameters.AddWithValue("email", tbxCEmail.Text)
             da.SelectCommand.Parameters.AddWithValue("user_password", tbxCPass.Text)
             da.SelectCommand.Parameters.AddWithValue("role", cbRoles.Text)
+
             da.Fill(ds, "Data")
 
             PersyModule.Clear(panelRegister)
@@ -169,21 +185,23 @@ Public Class Login
             check = False
         End If
 
-        If check = True Then
-            Try
-                emailNotFound.Visible = False
-                ds.Clear()
-                da = New MySqlDataAdapter("UPDATE tbl_user SET user_password = ? WHERE email = '" & tbxFPEmail.Text & "'", conn)
-                da.SelectCommand.Parameters.AddWithValue("user_password", tbxFPPass.Text)
-                da.Fill(ds, "Data")
+        ds.Clear()
+        da = New MySqlDataAdapter("Select * From tbl_user Where email ='" & tbxFPEmail.Text & "'", conn)
+        da.Fill(ds, "EmailCheck")
 
-                PersyModule.Clear(panelFPass)
-                panelFPass.Hide()
-                panelRegister.Hide()
-                panelLogin.Show()
-            Catch ex As Exception
-                emailNotFound.Visible = True
-            End Try
+        If check = True AndAlso ds.Tables("EmailCheck").Rows.Count > 0 Then
+            emailNotFound.Visible = False
+            ds.Clear()
+            da = New MySqlDataAdapter("UPDATE tbl_user SET user_password = ? WHERE email = '" & tbxFPEmail.Text & "'", conn)
+            da.SelectCommand.Parameters.AddWithValue("user_password", tbxFPPass.Text)
+            da.Fill(ds, "Data")
+
+            PersyModule.Clear(panelFPass)
+            panelFPass.Hide()
+            panelRegister.Hide()
+            panelLogin.Show()
+        Else
+            emailNotFound.Visible = True
         End If
 
         PersyModule.HideErrorLogin()

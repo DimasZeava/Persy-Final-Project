@@ -12,7 +12,7 @@
 
         btnHome.Image = My.Resources.home
         btnReport.Image = My.Resources.Laporan
-        btnDetail.Image = My.Resources.history
+        btnDetail.Image = My.Resources.history_white
         btnProfile.Image = My.Resources.output_onlinepngtools__1_
     End Sub
 
