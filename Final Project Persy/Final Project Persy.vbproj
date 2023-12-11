@@ -304,5 +304,11 @@
   <ItemGroup>
     <None Include="Resources\menu white1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options-lines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rupiah.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

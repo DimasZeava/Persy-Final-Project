@@ -21,6 +21,7 @@ Module PersyModule
             End If
         Next
     End Sub
+
     Public Sub Clicked_Color(ByVal button As Guna2GradientButton)
         button.FillColor = Color.White
         button.FillColor2 = Color.White

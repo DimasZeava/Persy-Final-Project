@@ -233,6 +233,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property options_lines() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("options-lines", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property output_onlinepngtools() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("output-onlinepngtools", resourceCulture)
@@ -326,6 +336,16 @@ Namespace My.Resources
         Friend ReadOnly Property rm222_mind_19() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("rm222-mind-19", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property rupiah() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("rupiah", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

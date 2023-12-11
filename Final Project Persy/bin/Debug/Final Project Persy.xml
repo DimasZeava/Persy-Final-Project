@@ -107,6 +107,11 @@ Final Project Persy
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Final_Project_Persy.My.Resources.Resources.options_lines">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Final_Project_Persy.My.Resources.Resources.output_onlinepngtools">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -153,6 +158,11 @@ Final Project Persy
 </summary>
 </member>
 <member name="P:Final_Project_Persy.My.Resources.Resources.rm222_mind_19">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Final_Project_Persy.My.Resources.Resources.rupiah">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
