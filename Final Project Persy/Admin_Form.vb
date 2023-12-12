@@ -2,7 +2,7 @@
 Public Class Admin_Form
     Public Sub Show_Data()
         ds.Clear()
-        da = New MySqlDataAdapter("SELECT nama_produk, kategori, harga, stock FROM tbl_produk", conn)
+        da = New MySqlDataAdapter("SELECT nama_produk, kategori, harga, stock, id_produk FROM tbl_produk", conn)
 
         da.Fill(ds, "produk")
         dgvBarang.Rows.Clear()
@@ -11,7 +11,8 @@ Public Class Admin_Form
             dgvBarang.Rows.Add(ds.Tables("produk").Rows(i).Item(0).ToString,
                                ds.Tables("produk").Rows(i).Item(1).ToString,
                                ds.Tables("produk").Rows(i).Item(2).ToString,
-                               ds.Tables("produk").Rows(i).Item(3).ToString
+                               ds.Tables("produk").Rows(i).Item(3).ToString,
+                               ds.Tables("produk").Rows(i).Item(4).ToString
            )
         Next
     End Sub
@@ -111,6 +112,28 @@ Public Class Admin_Form
         da.SelectCommand.Parameters.AddWithValue("kategori", tbxKategori.Text)
         da.Fill(ds, "Data_Barang")
         ds.Clear()
+        Show_Data()
+        PersyModule.ClearPanel(panelTambah)
+    End Sub
+    Private Sub dgvBarang_DoubleClick(sender As Object, e As EventArgs) Handles dgvBarang.DoubleClick
+        If dgvBarang.SelectedRows.Count > 0 Then
+            Dim selectedRow As DataGridViewRow = dgvBarang.SelectedRows(0)
+            tbxID.Text = selectedRow.Cells("idProduk").Value.ToString()
+            tbxProduk.Text = selectedRow.Cells("namaProduk").Value.ToString()
+            tbxKategori.Text = selectedRow.Cells("kategori").Value.ToString()
+            tbxHarga.Text = selectedRow.Cells("harga").Value.ToString()
+            numStock.Value = selectedRow.Cells("stock").Value
+        End If
+    End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        da = New MySqlDataAdapter("Update tbl_produk Set nama_barang=?, harga=?, stock=? Where id_produk = '" &  & "'", conn)
+        da.SelectCommand.Parameters.AddWithValue("nama_produk", tbxProduk.Text)
+        da.SelectCommand.Parameters.AddWithValue("harga", tbxHarga.Text)
+        da.SelectCommand.Parameters.AddWithValue("stock", numStock.Value)
+        da.Fill(ds, "Data_Barang")
+        ds.Clear()
+        PersyModule.ClearPanel(panelTambah)
         Show_Data()
     End Sub
 End Class

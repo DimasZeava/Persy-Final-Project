@@ -21,6 +21,17 @@ Module PersyModule
             End If
         Next
     End Sub
+    Public Sub ClearPanel(ByVal panel As Guna2Panel)
+        For Each ctr As Control In panel.Controls
+            If TypeOf ctr Is Guna2TextBox Then
+                ctr.Text = ""
+            ElseIf TypeOf ctr Is Guna2ComboBox Then
+                DirectCast(ctr, Guna2ComboBox).SelectedItem = Nothing
+            ElseIf TypeOf ctr Is Guna2NumericUpDown Then
+                DirectCast(ctr, Guna2NumericUpDown).Value = 0
+            End If
+        Next
+    End Sub
 
     Public Sub Clicked_Color(ByVal button As Guna2GradientButton)
         button.FillColor = Color.White

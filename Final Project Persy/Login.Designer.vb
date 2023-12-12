@@ -47,6 +47,7 @@ Partial Class Login
         Me.tbxUserLogin = New Guna.UI2.WinForms.Guna2TextBox()
         Me.iconHide = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.panelRegister = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.emailCheckFalse = New System.Windows.Forms.Label()
         Me.roleIsNotReg = New System.Windows.Forms.Label()
         Me.passwordIsNotReg = New System.Windows.Forms.Label()
         Me.mailIsNotReg = New System.Windows.Forms.Label()
@@ -79,7 +80,7 @@ Partial Class Login
         Me.tbxFPEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.AnimateWindow = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.DragControlPanel = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.emailCheckFalse = New System.Windows.Forms.Label()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelControl.SuspendLayout()
         Me.panelLogin.SuspendLayout()
@@ -406,6 +407,18 @@ Partial Class Login
         Me.panelRegister.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.panelRegister.Size = New System.Drawing.Size(338, 393)
         Me.panelRegister.TabIndex = 11
+        '
+        'emailCheckFalse
+        '
+        Me.emailCheckFalse.AutoSize = True
+        Me.emailCheckFalse.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.emailCheckFalse.ForeColor = System.Drawing.Color.Red
+        Me.emailCheckFalse.Location = New System.Drawing.Point(44, 264)
+        Me.emailCheckFalse.Name = "emailCheckFalse"
+        Me.emailCheckFalse.Size = New System.Drawing.Size(198, 23)
+        Me.emailCheckFalse.TabIndex = 22
+        Me.emailCheckFalse.Text = "Maaf Email sudah digunakan"
+        Me.emailCheckFalse.Visible = False
         '
         'roleIsNotReg
         '
@@ -880,17 +893,12 @@ Partial Class Login
         Me.DragControlPanel.TargetControl = Me.panelControl
         Me.DragControlPanel.UseTransparentDrag = True
         '
-        'emailCheckFalse
+        'Guna2Panel1
         '
-        Me.emailCheckFalse.AutoSize = True
-        Me.emailCheckFalse.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.emailCheckFalse.ForeColor = System.Drawing.Color.Red
-        Me.emailCheckFalse.Location = New System.Drawing.Point(44, 264)
-        Me.emailCheckFalse.Name = "emailCheckFalse"
-        Me.emailCheckFalse.Size = New System.Drawing.Size(198, 23)
-        Me.emailCheckFalse.TabIndex = 22
-        Me.emailCheckFalse.Text = "Maaf Email sudah digunakan"
-        Me.emailCheckFalse.Visible = False
+        Me.Guna2Panel1.Location = New System.Drawing.Point(667, 114)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(112, 155)
+        Me.Guna2Panel1.TabIndex = 19
         '
         'Login
         '
@@ -899,6 +907,7 @@ Partial Class Login
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(821, 476)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.panelControl)
         Me.Controls.Add(Me.panelLogin)
         Me.Controls.Add(Me.panelRegister)
@@ -986,4 +995,5 @@ Partial Class Login
     Friend WithEvents noTextFP As Label
     Friend WithEvents emailNotFound As Label
     Friend WithEvents emailCheckFalse As Label
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
 End Class
