@@ -80,7 +80,6 @@ Partial Class Login
         Me.tbxFPEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.AnimateWindow = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.DragControlPanel = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelControl.SuspendLayout()
         Me.panelLogin.SuspendLayout()
@@ -893,13 +892,6 @@ Partial Class Login
         Me.DragControlPanel.TargetControl = Me.panelControl
         Me.DragControlPanel.UseTransparentDrag = True
         '
-        'Guna2Panel1
-        '
-        Me.Guna2Panel1.Location = New System.Drawing.Point(667, 114)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(112, 155)
-        Me.Guna2Panel1.TabIndex = 19
-        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -907,7 +899,6 @@ Partial Class Login
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(821, 476)
-        Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.panelControl)
         Me.Controls.Add(Me.panelLogin)
         Me.Controls.Add(Me.panelRegister)
@@ -995,5 +986,4 @@ Partial Class Login
     Friend WithEvents noTextFP As Label
     Friend WithEvents emailNotFound As Label
     Friend WithEvents emailCheckFalse As Label
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
 End Class

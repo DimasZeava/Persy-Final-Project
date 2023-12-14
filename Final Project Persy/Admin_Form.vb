@@ -123,11 +123,13 @@ Public Class Admin_Form
             tbxKategori.Text = selectedRow.Cells("kategori").Value.ToString()
             tbxHarga.Text = selectedRow.Cells("harga").Value.ToString()
             numStock.Value = selectedRow.Cells("stock").Value
+            tbxKategori.ReadOnly = True
         End If
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        da = New MySqlDataAdapter("Update tbl_produk Set nama_barang=?, harga=?, stock=? Where id_produk = '" &  & "'", conn)
+        tbxKategori.ReadOnly = False
+        da = New MySqlDataAdapter("Update tbl_produk Set nama_produk=?, harga=?, stock=? Where id_produk = '" & tbxID.Text & "'", conn)
         da.SelectCommand.Parameters.AddWithValue("nama_produk", tbxProduk.Text)
         da.SelectCommand.Parameters.AddWithValue("harga", tbxHarga.Text)
         da.SelectCommand.Parameters.AddWithValue("stock", numStock.Value)
@@ -135,5 +137,17 @@ Public Class Admin_Form
         ds.Clear()
         PersyModule.ClearPanel(panelTambah)
         Show_Data()
+    End Sub
+
+    Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+        Try
+            da = New MySqlDataAdapter("DELETE FROM tbl_produk WHERE id_produk = '" & tbxID.Text & "'", conn)
+            da.Fill(ds, "Data_Barang")
+            ds.Clear()
+            PersyModule.ClearPanel(panelTambah)
+            Show_Data()
+        Catch ex As Exception
+            MessageBox.Show("Error dalam mengapus data" & ex.Message)
+        End Try
     End Sub
 End Class
