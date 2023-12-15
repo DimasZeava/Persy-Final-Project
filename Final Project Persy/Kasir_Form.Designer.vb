@@ -70,8 +70,8 @@ Partial Class Kasir_Form
         Me.extendPage = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.shortenPage = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.panelListBarang = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnPanelPembayaran = New Guna.UI2.WinForms.Guna2Button()
         Me.panelJumlah = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.tbxidproduk = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnClosePanel = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -80,7 +80,9 @@ Partial Class Kasir_Form
         Me.btnAdd = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.tbxProduk = New Guna.UI2.WinForms.Guna2TextBox()
         Me.numJumlah = New Guna.UI2.WinForms.Guna2NumericUpDown()
+        Me.btnPanelPembayaran = New Guna.UI2.WinForms.Guna2Button()
         Me.dgvListBarang = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.idproduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.namaProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.kategori = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -94,6 +96,11 @@ Partial Class Kasir_Form
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.panelRiwayat = New Guna.UI2.WinForms.Guna2Panel()
         Me.panelPembayaran = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.tbxTotalPembayaran = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btnBersihkan = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.btnKonfirm = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.tbxPelanggan = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.tbxInvoice = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -101,6 +108,12 @@ Partial Class Kasir_Form
         Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblPembayaran = New System.Windows.Forms.Label()
         Me.dgvBarangPembeli = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.idprodukPembeli = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.produkPembeli = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kategoriProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.jumlahProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotalProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.hapus = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
@@ -108,17 +121,6 @@ Partial Class Kasir_Form
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2DragControl3 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.btnBersihkan = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.btnKonfirmasi = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.tbxPembayaran = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.tbxPelanggan = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.tbxTotalPembayaran = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.produkPembeli = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kategoriProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.jumlahProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.subtotalProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.hapus = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.panelMenu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelControl.SuspendLayout()
@@ -727,35 +729,10 @@ Partial Class Kasir_Form
         Me.panelListBarang.TabIndex = 18
         Me.panelListBarang.Visible = False
         '
-        'btnPanelPembayaran
-        '
-        Me.btnPanelPembayaran.Animated = True
-        Me.btnPanelPembayaran.AutoRoundedCorners = True
-        Me.btnPanelPembayaran.BorderRadius = 21
-        Me.btnPanelPembayaran.BorderThickness = 1
-        Me.transitionFormP.SetDecoration(Me.btnPanelPembayaran, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnPanelPembayaran.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnPanelPembayaran.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnPanelPembayaran.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnPanelPembayaran.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnPanelPembayaran.FillColor = System.Drawing.Color.Transparent
-        Me.btnPanelPembayaran.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnPanelPembayaran.ForeColor = System.Drawing.Color.Black
-        Me.btnPanelPembayaran.HoverState.BorderColor = System.Drawing.Color.White
-        Me.btnPanelPembayaran.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnPanelPembayaran.HoverState.Font = New System.Drawing.Font("Poppins", 8.25!)
-        Me.btnPanelPembayaran.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnPanelPembayaran.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.cashier_machine_white
-        Me.btnPanelPembayaran.Image = Global.Final_Project_Persy.My.Resources.Resources.cashier_machine
-        Me.btnPanelPembayaran.Location = New System.Drawing.Point(660, 371)
-        Me.btnPanelPembayaran.Name = "btnPanelPembayaran"
-        Me.btnPanelPembayaran.Size = New System.Drawing.Size(180, 45)
-        Me.btnPanelPembayaran.TabIndex = 3
-        Me.btnPanelPembayaran.Text = "Pembayaran"
-        '
         'panelJumlah
         '
         Me.panelJumlah.BackColor = System.Drawing.Color.Transparent
+        Me.panelJumlah.Controls.Add(Me.tbxidproduk)
         Me.panelJumlah.Controls.Add(Me.btnClosePanel)
         Me.panelJumlah.Controls.Add(Me.Label4)
         Me.panelJumlah.Controls.Add(Me.Label1)
@@ -772,6 +749,27 @@ Partial Class Kasir_Form
         Me.panelJumlah.Size = New System.Drawing.Size(348, 307)
         Me.panelJumlah.TabIndex = 2
         Me.panelJumlah.Visible = False
+        '
+        'tbxidproduk
+        '
+        Me.tbxidproduk.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.tbxidproduk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.tbxidproduk.DefaultText = ""
+        Me.tbxidproduk.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxidproduk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxidproduk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxidproduk.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxidproduk.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxidproduk.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.tbxidproduk.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxidproduk.Location = New System.Drawing.Point(19, 13)
+        Me.tbxidproduk.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxidproduk.Name = "tbxidproduk"
+        Me.tbxidproduk.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxidproduk.PlaceholderText = "ID Produk"
+        Me.tbxidproduk.SelectedText = ""
+        Me.tbxidproduk.Size = New System.Drawing.Size(200, 28)
+        Me.tbxidproduk.TabIndex = 8
         '
         'btnClosePanel
         '
@@ -909,6 +907,32 @@ Partial Class Kasir_Form
         Me.numJumlah.TabIndex = 0
         Me.numJumlah.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
         '
+        'btnPanelPembayaran
+        '
+        Me.btnPanelPembayaran.Animated = True
+        Me.btnPanelPembayaran.AutoRoundedCorners = True
+        Me.btnPanelPembayaran.BorderRadius = 21
+        Me.btnPanelPembayaran.BorderThickness = 1
+        Me.transitionFormP.SetDecoration(Me.btnPanelPembayaran, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnPanelPembayaran.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnPanelPembayaran.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnPanelPembayaran.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnPanelPembayaran.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnPanelPembayaran.FillColor = System.Drawing.Color.Transparent
+        Me.btnPanelPembayaran.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnPanelPembayaran.ForeColor = System.Drawing.Color.Black
+        Me.btnPanelPembayaran.HoverState.BorderColor = System.Drawing.Color.White
+        Me.btnPanelPembayaran.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnPanelPembayaran.HoverState.Font = New System.Drawing.Font("Poppins", 8.25!)
+        Me.btnPanelPembayaran.HoverState.ForeColor = System.Drawing.Color.White
+        Me.btnPanelPembayaran.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.cashier_machine_white
+        Me.btnPanelPembayaran.Image = Global.Final_Project_Persy.My.Resources.Resources.cashier_machine
+        Me.btnPanelPembayaran.Location = New System.Drawing.Point(660, 371)
+        Me.btnPanelPembayaran.Name = "btnPanelPembayaran"
+        Me.btnPanelPembayaran.Size = New System.Drawing.Size(180, 45)
+        Me.btnPanelPembayaran.TabIndex = 3
+        Me.btnPanelPembayaran.Text = "Pembayaran"
+        '
         'dgvListBarang
         '
         DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
@@ -923,7 +947,7 @@ Partial Class Kasir_Form
         Me.dgvListBarang.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dgvListBarang.ColumnHeadersHeight = 15
         Me.dgvListBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvListBarang.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.namaProduk, Me.kategori, Me.harga, Me.btnTambah})
+        Me.dgvListBarang.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idproduk, Me.namaProduk, Me.kategori, Me.harga, Me.btnTambah})
         Me.transitionFormP.SetDecoration(Me.dgvListBarang, Guna.UI2.AnimatorNS.DecorationType.None)
         DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
@@ -960,6 +984,11 @@ Partial Class Kasir_Form
         Me.dgvListBarang.ThemeStyle.RowsStyle.Height = 22
         Me.dgvListBarang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvListBarang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'idproduk
+        '
+        Me.idproduk.HeaderText = "ID Produk"
+        Me.idproduk.Name = "idproduk"
         '
         'namaProduk
         '
@@ -1119,8 +1148,7 @@ Partial Class Kasir_Form
         Me.panelPembayaran.Controls.Add(Me.Label2)
         Me.panelPembayaran.Controls.Add(Me.tbxTotalPembayaran)
         Me.panelPembayaran.Controls.Add(Me.btnBersihkan)
-        Me.panelPembayaran.Controls.Add(Me.btnKonfirmasi)
-        Me.panelPembayaran.Controls.Add(Me.tbxPembayaran)
+        Me.panelPembayaran.Controls.Add(Me.btnKonfirm)
         Me.panelPembayaran.Controls.Add(Me.tbxPelanggan)
         Me.panelPembayaran.Controls.Add(Me.Guna2Panel1)
         Me.panelPembayaran.Controls.Add(Me.btnBack)
@@ -1133,6 +1161,119 @@ Partial Class Kasir_Form
         Me.panelPembayaran.Size = New System.Drawing.Size(843, 419)
         Me.panelPembayaran.TabIndex = 20
         Me.panelPembayaran.Visible = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.Label2, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 12.0!)
+        Me.Label2.Location = New System.Drawing.Point(302, 366)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(160, 28)
+        Me.Label2.TabIndex = 28
+        Me.Label2.Text = "Total Pembayaran"
+        '
+        'tbxTotalPembayaran
+        '
+        Me.tbxTotalPembayaran.BorderRadius = 5
+        Me.tbxTotalPembayaran.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.tbxTotalPembayaran, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.tbxTotalPembayaran.DefaultText = ""
+        Me.tbxTotalPembayaran.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxTotalPembayaran.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxTotalPembayaran.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxTotalPembayaran.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxTotalPembayaran.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxTotalPembayaran.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.tbxTotalPembayaran.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxTotalPembayaran.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.rupiah
+        Me.tbxTotalPembayaran.Location = New System.Drawing.Point(468, 366)
+        Me.tbxTotalPembayaran.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxTotalPembayaran.Name = "tbxTotalPembayaran"
+        Me.tbxTotalPembayaran.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxTotalPembayaran.PlaceholderText = "0"
+        Me.tbxTotalPembayaran.SelectedText = ""
+        Me.tbxTotalPembayaran.Size = New System.Drawing.Size(241, 36)
+        Me.tbxTotalPembayaran.TabIndex = 27
+        '
+        'btnBersihkan
+        '
+        Me.btnBersihkan.Animated = True
+        Me.btnBersihkan.AutoRoundedCorners = True
+        Me.btnBersihkan.BackColor = System.Drawing.Color.Transparent
+        Me.btnBersihkan.BorderColor = System.Drawing.Color.Red
+        Me.btnBersihkan.BorderRadius = 20
+        Me.btnBersihkan.BorderThickness = 1
+        Me.transitionFormP.SetDecoration(Me.btnBersihkan, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnBersihkan.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnBersihkan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnBersihkan.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnBersihkan.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnBersihkan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnBersihkan.FillColor = System.Drawing.Color.White
+        Me.btnBersihkan.FillColor2 = System.Drawing.Color.White
+        Me.btnBersihkan.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnBersihkan.ForeColor = System.Drawing.Color.Red
+        Me.btnBersihkan.HoverState.FillColor = System.Drawing.Color.Red
+        Me.btnBersihkan.HoverState.FillColor2 = System.Drawing.Color.Red
+        Me.btnBersihkan.HoverState.ForeColor = System.Drawing.Color.White
+        Me.btnBersihkan.Location = New System.Drawing.Point(15, 372)
+        Me.btnBersihkan.Name = "btnBersihkan"
+        Me.btnBersihkan.Size = New System.Drawing.Size(256, 43)
+        Me.btnBersihkan.TabIndex = 26
+        Me.btnBersihkan.Text = "Bersihkan"
+        Me.btnBersihkan.UseTransparentBackground = True
+        '
+        'btnKonfirm
+        '
+        Me.btnKonfirm.Animated = True
+        Me.btnKonfirm.AutoRoundedCorners = True
+        Me.btnKonfirm.BackColor = System.Drawing.Color.Transparent
+        Me.btnKonfirm.BorderColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnKonfirm.BorderRadius = 20
+        Me.btnKonfirm.BorderThickness = 1
+        Me.transitionFormP.SetDecoration(Me.btnKonfirm, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnKonfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnKonfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnKonfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnKonfirm.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnKonfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnKonfirm.FillColor = System.Drawing.Color.White
+        Me.btnKonfirm.FillColor2 = System.Drawing.Color.White
+        Me.btnKonfirm.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnKonfirm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnKonfirm.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnKonfirm.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnKonfirm.HoverState.ForeColor = System.Drawing.Color.White
+        Me.btnKonfirm.Location = New System.Drawing.Point(15, 323)
+        Me.btnKonfirm.Name = "btnKonfirm"
+        Me.btnKonfirm.Size = New System.Drawing.Size(256, 43)
+        Me.btnKonfirm.TabIndex = 25
+        Me.btnKonfirm.Text = "Konfirmasi"
+        Me.btnKonfirm.UseTransparentBackground = True
+        '
+        'tbxPelanggan
+        '
+        Me.tbxPelanggan.BorderRadius = 5
+        Me.tbxPelanggan.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.tbxPelanggan, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.tbxPelanggan.DefaultText = ""
+        Me.tbxPelanggan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxPelanggan.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxPelanggan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxPelanggan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxPelanggan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxPelanggan.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.tbxPelanggan.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxPelanggan.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.user1
+        Me.tbxPelanggan.Location = New System.Drawing.Point(15, 120)
+        Me.tbxPelanggan.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxPelanggan.Name = "tbxPelanggan"
+        Me.tbxPelanggan.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxPelanggan.PlaceholderText = "Nama Pelanggan"
+        Me.tbxPelanggan.SelectedText = ""
+        Me.tbxPelanggan.Size = New System.Drawing.Size(295, 36)
+        Me.tbxPelanggan.TabIndex = 23
         '
         'Guna2Panel1
         '
@@ -1251,7 +1392,7 @@ Partial Class Kasir_Form
         Me.dgvBarangPembeli.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvBarangPembeli.ColumnHeadersHeight = 15
         Me.dgvBarangPembeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvBarangPembeli.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.produkPembeli, Me.kategoriProduk, Me.jumlahProduk, Me.subtotalProduk, Me.hapus})
+        Me.dgvBarangPembeli.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idprodukPembeli, Me.produkPembeli, Me.kategoriProduk, Me.jumlahProduk, Me.subtotalProduk, Me.hapus})
         Me.transitionFormP.SetDecoration(Me.dgvBarangPembeli, Guna.UI2.AnimatorNS.DecorationType.None)
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
@@ -1289,6 +1430,38 @@ Partial Class Kasir_Form
         Me.dgvBarangPembeli.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvBarangPembeli.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
+        'idprodukPembeli
+        '
+        Me.idprodukPembeli.HeaderText = "ID Produk"
+        Me.idprodukPembeli.Name = "idprodukPembeli"
+        '
+        'produkPembeli
+        '
+        Me.produkPembeli.HeaderText = "Produk"
+        Me.produkPembeli.Name = "produkPembeli"
+        '
+        'kategoriProduk
+        '
+        Me.kategoriProduk.HeaderText = "Kategori"
+        Me.kategoriProduk.Name = "kategoriProduk"
+        '
+        'jumlahProduk
+        '
+        Me.jumlahProduk.HeaderText = "Jumlah"
+        Me.jumlahProduk.Name = "jumlahProduk"
+        '
+        'subtotalProduk
+        '
+        Me.subtotalProduk.HeaderText = "Subtotal"
+        Me.subtotalProduk.Name = "subtotalProduk"
+        '
+        'hapus
+        '
+        Me.hapus.HeaderText = ""
+        Me.hapus.Name = "hapus"
+        Me.hapus.Text = "Hapus"
+        Me.hapus.UseColumnTextForButtonValue = True
+        '
         'Guna2AnimateWindow1
         '
         Me.Guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND
@@ -1319,169 +1492,6 @@ Partial Class Kasir_Form
         Me.Guna2DragControl3.DockIndicatorTransparencyValue = 0.6R
         Me.Guna2DragControl3.TargetControl = Me.panelJumlah
         Me.Guna2DragControl3.UseTransparentDrag = True
-        '
-        'btnBersihkan
-        '
-        Me.btnBersihkan.Animated = True
-        Me.btnBersihkan.AutoRoundedCorners = True
-        Me.btnBersihkan.BackColor = System.Drawing.Color.Transparent
-        Me.btnBersihkan.BorderColor = System.Drawing.Color.Red
-        Me.btnBersihkan.BorderRadius = 20
-        Me.btnBersihkan.BorderThickness = 1
-        Me.transitionFormP.SetDecoration(Me.btnBersihkan, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnBersihkan.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnBersihkan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnBersihkan.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnBersihkan.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnBersihkan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnBersihkan.FillColor = System.Drawing.Color.White
-        Me.btnBersihkan.FillColor2 = System.Drawing.Color.White
-        Me.btnBersihkan.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnBersihkan.ForeColor = System.Drawing.Color.Red
-        Me.btnBersihkan.HoverState.FillColor = System.Drawing.Color.Red
-        Me.btnBersihkan.HoverState.FillColor2 = System.Drawing.Color.Red
-        Me.btnBersihkan.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnBersihkan.Location = New System.Drawing.Point(15, 372)
-        Me.btnBersihkan.Name = "btnBersihkan"
-        Me.btnBersihkan.Size = New System.Drawing.Size(256, 43)
-        Me.btnBersihkan.TabIndex = 26
-        Me.btnBersihkan.Text = "Bersihkan"
-        Me.btnBersihkan.UseTransparentBackground = True
-        '
-        'btnKonfirmasi
-        '
-        Me.btnKonfirmasi.Animated = True
-        Me.btnKonfirmasi.AutoRoundedCorners = True
-        Me.btnKonfirmasi.BackColor = System.Drawing.Color.Transparent
-        Me.btnKonfirmasi.BorderColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnKonfirmasi.BorderRadius = 20
-        Me.btnKonfirmasi.BorderThickness = 1
-        Me.transitionFormP.SetDecoration(Me.btnKonfirmasi, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnKonfirmasi.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnKonfirmasi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnKonfirmasi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnKonfirmasi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnKonfirmasi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnKonfirmasi.FillColor = System.Drawing.Color.White
-        Me.btnKonfirmasi.FillColor2 = System.Drawing.Color.White
-        Me.btnKonfirmasi.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnKonfirmasi.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnKonfirmasi.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnKonfirmasi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnKonfirmasi.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnKonfirmasi.Location = New System.Drawing.Point(15, 323)
-        Me.btnKonfirmasi.Name = "btnKonfirmasi"
-        Me.btnKonfirmasi.Size = New System.Drawing.Size(256, 43)
-        Me.btnKonfirmasi.TabIndex = 25
-        Me.btnKonfirmasi.Text = "Konfirmasi"
-        Me.btnKonfirmasi.UseTransparentBackground = True
-        '
-        'tbxPembayaran
-        '
-        Me.tbxPembayaran.BorderRadius = 5
-        Me.tbxPembayaran.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.transitionFormP.SetDecoration(Me.tbxPembayaran, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.tbxPembayaran.DefaultText = ""
-        Me.tbxPembayaran.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxPembayaran.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxPembayaran.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxPembayaran.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxPembayaran.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxPembayaran.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.tbxPembayaran.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxPembayaran.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.rupiah
-        Me.tbxPembayaran.Location = New System.Drawing.Point(14, 165)
-        Me.tbxPembayaran.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbxPembayaran.Name = "tbxPembayaran"
-        Me.tbxPembayaran.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbxPembayaran.PlaceholderText = "Pembayaran"
-        Me.tbxPembayaran.SelectedText = ""
-        Me.tbxPembayaran.Size = New System.Drawing.Size(296, 36)
-        Me.tbxPembayaran.TabIndex = 24
-        '
-        'tbxPelanggan
-        '
-        Me.tbxPelanggan.BorderRadius = 5
-        Me.tbxPelanggan.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.transitionFormP.SetDecoration(Me.tbxPelanggan, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.tbxPelanggan.DefaultText = ""
-        Me.tbxPelanggan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxPelanggan.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxPelanggan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxPelanggan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxPelanggan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxPelanggan.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.tbxPelanggan.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxPelanggan.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.user1
-        Me.tbxPelanggan.Location = New System.Drawing.Point(15, 120)
-        Me.tbxPelanggan.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbxPelanggan.Name = "tbxPelanggan"
-        Me.tbxPelanggan.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbxPelanggan.PlaceholderText = "Nama Pelanggan"
-        Me.tbxPelanggan.SelectedText = ""
-        Me.tbxPelanggan.Size = New System.Drawing.Size(295, 36)
-        Me.tbxPelanggan.TabIndex = 23
-        '
-        'tbxTotalPembayaran
-        '
-        Me.tbxTotalPembayaran.BorderRadius = 5
-        Me.tbxTotalPembayaran.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.transitionFormP.SetDecoration(Me.tbxTotalPembayaran, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.tbxTotalPembayaran.DefaultText = ""
-        Me.tbxTotalPembayaran.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxTotalPembayaran.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxTotalPembayaran.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxTotalPembayaran.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxTotalPembayaran.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxTotalPembayaran.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.tbxTotalPembayaran.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxTotalPembayaran.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.rupiah
-        Me.tbxTotalPembayaran.Location = New System.Drawing.Point(468, 366)
-        Me.tbxTotalPembayaran.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbxTotalPembayaran.Name = "tbxTotalPembayaran"
-        Me.tbxTotalPembayaran.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbxTotalPembayaran.PlaceholderText = "0"
-        Me.tbxTotalPembayaran.SelectedText = ""
-        Me.tbxTotalPembayaran.Size = New System.Drawing.Size(241, 36)
-        Me.tbxTotalPembayaran.TabIndex = 27
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.transitionFormP.SetDecoration(Me.Label2, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(302, 366)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(160, 28)
-        Me.Label2.TabIndex = 28
-        Me.Label2.Text = "Total Pembayaran"
-        '
-        'produkPembeli
-        '
-        Me.produkPembeli.HeaderText = "Produk"
-        Me.produkPembeli.Name = "produkPembeli"
-        '
-        'kategoriProduk
-        '
-        Me.kategoriProduk.HeaderText = "Kategori"
-        Me.kategoriProduk.Name = "kategoriProduk"
-        '
-        'jumlahProduk
-        '
-        Me.jumlahProduk.HeaderText = "Jumlah"
-        Me.jumlahProduk.Name = "jumlahProduk"
-        '
-        'subtotalProduk
-        '
-        Me.subtotalProduk.HeaderText = "Subtotal"
-        Me.subtotalProduk.Name = "subtotalProduk"
-        '
-        'hapus
-        '
-        Me.hapus.HeaderText = ""
-        Me.hapus.Name = "hapus"
-        Me.hapus.Text = "Hapus"
-        Me.hapus.UseColumnTextForButtonValue = True
         '
         'Kasir_Form
         '
@@ -1557,10 +1567,6 @@ Partial Class Kasir_Form
     Friend WithEvents tbxSubtotal As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbxKategori As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents namaProduk As DataGridViewTextBoxColumn
-    Friend WithEvents kategori As DataGridViewTextBoxColumn
-    Friend WithEvents harga As DataGridViewTextBoxColumn
-    Friend WithEvents btnTambah As DataGridViewButtonColumn
     Friend WithEvents btnClosePanel As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents Guna2DragControl3 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents btnPanelPembayaran As Guna.UI2.WinForms.Guna2Button
@@ -1601,9 +1607,15 @@ Partial Class Kasir_Form
     Friend WithEvents Label2 As Label
     Friend WithEvents tbxTotalPembayaran As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnBersihkan As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents btnKonfirmasi As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents tbxPembayaran As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents btnKonfirm As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents tbxPelanggan As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbxidproduk As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents idproduk As DataGridViewTextBoxColumn
+    Friend WithEvents namaProduk As DataGridViewTextBoxColumn
+    Friend WithEvents kategori As DataGridViewTextBoxColumn
+    Friend WithEvents harga As DataGridViewTextBoxColumn
+    Friend WithEvents btnTambah As DataGridViewButtonColumn
+    Friend WithEvents idprodukPembeli As DataGridViewTextBoxColumn
     Friend WithEvents produkPembeli As DataGridViewTextBoxColumn
     Friend WithEvents kategoriProduk As DataGridViewTextBoxColumn
     Friend WithEvents jumlahProduk As DataGridViewTextBoxColumn
