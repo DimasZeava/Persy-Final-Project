@@ -23,20 +23,20 @@ Partial Class Kasir_Form
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Kasir_Form))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelMenu = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnListBarang = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -96,10 +96,10 @@ Partial Class Kasir_Form
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.panelRiwayat = New Guna.UI2.WinForms.Guna2Panel()
         Me.panelPembayaran = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnKonfirmasi = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tbxTotalPembayaran = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnBersihkan = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.btnKonfirm = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.tbxPelanggan = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.tbxInvoice = New Guna.UI2.WinForms.Guna2TextBox()
@@ -107,12 +107,12 @@ Partial Class Kasir_Form
         Me.btnBack = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblPembayaran = New System.Windows.Forms.Label()
-        Me.dgvBarangPembeli = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.idprodukPembeli = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvBarang = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.idProdukPersy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.produkPembeli = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.kategoriProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.jumlahProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.subtotalProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.hapus = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
@@ -135,7 +135,7 @@ Partial Class Kasir_Form
         Me.panelRiwayat.SuspendLayout()
         Me.panelPembayaran.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.dgvBarangPembeli, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -548,28 +548,28 @@ Partial Class Kasir_Form
         '
         'Guna2DataGridView1
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
+        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.Guna2DataGridView1.ColumnHeadersHeight = 15
         Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewButtonColumn1})
         Me.transitionFormP.SetDecoration(Me.Guna2DataGridView1, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle18
         Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2DataGridView1.Location = New System.Drawing.Point(327, 65)
         Me.Guna2DataGridView1.Name = "Guna2DataGridView1"
@@ -656,22 +656,22 @@ Partial Class Kasir_Form
         '
         Me.transitionFormP.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide
         Me.transitionFormP.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.transitionFormP.DefaultAnimation = Animation1
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.transitionFormP.DefaultAnimation = Animation2
         '
         'extendPage
         '
@@ -935,28 +935,28 @@ Partial Class Kasir_Form
         '
         'dgvListBarang
         '
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.dgvListBarang.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListBarang.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.White
+        Me.dgvListBarang.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListBarang.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.dgvListBarang.ColumnHeadersHeight = 15
         Me.dgvListBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.dgvListBarang.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idproduk, Me.namaProduk, Me.kategori, Me.harga, Me.btnTambah})
         Me.transitionFormP.SetDecoration(Me.dgvListBarang, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvListBarang.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvListBarang.DefaultCellStyle = DataGridViewCellStyle21
         Me.dgvListBarang.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvListBarang.Location = New System.Drawing.Point(12, 91)
         Me.dgvListBarang.Name = "dgvListBarang"
@@ -1030,28 +1030,28 @@ Partial Class Kasir_Form
         '
         'dgvRiwayat
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.dgvRiwayat.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRiwayat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.White
+        Me.dgvRiwayat.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRiwayat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
         Me.dgvRiwayat.ColumnHeadersHeight = 15
         Me.dgvRiwayat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.dgvRiwayat.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.noinvoice, Me.pelanggan, Me.total})
         Me.transitionFormP.SetDecoration(Me.dgvRiwayat, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvRiwayat.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle24.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvRiwayat.DefaultCellStyle = DataGridViewCellStyle24
         Me.dgvRiwayat.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvRiwayat.Location = New System.Drawing.Point(14, 65)
         Me.dgvRiwayat.Name = "dgvRiwayat"
@@ -1145,22 +1145,50 @@ Partial Class Kasir_Form
         '
         'panelPembayaran
         '
+        Me.panelPembayaran.Controls.Add(Me.btnKonfirmasi)
         Me.panelPembayaran.Controls.Add(Me.Label2)
         Me.panelPembayaran.Controls.Add(Me.tbxTotalPembayaran)
         Me.panelPembayaran.Controls.Add(Me.btnBersihkan)
-        Me.panelPembayaran.Controls.Add(Me.btnKonfirm)
         Me.panelPembayaran.Controls.Add(Me.tbxPelanggan)
         Me.panelPembayaran.Controls.Add(Me.Guna2Panel1)
         Me.panelPembayaran.Controls.Add(Me.btnBack)
         Me.panelPembayaran.Controls.Add(Me.Guna2TextBox2)
         Me.panelPembayaran.Controls.Add(Me.lblPembayaran)
-        Me.panelPembayaran.Controls.Add(Me.dgvBarangPembeli)
+        Me.panelPembayaran.Controls.Add(Me.dgvBarang)
         Me.transitionFormP.SetDecoration(Me.panelPembayaran, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.panelPembayaran.Location = New System.Drawing.Point(63, 60)
         Me.panelPembayaran.Name = "panelPembayaran"
         Me.panelPembayaran.Size = New System.Drawing.Size(843, 419)
         Me.panelPembayaran.TabIndex = 20
         Me.panelPembayaran.Visible = False
+        '
+        'btnKonfirmasi
+        '
+        Me.btnKonfirmasi.Animated = True
+        Me.btnKonfirmasi.AutoRoundedCorners = True
+        Me.btnKonfirmasi.BackColor = System.Drawing.Color.Transparent
+        Me.btnKonfirmasi.BorderColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnKonfirmasi.BorderRadius = 20
+        Me.btnKonfirmasi.BorderThickness = 1
+        Me.transitionFormP.SetDecoration(Me.btnKonfirmasi, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnKonfirmasi.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnKonfirmasi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnKonfirmasi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnKonfirmasi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnKonfirmasi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnKonfirmasi.FillColor = System.Drawing.Color.White
+        Me.btnKonfirmasi.FillColor2 = System.Drawing.Color.White
+        Me.btnKonfirmasi.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnKonfirmasi.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnKonfirmasi.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnKonfirmasi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnKonfirmasi.HoverState.ForeColor = System.Drawing.Color.White
+        Me.btnKonfirmasi.Location = New System.Drawing.Point(15, 323)
+        Me.btnKonfirmasi.Name = "btnKonfirmasi"
+        Me.btnKonfirmasi.Size = New System.Drawing.Size(256, 43)
+        Me.btnKonfirmasi.TabIndex = 29
+        Me.btnKonfirmasi.Text = "Konfirmasi"
+        Me.btnKonfirmasi.UseTransparentBackground = True
         '
         'Label2
         '
@@ -1223,34 +1251,6 @@ Partial Class Kasir_Form
         Me.btnBersihkan.TabIndex = 26
         Me.btnBersihkan.Text = "Bersihkan"
         Me.btnBersihkan.UseTransparentBackground = True
-        '
-        'btnKonfirm
-        '
-        Me.btnKonfirm.Animated = True
-        Me.btnKonfirm.AutoRoundedCorners = True
-        Me.btnKonfirm.BackColor = System.Drawing.Color.Transparent
-        Me.btnKonfirm.BorderColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnKonfirm.BorderRadius = 20
-        Me.btnKonfirm.BorderThickness = 1
-        Me.transitionFormP.SetDecoration(Me.btnKonfirm, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnKonfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnKonfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnKonfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnKonfirm.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnKonfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnKonfirm.FillColor = System.Drawing.Color.White
-        Me.btnKonfirm.FillColor2 = System.Drawing.Color.White
-        Me.btnKonfirm.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnKonfirm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnKonfirm.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnKonfirm.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnKonfirm.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnKonfirm.Location = New System.Drawing.Point(15, 323)
-        Me.btnKonfirm.Name = "btnKonfirm"
-        Me.btnKonfirm.Size = New System.Drawing.Size(256, 43)
-        Me.btnKonfirm.TabIndex = 25
-        Me.btnKonfirm.Text = "Konfirmasi"
-        Me.btnKonfirm.UseTransparentBackground = True
         '
         'tbxPelanggan
         '
@@ -1378,62 +1378,62 @@ Partial Class Kasir_Form
         Me.lblPembayaran.TabIndex = 1
         Me.lblPembayaran.Text = "Pembayaran"
         '
-        'dgvBarangPembeli
+        'dgvBarang
         '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dgvBarangPembeli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBarangPembeli.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.dgvBarangPembeli.ColumnHeadersHeight = 15
-        Me.dgvBarangPembeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvBarangPembeli.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idprodukPembeli, Me.produkPembeli, Me.kategoriProduk, Me.jumlahProduk, Me.subtotalProduk, Me.hapus})
-        Me.transitionFormP.SetDecoration(Me.dgvBarangPembeli, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvBarangPembeli.DefaultCellStyle = DataGridViewCellStyle6
-        Me.dgvBarangPembeli.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvBarangPembeli.Location = New System.Drawing.Point(327, 65)
-        Me.dgvBarangPembeli.Name = "dgvBarangPembeli"
-        Me.dgvBarangPembeli.RowHeadersVisible = False
-        Me.dgvBarangPembeli.Size = New System.Drawing.Size(502, 268)
-        Me.dgvBarangPembeli.TabIndex = 0
-        Me.dgvBarangPembeli.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvBarangPembeli.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dgvBarangPembeli.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dgvBarangPembeli.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dgvBarangPembeli.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvBarangPembeli.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.dgvBarangPembeli.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvBarangPembeli.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.dgvBarangPembeli.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvBarangPembeli.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvBarangPembeli.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dgvBarangPembeli.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvBarangPembeli.ThemeStyle.HeaderStyle.Height = 15
-        Me.dgvBarangPembeli.ThemeStyle.ReadOnly = False
-        Me.dgvBarangPembeli.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvBarangPembeli.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvBarangPembeli.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvBarangPembeli.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.dgvBarangPembeli.ThemeStyle.RowsStyle.Height = 22
-        Me.dgvBarangPembeli.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvBarangPembeli.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        Me.dgvBarang.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBarang.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        Me.dgvBarang.ColumnHeadersHeight = 15
+        Me.dgvBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvBarang.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idProdukPersy, Me.produkPembeli, Me.kategoriProduk, Me.jumlah, Me.subtotal, Me.hapus})
+        Me.transitionFormP.SetDecoration(Me.dgvBarang, Guna.UI2.AnimatorNS.DecorationType.None)
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvBarang.DefaultCellStyle = DataGridViewCellStyle15
+        Me.dgvBarang.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvBarang.Location = New System.Drawing.Point(327, 65)
+        Me.dgvBarang.Name = "dgvBarang"
+        Me.dgvBarang.RowHeadersVisible = False
+        Me.dgvBarang.Size = New System.Drawing.Size(502, 268)
+        Me.dgvBarang.TabIndex = 0
+        Me.dgvBarang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvBarang.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvBarang.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvBarang.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvBarang.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvBarang.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvBarang.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvBarang.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.dgvBarang.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvBarang.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvBarang.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvBarang.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvBarang.ThemeStyle.HeaderStyle.Height = 15
+        Me.dgvBarang.ThemeStyle.ReadOnly = False
+        Me.dgvBarang.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvBarang.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvBarang.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvBarang.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgvBarang.ThemeStyle.RowsStyle.Height = 22
+        Me.dgvBarang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvBarang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'idprodukPembeli
+        'idProdukPersy
         '
-        Me.idprodukPembeli.HeaderText = "ID Produk"
-        Me.idprodukPembeli.Name = "idprodukPembeli"
+        Me.idProdukPersy.HeaderText = "ID Produk"
+        Me.idProdukPersy.Name = "idProdukPersy"
         '
         'produkPembeli
         '
@@ -1445,15 +1445,15 @@ Partial Class Kasir_Form
         Me.kategoriProduk.HeaderText = "Kategori"
         Me.kategoriProduk.Name = "kategoriProduk"
         '
-        'jumlahProduk
+        'jumlah
         '
-        Me.jumlahProduk.HeaderText = "Jumlah"
-        Me.jumlahProduk.Name = "jumlahProduk"
+        Me.jumlah.HeaderText = "Jumlah"
+        Me.jumlah.Name = "jumlah"
         '
-        'subtotalProduk
+        'subtotal
         '
-        Me.subtotalProduk.HeaderText = "Subtotal"
-        Me.subtotalProduk.Name = "subtotalProduk"
+        Me.subtotal.HeaderText = "Subtotal"
+        Me.subtotal.Name = "subtotal"
         '
         'hapus
         '
@@ -1532,7 +1532,7 @@ Partial Class Kasir_Form
         Me.panelPembayaran.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        CType(Me.dgvBarangPembeli, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvBarang, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1599,7 +1599,7 @@ Partial Class Kasir_Form
     Friend WithEvents panelPembayaran As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lblPembayaran As Label
-    Friend WithEvents dgvBarangPembeli As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents dgvBarang As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents tbxInvoice As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
@@ -1607,7 +1607,6 @@ Partial Class Kasir_Form
     Friend WithEvents Label2 As Label
     Friend WithEvents tbxTotalPembayaran As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnBersihkan As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents btnKonfirm As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents tbxPelanggan As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbxidproduk As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents idproduk As DataGridViewTextBoxColumn
@@ -1615,10 +1614,11 @@ Partial Class Kasir_Form
     Friend WithEvents kategori As DataGridViewTextBoxColumn
     Friend WithEvents harga As DataGridViewTextBoxColumn
     Friend WithEvents btnTambah As DataGridViewButtonColumn
-    Friend WithEvents idprodukPembeli As DataGridViewTextBoxColumn
+    Friend WithEvents btnKonfirmasi As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents idProdukPersy As DataGridViewTextBoxColumn
     Friend WithEvents produkPembeli As DataGridViewTextBoxColumn
     Friend WithEvents kategoriProduk As DataGridViewTextBoxColumn
-    Friend WithEvents jumlahProduk As DataGridViewTextBoxColumn
-    Friend WithEvents subtotalProduk As DataGridViewTextBoxColumn
+    Friend WithEvents jumlah As DataGridViewTextBoxColumn
+    Friend WithEvents subtotal As DataGridViewTextBoxColumn
     Friend WithEvents hapus As DataGridViewButtonColumn
 End Class

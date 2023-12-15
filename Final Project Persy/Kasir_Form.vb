@@ -81,7 +81,7 @@ Public Class Kasir_Form
         lbPembayaran.Location = New Point(316, 0)
         panelPembayaran.Location = New Point(63, 60)
         panelPembayaran.Width = 843
-        dgvBarangPembeli.Width = 502
+        dgvBarang.Width = 502
 
         btnPanelPembayaran.Location = New Point(660, 371)
 
@@ -103,7 +103,7 @@ Public Class Kasir_Form
         lbPembayaran.Location = New Point(230, 0)
         panelPembayaran.Location = New Point(211, 60)
         panelPembayaran.Width = 673
-        dgvBarangPembeli.Width = 332
+        dgvBarang.Width = 332
 
         btnPanelPembayaran.Location = New Point(460, 371)
 
@@ -131,7 +131,7 @@ Public Class Kasir_Form
 
         tbxProduk.Text = dgvListBarang.Rows(e.RowIndex).Cells("namaProduk").Value.ToString()
         tbxKategori.Text = dgvListBarang.Rows(e.RowIndex).Cells("kategori").Value.ToString()
-        tbxIdProduk.Text = dgvListBarang.Rows(e.RowIndex).Cells("idproduk").Value.ToString()
+        tbxidproduk.Text = dgvListBarang.Rows(e.RowIndex).Cells("idproduk").Value.ToString()
     End Sub
 
     Private Sub btnClosePanel_Click(sender As Object, e As EventArgs) Handles btnClosePanel.Click
@@ -154,8 +154,8 @@ Public Class Kasir_Form
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim existingRow As DataGridViewRow = Nothing
 
-        For Each row As DataGridViewRow In dgvBarangPembeli.Rows
-            If row.Cells("idprodukPembeli").Value IsNot Nothing AndAlso row.Cells("idprodukPembeli").Value.ToString() = tbxidproduk.Text Then
+        For Each row As DataGridViewRow In dgvBarang.Rows
+            If row.Cells("idProdukPersy").Value IsNot Nothing AndAlso row.Cells("idProdukPersy").Value.ToString() = tbxidproduk.Text Then
                 existingRow = row
                 Exit For
             End If
@@ -166,65 +166,25 @@ Public Class Kasir_Form
         Dim currentStock As Integer = Integer.Parse(ds.Tables("Stock").Rows(0).Item(0))
 
         If existingRow IsNot Nothing AndAlso currentStock <> 0 Then
-            Dim existingQuantity As Integer = Integer.Parse(existingRow.Cells("jumlahProduk").Value)
-            Dim existingSubtotal As Integer = Integer.Parse(existingRow.Cells("subtotalProduk").Value)
+            Dim existingQuantity As Integer = Integer.Parse(existingRow.Cells("jumlah").Value)
+            Dim existingSubtotal As Integer = Integer.Parse(existingRow.Cells("subtotal").Value)
 
-            existingRow.Cells("jumlahProduk").Value = existingQuantity + numJumlah.Value
-            existingRow.Cells("subtotalProduk").Value = existingSubtotal + tbxSubtotal.Text
-        ElseIf currentStock <= 0 Then
-            MessageBox.Show("Error")
-        ElseIf currentStock <> 0 Then
-            dgvBarangPembeli.Rows.Add(tbxidproduk.Text, tbxProduk.Text, tbxKategori.Text, numJumlah.Value, tbxSubtotal.Text)
+            existingRow.Cells("jumlah").Value = existingQuantity + numJumlah.Value
+            existingRow.Cells("subtotal").Value = existingSubtotal + tbxSubtotal.Text
+        Else
+            dgvBarang.Rows.Add(tbxidproduk.Text, tbxProduk.Text, tbxKategori.Text, numJumlah.Value, tbxSubtotal.Text)
         End If
     End Sub
 
-    Private Sub btnKonfirm_Click(sender As Object, e As EventArgs) Handles btnKonfirm.Click
-        Try
-            ds.Clear()
-            da = New MySqlDataAdapter("insert into tbl_transaksi values (?,?,?,?)", conn)
-            da.SelectCommand.Parameters.AddWithValue("no_invoice", tbxInvoice.Text)
-            da.SelectCommand.Parameters.AddWithValue("nama_pembeli", tbxPelanggan.Text)
-            da.SelectCommand.Parameters.AddWithValue("total", tbxTotalPembayaran.Text)
-            da.Fill(ds, "transaksi")
-            ds.Clear()
-
-            For i As Integer = 0 To dgvBarangPembeli.Rows.Count - 1
-                Dim jumlah As Integer = dgvBarangPembeli.Rows(i).Cells("jumlahProduk").Value
-                Dim id_produk As String = dgvBarangPembeli.Rows(i).Cells("idprodukPembeli").Value
-                Dim subtotal As Integer = dgvBarangPembeli.Rows(i).Cells("subtotal").Value
-                da = New MySqlDataAdapter("Select id_produk from tbl_produk where id_produk = '" & id_produk & "'", conn)
-                da.Fill(ds, "idproduk")
-                If ds.Tables("idproduk").Rows.Count > 0 Then
-                    Dim expectedID As String = ds.Tables(0).Rows(0).Item(0)
-                    If Not (jumlah = 0 OrElse subtotal = 0) Then
-                        ds.Clear()
-                        da = New MySqlDataAdapter("insert into tbl_detailtransaksi (no_invoice,id_produk,jumlah,subtotal) Values (?,?,?,?)", conn)
-                        da.SelectCommand.Parameters.AddWithValue("no_invoice", tbxInvoice.Text)
-                        da.SelectCommand.Parameters.AddWithValue("id_produk", expectedID)
-                        da.SelectCommand.Parameters.AddWithValue("jumlah", jumlah)
-                        da.SelectCommand.Parameters.AddWithValue("subtotal", subtotal)
-                        da.Fill(ds, "detail")
-                    End If
-                End If
-                'no_invoice = tbxInvoice.Text
-                PersyModule.ClearPanel(panelPembayaran)
-                dgvBarangPembeli.Rows.Clear()
-                Invoice()
-            Next
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub dgvBarangPembeli_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBarangPembeli.CellContentClick
+    Private Sub dgvBarang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBarang.CellContentClick
 
     End Sub
     Private Sub btnPanelPembayaran_Click(sender As Object, e As EventArgs) Handles btnPanelPembayaran.Click
         panelPembayaran.Visible = True
         Dim total As Integer = 0
-        For Each row As DataGridViewRow In dgvBarangPembeli.Rows
-            If row.Cells("subtotalProduk").Value IsNot Nothing Then
-                total += row.Cells("subtotalProduk").Value
+        For Each row As DataGridViewRow In dgvBarang.Rows
+            If row.Cells("subtotal").Value IsNot Nothing Then
+                total += row.Cells("subtotal").Value
             End If
         Next
         tbxTotalPembayaran.Text = total.ToString()
@@ -232,5 +192,44 @@ Public Class Kasir_Form
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         panelPembayaran.Visible = False
+    End Sub
+
+    Private Sub btnKonfirmasi_Click(sender As Object, e As EventArgs) Handles btnKonfirmasi.Click
+        'Try
+        ds.Clear()
+            da = New MySqlDataAdapter("insert into tbl_transaksi values (?,?,?)", conn)
+            da.SelectCommand.Parameters.AddWithValue("no_invoice", tbxInvoice.Text)
+            da.SelectCommand.Parameters.AddWithValue("nama_pembeli", tbxPelanggan.Text)
+            da.SelectCommand.Parameters.AddWithValue("total", tbxTotalPembayaran.Text)
+            da.Fill(ds, "transaksi")
+            ds.Clear()
+
+        For i As Integer = 0 To dgvBarang.Rows.Count - 1
+            If i >= 0 AndAlso i < dgvBarang.Rows.Count Then
+                Dim jumlahProduk As Integer = dgvBarang.Rows(i).Cells("jumlah").Value
+                Dim subtotalProduk As Integer = dgvBarang.Rows(i).Cells("subtotal").Value
+                Dim namaProduk As String = dgvBarang.Rows(i).Cells("produkPembeli").Value
+                Dim kategoriProduk As String = dgvBarang.Rows(i).Cells("kategoriProduk").Value
+                ds.Clear()
+                da = New MySqlDataAdapter("select id_produk from tbl_produk where nama_produk ='" & namaProduk & "' AND kategori = '" & kategoriProduk & "'", conn)
+                da.Fill(ds, "produk")
+                If ds.Tables("produk").Rows.Count > 0 Then
+                    Dim id_item As String = ds.Tables("produk").Rows(0).Item(0)
+                    If Not (jumlahProduk = 0 OrElse subtotalProduk = 0) Then
+                        ds.Clear()
+                        da = New MySqlDataAdapter("insert into tbl_detailtransaksi (no_invoice, id_produk, jumlah, subtotal) Values (?,?,?,?)", conn)
+                        da.SelectCommand.Parameters.AddWithValue("no_invoice", tbxInvoice.Text)
+                        da.SelectCommand.Parameters.AddWithValue("id_barang", id_item)
+                        da.SelectCommand.Parameters.AddWithValue("jumlah", jumlahProduk)
+                        da.SelectCommand.Parameters.AddWithValue("subtotal", subtotalProduk)
+                        da.Fill(ds, "detail")
+                    End If
+                End If
+                'no_invoice = tbxInvoice.Text
+                PersyModule.ClearPanel(panelPembayaran)
+                dgvBarang.Rows.Clear()
+                Invoice()
+            End If
+        Next
     End Sub
 End Class
