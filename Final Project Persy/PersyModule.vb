@@ -12,6 +12,19 @@ Module PersyModule
                                     password = ;
                                     database = db_persy2")
     End Sub
+
+    Sub Show_Transaction(ByVal data As Guna2DataGridView)
+        ds.Clear()
+        da = New MySqlDataAdapter("select*from tbl_transaksi", conn)
+        da.Fill(ds, "transaksi")
+        data.Rows.Clear()
+        For i As Integer = 0 To ds.Tables("transaksi").Rows.Count - 1
+            data.Rows.Add(ds.Tables("transaksi").Rows(i).Item(0).ToString,
+                                     ds.Tables("transaksi").Rows(i).Item(1).ToString,
+                                     ds.Tables("transaksi").Rows(i).Item(2).ToString)
+        Next
+    End Sub
+
     Public Sub ClearShadowPanel(ByVal panel As Guna2ShadowPanel)
         For Each ctr As Control In panel.Controls
             If TypeOf ctr Is Guna2TextBox Then

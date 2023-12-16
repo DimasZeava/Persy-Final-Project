@@ -25,6 +25,9 @@ Partial Class Admin_Form
         Me.components = New System.ComponentModel.Container()
         Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Admin_Form))
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -61,12 +64,22 @@ Partial Class Admin_Form
         Me.extendPage = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.shortenPage = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.panelRiwayat = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.lbRiwayatPembayaran = New System.Windows.Forms.Label()
+        Me.dgvRiwayat = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.noinvoice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.pelanggan = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.hapusRiwayat = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.panelMenu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelControl.SuspendLayout()
         Me.panelTambah.SuspendLayout()
         CType(Me.dgvBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numStock, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelRiwayat.SuspendLayout()
+        CType(Me.dgvRiwayat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -320,29 +333,29 @@ Partial Class Admin_Form
         '
         'dgvBarang
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgvBarang.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.dgvBarang.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvBarang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBarang.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBarang.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvBarang.ColumnHeadersHeight = 15
         Me.dgvBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.dgvBarang.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.namaProduk, Me.kategori, Me.harga, Me.stock, Me.idProduk})
         Me.transitionFormP.SetDecoration(Me.dgvBarang, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvBarang.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvBarang.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvBarang.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvBarang.Location = New System.Drawing.Point(300, 8)
         Me.dgvBarang.Name = "dgvBarang"
@@ -627,11 +640,134 @@ Partial Class Admin_Form
         Me.Guna2DragControl1.TargetControl = Me
         Me.Guna2DragControl1.UseTransparentDrag = True
         '
+        'panelRiwayat
+        '
+        Me.panelRiwayat.Controls.Add(Me.Guna2TextBox1)
+        Me.panelRiwayat.Controls.Add(Me.lbRiwayatPembayaran)
+        Me.panelRiwayat.Controls.Add(Me.dgvRiwayat)
+        Me.transitionFormP.SetDecoration(Me.panelRiwayat, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.panelRiwayat.Location = New System.Drawing.Point(63, 38)
+        Me.panelRiwayat.Name = "panelRiwayat"
+        Me.panelRiwayat.Size = New System.Drawing.Size(843, 419)
+        Me.panelRiwayat.TabIndex = 20
+        Me.panelRiwayat.Visible = False
+        '
+        'Guna2TextBox1
+        '
+        Me.Guna2TextBox1.BorderColor = System.Drawing.Color.Empty
+        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.Guna2TextBox1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Guna2TextBox1.DefaultText = ""
+        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.Font = New System.Drawing.Font("Poppins", 14.0!)
+        Me.Guna2TextBox1.ForeColor = System.Drawing.Color.Black
+        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(988, 59)
+        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(5, 7, 5, 7)
+        Me.Guna2TextBox1.Name = "Guna2TextBox1"
+        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Transparent
+        Me.Guna2TextBox1.PlaceholderText = ""
+        Me.Guna2TextBox1.SelectedText = ""
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(314, 82)
+        Me.Guna2TextBox1.TabIndex = 11
+        '
+        'lbRiwayatPembayaran
+        '
+        Me.lbRiwayatPembayaran.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.lbRiwayatPembayaran, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.lbRiwayatPembayaran.Font = New System.Drawing.Font("Poppins", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbRiwayatPembayaran.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.lbRiwayatPembayaran.Location = New System.Drawing.Point(232, 0)
+        Me.lbRiwayatPembayaran.Name = "lbRiwayatPembayaran"
+        Me.lbRiwayatPembayaran.Size = New System.Drawing.Size(405, 62)
+        Me.lbRiwayatPembayaran.TabIndex = 1
+        Me.lbRiwayatPembayaran.Text = "Riwayat Pembayaran"
+        '
+        'dgvRiwayat
+        '
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgvRiwayat.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRiwayat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvRiwayat.ColumnHeadersHeight = 15
+        Me.dgvRiwayat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvRiwayat.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.noinvoice, Me.pelanggan, Me.total, Me.hapusRiwayat})
+        Me.transitionFormP.SetDecoration(Me.dgvRiwayat, Guna.UI2.AnimatorNS.DecorationType.None)
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvRiwayat.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvRiwayat.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRiwayat.Location = New System.Drawing.Point(14, 65)
+        Me.dgvRiwayat.Name = "dgvRiwayat"
+        Me.dgvRiwayat.RowHeadersVisible = False
+        Me.dgvRiwayat.Size = New System.Drawing.Size(815, 337)
+        Me.dgvRiwayat.TabIndex = 0
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvRiwayat.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvRiwayat.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.Height = 15
+        Me.dgvRiwayat.ThemeStyle.ReadOnly = False
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.Height = 22
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'noinvoice
+        '
+        Me.noinvoice.HeaderText = "Nomor Invoice"
+        Me.noinvoice.Name = "noinvoice"
+        '
+        'pelanggan
+        '
+        Me.pelanggan.HeaderText = "Nama Pelanggan"
+        Me.pelanggan.Name = "pelanggan"
+        '
+        'total
+        '
+        Me.total.HeaderText = "Total Pembelian"
+        Me.total.Name = "total"
+        '
+        'hapusRiwayat
+        '
+        Me.hapusRiwayat.HeaderText = ""
+        Me.hapusRiwayat.Name = "hapusRiwayat"
+        Me.hapusRiwayat.Text = "Hapus"
+        Me.hapusRiwayat.UseColumnTextForButtonValue = True
+        '
         'Admin_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(918, 506)
+        Me.Controls.Add(Me.panelRiwayat)
         Me.Controls.Add(Me.extendPage)
         Me.Controls.Add(Me.shortenPage)
         Me.Controls.Add(Me.panelMenu)
@@ -648,6 +784,9 @@ Partial Class Admin_Form
         Me.panelTambah.PerformLayout()
         CType(Me.dgvBarang, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numStock, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panelRiwayat.ResumeLayout(False)
+        Me.panelRiwayat.PerformLayout()
+        CType(Me.dgvRiwayat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -685,4 +824,12 @@ Partial Class Admin_Form
     Friend WithEvents idProduk As DataGridViewTextBoxColumn
     Friend WithEvents tbxID As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents panelRiwayat As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents lbRiwayatPembayaran As Label
+    Friend WithEvents dgvRiwayat As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents noinvoice As DataGridViewTextBoxColumn
+    Friend WithEvents pelanggan As DataGridViewTextBoxColumn
+    Friend WithEvents total As DataGridViewTextBoxColumn
+    Friend WithEvents hapusRiwayat As DataGridViewButtonColumn
 End Class

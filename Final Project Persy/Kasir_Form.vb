@@ -145,11 +145,9 @@ Public Class Kasir_Form
     End Sub
 
     Private Sub btnBersihkan_Click(sender As Object, e As EventArgs) Handles btnBersihkan.Click
-        For Each ctr In Me.Controls
-            If TypeOf ctr Is Guna2DataGridView Then
-                dgvBarang.Rows.Clear()
-            End If
-        Next
+        If dgvBarang.Rows.Count > 0 Then
+            dgvBarang.Rows.Clear()
+        End If
     End Sub
 
 
@@ -165,6 +163,7 @@ Public Class Kasir_Form
 
         panelListBarang.Visible = True
         panelPembayaran.Visible = False
+        panelRiwayat.Visible = False
     End Sub
 
     Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
@@ -176,6 +175,7 @@ Public Class Kasir_Form
 
         panelListBarang.Visible = False
         panelPembayaran.Visible = False
+        panelRiwayat.Visible = True
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -201,10 +201,14 @@ Public Class Kasir_Form
         panelListBarang.Width = 843
         dgvListBarang.Width = 817
 
-        lbPembayaran.Location = New Point(316, 0)
+        lbRiwayatPembayaran.Location = New Point(230, 0)
         panelPembayaran.Location = New Point(63, 60)
         panelPembayaran.Width = 843
         dgvBarang.Width = 502
+
+        panelRiwayat.Location = New Point(63, 60)
+        panelRiwayat.Width = 843
+        dgvRiwayat.Width = 817
 
         btnPanelPembayaran.Location = New Point(660, 371)
 
@@ -223,10 +227,14 @@ Public Class Kasir_Form
         panelListBarang.Width = 673
         dgvListBarang.Width = 626
 
-        lbPembayaran.Location = New Point(230, 0)
+        lbRiwayatPembayaran.Location = New Point(150, 0)
         panelPembayaran.Location = New Point(211, 60)
         panelPembayaran.Width = 673
         dgvBarang.Width = 332
+
+        panelRiwayat.Location = New Point(211, 60)
+        panelRiwayat.Width = 673
+        dgvRiwayat.Width = 626
 
         btnPanelPembayaran.Location = New Point(460, 371)
 
@@ -243,5 +251,9 @@ Public Class Kasir_Form
 
     Private Sub panelListBarang_Paint(sender As Object, e As PaintEventArgs) Handles panelListBarang.Paint
         Show_Data()
+    End Sub
+
+    Private Sub panelRiwayat_Paint(sender As Object, e As PaintEventArgs) Handles panelRiwayat.Paint
+        PersyModule.Show_Transaction(dgvRiwayat)
     End Sub
 End Class

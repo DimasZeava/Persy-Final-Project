@@ -24,6 +24,7 @@ Public Class Admin_Form
         btnDetail.Image = My.Resources.transaction_detail_white
         btnBarang.Image = My.Resources.product
         panelTambah.Visible = True
+        panelRiwayat.Visible = False
     End Sub
 
     Private Sub btnDetail_Click(sender As Object, e As EventArgs) Handles btnDetail.Click
@@ -33,6 +34,7 @@ Public Class Admin_Form
         btnBarang.Image = My.Resources.Barang
         btnDetail.Image = My.Resources.transaction_detail1
         panelTambah.Visible = False
+        panelRiwayat.Visible = True
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -56,6 +58,11 @@ Public Class Admin_Form
         panelTambah.Width = 824
         dgvBarang.Width = 521
 
+        lbRiwayatPembayaran.Location = New Point(230, 0)
+        panelRiwayat.Location = New Point(63, 60)
+        panelRiwayat.Width = 843
+        dgvRiwayat.Width = 817
+
         panelMenu.Visible = False
         panelMenu.Width = 46
 
@@ -69,6 +76,11 @@ Public Class Admin_Form
         panelTambah.Location = New Point(229, 38)
         panelTambah.Width = 662
         dgvBarang.Width = 321
+
+        lbRiwayatPembayaran.Location = New Point(150, 0)
+        panelRiwayat.Location = New Point(211, 60)
+        panelRiwayat.Width = 673
+        dgvRiwayat.Width = 626
 
         panelMenu.Visible = False
         panelMenu.Width = 204
@@ -151,4 +163,21 @@ Public Class Admin_Form
         End Try
     End Sub
 
+    Private Sub panelRiwayat_Paint(sender As Object, e As PaintEventArgs) Handles panelRiwayat.Paint
+        PersyModule.Show_Transaction(dgvRiwayat)
+    End Sub
+
+    Private Sub dgvRiwayat_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRiwayat.CellContentClick
+        If e.ColumnIndex = dgvBarang.Columns("hapus").Index AndAlso e.RowIndex >= 0 Then
+            dgvBarang.Rows.RemoveAt(e.RowIndex)
+
+            ds.Clear()
+            da = New MySqlDataAdapter("Delete from tbl_transaksi where column_name = " & e.ColumnIndex, conn)
+            da.Fill(ds, "transaksi")
+
+            ds.Clear()
+            da = New MySqlDataAdapter("Delete from tbl_detailtransaksi where no_invoice = '" & dgvBarang.Rows(0).ToString() & "'", conn)
+            da.Fill(ds, "detail")
+        End If
+    End Sub
 End Class
