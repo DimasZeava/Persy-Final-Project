@@ -168,16 +168,21 @@ Public Class Admin_Form
     End Sub
 
     Private Sub dgvRiwayat_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRiwayat.CellContentClick
-        If e.ColumnIndex = dgvBarang.Columns("hapus").Index AndAlso e.RowIndex >= 0 Then
-            dgvBarang.Rows.RemoveAt(e.RowIndex)
+        If e.ColumnIndex = dgvRiwayat.Columns("hapusRiwayat").Index AndAlso e.RowIndex >= 0 Then
+            Dim invoice As String = dgvRiwayat.Rows(e.RowIndex).Cells("noinvoice").Value.ToString()
 
             ds.Clear()
-            da = New MySqlDataAdapter("Delete from tbl_transaksi where column_name = " & e.ColumnIndex, conn)
-            da.Fill(ds, "transaksi")
-
-            ds.Clear()
-            da = New MySqlDataAdapter("Delete from tbl_detailtransaksi where no_invoice = '" & dgvBarang.Rows(0).ToString() & "'", conn)
+            da = New MySqlDataAdapter("Delete from tbl_detailtransaksi where no_invoice = @no_invoice", conn)
+            da.SelectCommand.Parameters.AddWithValue("@no_invoice", invoice)
             da.Fill(ds, "detail")
+
+            ds.Clear()
+            da = New MySqlDataAdapter("Delete from tbl_transaksi where no_invoice = @no_invoice", conn)
+            da.SelectCommand.Parameters.AddWithValue("@no_invoice", invoice)
+            da.Fill(ds, "transaksi")
+            ds.Clear()
+
+            PersyModule.Show_Transaction(dgvRiwayat)
         End If
     End Sub
 End Class

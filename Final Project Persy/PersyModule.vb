@@ -46,14 +46,21 @@ Module PersyModule
         Next
     End Sub
 
-    Public Sub total_value()
+    Public Sub total_value(ByVal data As DataGridView, ByVal tbx As Guna2TextBox)
         Dim total As Integer = 0
-        For Each row As DataGridViewRow In Kasir_Form.dgvBarang.Rows
-            If row.Cells("subtotal").Value IsNot Nothing Then
-                total += row.Cells("subtotal").Value
+        For Each row As DataGridViewRow In data.Rows
+            If data Is Kasir_Form.dgvBarang Or data Is Owner_Form.dgvDetail Then
+                If row.Cells("subtotal").Value IsNot Nothing Then
+                    total += row.Cells("subtotal").Value
+                End If
+            ElseIf data Is Owner_Form.dgvRiwayat Then
+                If row.Cells("total").Value IsNot Nothing Then
+                    total += row.Cells("total").Value
+                End If
             End If
+
         Next
-        Kasir_Form.tbxTotalPembayaran.Text = total.ToString()
+        tbx.Text = total.ToString()
     End Sub
 
     Public Sub Clicked_Color(ByVal button As Guna2GradientButton)

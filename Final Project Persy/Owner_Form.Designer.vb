@@ -23,8 +23,14 @@ Partial Class Owner_Form
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Owner_Form))
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelControl = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
@@ -42,9 +48,36 @@ Partial Class Owner_Form
         Me.extendPage = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.shortenPage = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.transitionFormP = New Guna.UI2.WinForms.Guna2Transition()
+        Me.panelRiwayat = New Guna.UI2.WinForms.Guna2Panel()
+        Me.panelDetail = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.tbxinvoice = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbxPelanggan = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btnClosePanel = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.dgvDetail = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.nama_produk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kategori = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.tbxPemasukan = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.lbRiwayatPembayaran = New System.Windows.Forms.Label()
+        Me.dgvRiwayat = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.noinvoice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.pelanggan = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tbxTotal = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.panelControl.SuspendLayout()
         Me.panelMenu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelRiwayat.SuspendLayout()
+        Me.panelDetail.SuspendLayout()
+        CType(Me.dgvDetail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvRiwayat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -329,22 +362,393 @@ Partial Class Owner_Form
         '
         Me.transitionFormP.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide
         Me.transitionFormP.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.transitionFormP.DefaultAnimation = Animation1
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.transitionFormP.DefaultAnimation = Animation2
+        '
+        'panelRiwayat
+        '
+        Me.panelRiwayat.Controls.Add(Me.panelDetail)
+        Me.panelRiwayat.Controls.Add(Me.Label1)
+        Me.panelRiwayat.Controls.Add(Me.tbxPemasukan)
+        Me.panelRiwayat.Controls.Add(Me.Guna2TextBox1)
+        Me.panelRiwayat.Controls.Add(Me.lbRiwayatPembayaran)
+        Me.panelRiwayat.Controls.Add(Me.dgvRiwayat)
+        Me.transitionFormP.SetDecoration(Me.panelRiwayat, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.panelRiwayat.Location = New System.Drawing.Point(63, 60)
+        Me.panelRiwayat.Name = "panelRiwayat"
+        Me.panelRiwayat.Size = New System.Drawing.Size(843, 419)
+        Me.panelRiwayat.TabIndex = 20
+        Me.panelRiwayat.Visible = False
+        '
+        'panelDetail
+        '
+        Me.panelDetail.BackColor = System.Drawing.Color.Transparent
+        Me.panelDetail.Controls.Add(Me.Label4)
+        Me.panelDetail.Controls.Add(Me.tbxTotal)
+        Me.panelDetail.Controls.Add(Me.Label3)
+        Me.panelDetail.Controls.Add(Me.Label2)
+        Me.panelDetail.Controls.Add(Me.tbxinvoice)
+        Me.panelDetail.Controls.Add(Me.tbxPelanggan)
+        Me.panelDetail.Controls.Add(Me.btnClosePanel)
+        Me.panelDetail.Controls.Add(Me.dgvDetail)
+        Me.transitionFormP.SetDecoration(Me.panelDetail, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.panelDetail.FillColor = System.Drawing.Color.White
+        Me.panelDetail.Location = New System.Drawing.Point(148, 27)
+        Me.panelDetail.Name = "panelDetail"
+        Me.panelDetail.ShadowColor = System.Drawing.Color.Black
+        Me.panelDetail.Size = New System.Drawing.Size(560, 375)
+        Me.panelDetail.TabIndex = 21
+        Me.panelDetail.Visible = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.Label3, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Label3.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(285, 14)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 22)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "No invoice"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.Label2, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(18, 14)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(114, 22)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Nama Pelanggan"
+        '
+        'tbxinvoice
+        '
+        Me.tbxinvoice.BorderRadius = 5
+        Me.tbxinvoice.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.tbxinvoice, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.tbxinvoice.DefaultText = ""
+        Me.tbxinvoice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxinvoice.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxinvoice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxinvoice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxinvoice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxinvoice.Font = New System.Drawing.Font("Poppins", 10.0!)
+        Me.tbxinvoice.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxinvoice.Location = New System.Drawing.Point(289, 39)
+        Me.tbxinvoice.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxinvoice.Name = "tbxinvoice"
+        Me.tbxinvoice.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxinvoice.PlaceholderText = "No Invoice"
+        Me.tbxinvoice.SelectedText = ""
+        Me.tbxinvoice.Size = New System.Drawing.Size(200, 37)
+        Me.tbxinvoice.TabIndex = 10
+        '
+        'tbxPelanggan
+        '
+        Me.tbxPelanggan.BorderRadius = 5
+        Me.tbxPelanggan.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.tbxPelanggan, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.tbxPelanggan.DefaultText = ""
+        Me.tbxPelanggan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxPelanggan.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxPelanggan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxPelanggan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxPelanggan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxPelanggan.Font = New System.Drawing.Font("Poppins", 10.0!)
+        Me.tbxPelanggan.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxPelanggan.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.user
+        Me.tbxPelanggan.Location = New System.Drawing.Point(22, 39)
+        Me.tbxPelanggan.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxPelanggan.Name = "tbxPelanggan"
+        Me.tbxPelanggan.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxPelanggan.PlaceholderText = "Nama Pelanggan"
+        Me.tbxPelanggan.SelectedText = ""
+        Me.tbxPelanggan.Size = New System.Drawing.Size(200, 37)
+        Me.tbxPelanggan.TabIndex = 9
+        '
+        'btnClosePanel
+        '
+        Me.transitionFormP.SetDecoration(Me.btnClosePanel, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnClosePanel.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnClosePanel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnClosePanel.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnClosePanel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnClosePanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnClosePanel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnClosePanel.ForeColor = System.Drawing.Color.White
+        Me.btnClosePanel.Location = New System.Drawing.Point(512, 14)
+        Me.btnClosePanel.Name = "btnClosePanel"
+        Me.btnClosePanel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.btnClosePanel.Size = New System.Drawing.Size(35, 35)
+        Me.btnClosePanel.TabIndex = 8
+        Me.btnClosePanel.Text = "X"
+        '
+        'dgvDetail
+        '
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.dgvDetail.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvDetail.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.dgvDetail.ColumnHeadersHeight = 4
+        Me.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvDetail.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nama_produk, Me.kategori, Me.jumlah, Me.harga, Me.subtotal})
+        Me.transitionFormP.SetDecoration(Me.dgvDetail, Guna.UI2.AnimatorNS.DecorationType.None)
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDetail.DefaultCellStyle = DataGridViewCellStyle9
+        Me.dgvDetail.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDetail.Location = New System.Drawing.Point(22, 83)
+        Me.dgvDetail.Name = "dgvDetail"
+        Me.dgvDetail.RowHeadersVisible = False
+        Me.dgvDetail.Size = New System.Drawing.Size(509, 205)
+        Me.dgvDetail.TabIndex = 0
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvDetail.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvDetail.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDetail.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDetail.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvDetail.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvDetail.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvDetail.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvDetail.ThemeStyle.HeaderStyle.Height = 4
+        Me.dgvDetail.ThemeStyle.ReadOnly = False
+        Me.dgvDetail.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvDetail.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvDetail.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvDetail.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgvDetail.ThemeStyle.RowsStyle.Height = 22
+        Me.dgvDetail.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDetail.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'nama_produk
+        '
+        Me.nama_produk.HeaderText = "Nama Produk"
+        Me.nama_produk.Name = "nama_produk"
+        '
+        'kategori
+        '
+        Me.kategori.HeaderText = "Kategori"
+        Me.kategori.Name = "kategori"
+        '
+        'jumlah
+        '
+        Me.jumlah.HeaderText = "Jumlah"
+        Me.jumlah.Name = "jumlah"
+        '
+        'harga
+        '
+        Me.harga.HeaderText = "Harga"
+        Me.harga.Name = "harga"
+        '
+        'subtotal
+        '
+        Me.subtotal.HeaderText = "Sub Total"
+        Me.subtotal.Name = "subtotal"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.Label1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Label1.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(8, 335)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(105, 28)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "Pemasukan"
+        '
+        'tbxPemasukan
+        '
+        Me.tbxPemasukan.BorderColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.tbxPemasukan.BorderRadius = 5
+        Me.tbxPemasukan.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.tbxPemasukan, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.tbxPemasukan.DefaultText = ""
+        Me.tbxPemasukan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxPemasukan.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxPemasukan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxPemasukan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxPemasukan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxPemasukan.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.tbxPemasukan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.tbxPemasukan.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxPemasukan.Location = New System.Drawing.Point(14, 366)
+        Me.tbxPemasukan.Name = "tbxPemasukan"
+        Me.tbxPemasukan.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxPemasukan.PlaceholderText = "Total Pemasukan"
+        Me.tbxPemasukan.SelectedText = ""
+        Me.tbxPemasukan.Size = New System.Drawing.Size(256, 36)
+        Me.tbxPemasukan.TabIndex = 12
+        '
+        'Guna2TextBox1
+        '
+        Me.Guna2TextBox1.BorderColor = System.Drawing.Color.Empty
+        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.Guna2TextBox1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Guna2TextBox1.DefaultText = ""
+        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.Font = New System.Drawing.Font("Poppins", 14.0!)
+        Me.Guna2TextBox1.ForeColor = System.Drawing.Color.Black
+        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(988, 59)
+        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(5, 7, 5, 7)
+        Me.Guna2TextBox1.Name = "Guna2TextBox1"
+        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Transparent
+        Me.Guna2TextBox1.PlaceholderText = ""
+        Me.Guna2TextBox1.SelectedText = ""
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(314, 82)
+        Me.Guna2TextBox1.TabIndex = 11
+        '
+        'lbRiwayatPembayaran
+        '
+        Me.lbRiwayatPembayaran.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.lbRiwayatPembayaran, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.lbRiwayatPembayaran.Font = New System.Drawing.Font("Poppins", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbRiwayatPembayaran.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.lbRiwayatPembayaran.Location = New System.Drawing.Point(232, 0)
+        Me.lbRiwayatPembayaran.Name = "lbRiwayatPembayaran"
+        Me.lbRiwayatPembayaran.Size = New System.Drawing.Size(405, 62)
+        Me.lbRiwayatPembayaran.TabIndex = 1
+        Me.lbRiwayatPembayaran.Text = "Riwayat Pembayaran"
+        '
+        'dgvRiwayat
+        '
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        Me.dgvRiwayat.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRiwayat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        Me.dgvRiwayat.ColumnHeadersHeight = 15
+        Me.dgvRiwayat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvRiwayat.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.noinvoice, Me.pelanggan, Me.total})
+        Me.transitionFormP.SetDecoration(Me.dgvRiwayat, Guna.UI2.AnimatorNS.DecorationType.None)
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvRiwayat.DefaultCellStyle = DataGridViewCellStyle12
+        Me.dgvRiwayat.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRiwayat.Location = New System.Drawing.Point(14, 65)
+        Me.dgvRiwayat.Name = "dgvRiwayat"
+        Me.dgvRiwayat.RowHeadersVisible = False
+        Me.dgvRiwayat.Size = New System.Drawing.Size(815, 268)
+        Me.dgvRiwayat.TabIndex = 0
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvRiwayat.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvRiwayat.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvRiwayat.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvRiwayat.ThemeStyle.HeaderStyle.Height = 15
+        Me.dgvRiwayat.ThemeStyle.ReadOnly = False
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.Height = 22
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRiwayat.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'noinvoice
+        '
+        Me.noinvoice.HeaderText = "Nomor Invoice"
+        Me.noinvoice.Name = "noinvoice"
+        '
+        'pelanggan
+        '
+        Me.pelanggan.HeaderText = "Nama Pelanggan"
+        Me.pelanggan.Name = "pelanggan"
+        '
+        'total
+        '
+        Me.total.HeaderText = "Total Pembelian"
+        Me.total.Name = "total"
+        '
+        'tbxTotal
+        '
+        Me.tbxTotal.BorderRadius = 5
+        Me.tbxTotal.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.tbxTotal, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.tbxTotal.DefaultText = ""
+        Me.tbxTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxTotal.Font = New System.Drawing.Font("Poppins", 10.0!)
+        Me.tbxTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxTotal.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.rupiah
+        Me.tbxTotal.Location = New System.Drawing.Point(331, 330)
+        Me.tbxTotal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxTotal.Name = "tbxTotal"
+        Me.tbxTotal.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxTotal.PlaceholderText = "Total"
+        Me.tbxTotal.SelectedText = ""
+        Me.tbxTotal.Size = New System.Drawing.Size(200, 37)
+        Me.tbxTotal.TabIndex = 13
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.Label4, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Label4.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(327, 304)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 22)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "Total"
         '
         'Owner_Form
         '
@@ -352,6 +756,7 @@ Partial Class Owner_Form
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(918, 506)
+        Me.Controls.Add(Me.panelRiwayat)
         Me.Controls.Add(Me.extendPage)
         Me.Controls.Add(Me.shortenPage)
         Me.Controls.Add(Me.panelMenu)
@@ -364,6 +769,12 @@ Partial Class Owner_Form
         Me.panelControl.ResumeLayout(False)
         Me.panelMenu.ResumeLayout(False)
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panelRiwayat.ResumeLayout(False)
+        Me.panelRiwayat.PerformLayout()
+        Me.panelDetail.ResumeLayout(False)
+        Me.panelDetail.PerformLayout()
+        CType(Me.dgvDetail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvRiwayat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -385,4 +796,27 @@ Partial Class Owner_Form
     Friend WithEvents extendPage As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents transitionFormP As Guna.UI2.WinForms.Guna2Transition
     Friend WithEvents btnReport As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents panelRiwayat As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents tbxPemasukan As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents lbRiwayatPembayaran As Label
+    Friend WithEvents dgvRiwayat As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents noinvoice As DataGridViewTextBoxColumn
+    Friend WithEvents pelanggan As DataGridViewTextBoxColumn
+    Friend WithEvents total As DataGridViewTextBoxColumn
+    Friend WithEvents Label1 As Label
+    Friend WithEvents panelDetail As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents dgvDetail As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents btnClosePanel As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents nama_produk As DataGridViewTextBoxColumn
+    Friend WithEvents kategori As DataGridViewTextBoxColumn
+    Friend WithEvents jumlah As DataGridViewTextBoxColumn
+    Friend WithEvents harga As DataGridViewTextBoxColumn
+    Friend WithEvents subtotal As DataGridViewTextBoxColumn
+    Friend WithEvents tbxinvoice As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbxPelanggan As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents tbxTotal As Guna.UI2.WinForms.Guna2TextBox
 End Class
