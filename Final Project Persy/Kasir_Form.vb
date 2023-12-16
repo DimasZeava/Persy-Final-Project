@@ -99,13 +99,13 @@ Public Class Kasir_Form
         If e.ColumnIndex = dgvBarang.Columns("hapus").Index AndAlso e.RowIndex >= 0 Then
             dgvBarang.Rows.RemoveAt(e.RowIndex)
         End If
-        PersyModule.total_value(dgvRiwayat, tbxTotalPembayaran)
+        PersyModule.total_value(dgvBarang, tbxTotalPembayaran)
     End Sub
 
     Private Sub btnPanelPembayaran_Click(sender As Object, e As EventArgs) Handles btnPanelPembayaran.Click
         panelPembayaran.Visible = True
         panelListBarang.Visible = False
-        PersyModule.total_value(dgvRiwayat, tbxTotalPembayaran)
+        PersyModule.total_value(dgvBarang, tbxTotalPembayaran)
     End Sub
 
     Private Sub btnKonfirmasi_Click(sender As Object, e As EventArgs) Handles btnKonfirmasi.Click
@@ -139,10 +139,11 @@ Public Class Kasir_Form
                 End If
             End If
         Next
-        'no_invoice = tbxInvoice.Text
+        no_invoice = tbxInvoice.Text
         PersyModule.ClearPanel(panelPembayaran)
         dgvBarang.Rows.Clear()
         Invoice()
+        Struk.Show()
     End Sub
 
     Private Sub btnBersihkan_Click(sender As Object, e As EventArgs) Handles btnBersihkan.Click

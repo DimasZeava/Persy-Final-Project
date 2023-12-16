@@ -42,6 +42,7 @@
         btnProfile.Image = My.Resources.output_onlinepngtools__1_
 
         panelRiwayat.Visible = False
+        panelReport.Visible = False
     End Sub
 
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
@@ -57,6 +58,7 @@
         btnProfile.Image = My.Resources.output_onlinepngtools__1_
 
         panelRiwayat.Visible = False
+        panelReport.Visible = True
     End Sub
 
     Private Sub btnProfile_Click(sender As Object, e As EventArgs) Handles btnProfile.Click
@@ -72,6 +74,7 @@
         btnProfile.Image = My.Resources.user1
 
         panelRiwayat.Visible = False
+        panelReport.Visible = False
     End Sub
 
     Private Sub btnDetail_Click(sender As Object, e As EventArgs) Handles btnDetail.Click
@@ -87,6 +90,7 @@
         btnProfile.Image = My.Resources.output_onlinepngtools__1_
 
         panelRiwayat.Visible = True
+        panelReport.Visible = False
     End Sub
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         PersyModule.Restore_Color(btnHome)
@@ -101,6 +105,7 @@
         btnProfile.Image = My.Resources.output_onlinepngtools__1_
 
         panelRiwayat.Visible = False
+        panelReport.Visible = False
 
         Me.Hide()
         Login.Show()
@@ -112,6 +117,10 @@
         panelMenu.Visible = False
         panelMenu.Width = 46
 
+        panelRiwayat.Location = New Point(63, 60)
+        panelRiwayat.Width = 843
+        dgvRiwayat.Width = 817
+
         transitionFormP.ShowSync(panelMenu)
     End Sub
 
@@ -120,6 +129,10 @@
         shortenPage.Visible = True
         panelMenu.Visible = False
         panelMenu.Width = 204
+
+        panelRiwayat.Location = New Point(211, 60)
+        panelRiwayat.Width = 673
+        dgvRiwayat.Width = 626
 
         transitionFormP.ShowSync(panelMenu)
     End Sub
@@ -160,5 +173,9 @@
 
     Private Sub Owner_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         connection()
+    End Sub
+
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        CrystalReport.Show()
     End Sub
 End Class

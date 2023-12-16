@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsLaporan" targetNamespace="http://tempuri.org/dsLaporan.xsd" xmlns:mstns="http://tempuri.org/dsLaporan.xsd" xmlns="http://tempuri.org/dsLaporan.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsLaporan" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsLaporan" msprop:Generator_UserDSName="dsLaporan">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tabel_transaksi" msprop:Generator_TableClassName="tabel_transaksiDataTable" msprop:Generator_TableVarName="tabletabel_transaksi" msprop:Generator_TablePropName="tabel_transaksi" msprop:Generator_RowDeletingName="tabel_transaksiRowDeleting" msprop:Generator_RowChangingName="tabel_transaksiRowChanging" msprop:Generator_RowEvHandlerName="tabel_transaksiRowChangeEventHandler" msprop:Generator_RowDeletedName="tabel_transaksiRowDeleted" msprop:Generator_UserTableName="tabel_transaksi" msprop:Generator_RowChangedName="tabel_transaksiRowChanged" msprop:Generator_RowEvArgName="tabel_transaksiRowChangeEvent" msprop:Generator_RowClassName="tabel_transaksiRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no_invoice" msprop:Generator_ColumnVarNameInTable="columnno_invoice" msprop:Generator_ColumnPropNameInRow="no_invoice" msprop:Generator_ColumnPropNameInTable="no_invoiceColumn" msprop:Generator_UserColumnName="no_invoice" type="xs:string" minOccurs="0" />
+              <xs:element name="nama_pembeli" msprop:Generator_ColumnVarNameInTable="columnnama_pembeli" msprop:Generator_ColumnPropNameInRow="nama_pembeli" msprop:Generator_ColumnPropNameInTable="nama_pembeliColumn" msprop:Generator_UserColumnName="nama_pembeli" type="xs:string" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -5,6 +5,7 @@ Module PersyModule
     Public da As New MySqlDataAdapter
     Public ds As New DataSet
 
+    Public no_invoice As String
     Public Sub connection()
         conn = New MySqlConnection("
                                     server  = localhost ;
@@ -58,7 +59,6 @@ Module PersyModule
                     total += row.Cells("total").Value
                 End If
             End If
-
         Next
         tbx.Text = total.ToString()
     End Sub
