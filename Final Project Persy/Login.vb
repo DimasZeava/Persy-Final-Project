@@ -50,7 +50,7 @@ Public Class Login
                     End If
 
                     If tgswRemember.Checked = False Then
-                        PersyModule.Clear(panelLogin)
+                        PersyModule.ClearShadowPanel(panelLogin)
                     End If
                 Else
                     UNPFalse.Visible = True
@@ -148,7 +148,7 @@ Public Class Login
 
             da.Fill(ds, "Data")
 
-            PersyModule.Clear(panelRegister)
+            PersyModule.ClearShadowPanel(panelRegister)
             panelFPass.Hide()
             panelRegister.Hide()
             panelLogin.Show()
@@ -196,7 +196,7 @@ Public Class Login
             da.SelectCommand.Parameters.AddWithValue("user_password", tbxFPPass.Text)
             da.Fill(ds, "Data")
 
-            PersyModule.Clear(panelFPass)
+            PersyModule.ClearShadowPanel(panelFPass)
             panelFPass.Hide()
             panelRegister.Hide()
             panelLogin.Show()

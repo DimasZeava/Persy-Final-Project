@@ -150,4 +150,5 @@ Public Class Admin_Form
             MessageBox.Show("Error dalam mengapus data" & ex.Message)
         End Try
     End Sub
+
 End Class

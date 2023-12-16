@@ -12,7 +12,7 @@ Module PersyModule
                                     password = ;
                                     database = db_persy2")
     End Sub
-    Public Sub Clear(ByVal panel As Guna2ShadowPanel)
+    Public Sub ClearShadowPanel(ByVal panel As Guna2ShadowPanel)
         For Each ctr As Control In panel.Controls
             If TypeOf ctr Is Guna2TextBox Then
                 ctr.Text = ""
@@ -31,6 +31,16 @@ Module PersyModule
                 DirectCast(ctr, Guna2NumericUpDown).Value = 0
             End If
         Next
+    End Sub
+
+    Public Sub total_value()
+        Dim total As Integer = 0
+        For Each row As DataGridViewRow In Kasir_Form.dgvBarang.Rows
+            If row.Cells("subtotal").Value IsNot Nothing Then
+                total += row.Cells("subtotal").Value
+            End If
+        Next
+        Kasir_Form.tbxTotalPembayaran.Text = total.ToString()
     End Sub
 
     Public Sub Clicked_Color(ByVal button As Guna2GradientButton)
