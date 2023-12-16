@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Des 2023 pada 02.30
+-- Waktu pembuatan: 15 Des 2023 pada 08.57
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -35,6 +35,16 @@ CREATE TABLE `tbl_detailtransaksi` (
   `subtotal` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `tbl_detailtransaksi`
+--
+
+INSERT INTO `tbl_detailtransaksi` (`id_detail`, `no_invoice`, `id_produk`, `jumlah`, `subtotal`) VALUES
+(28, 'INV/001/12/2023', 'CP001', 1, 33000),
+(29, 'INV/002/12/2023', 'CP001', 1, 33000),
+(30, 'INV/006/12/2023', 'CP001', 1, 33000),
+(31, 'INV/007/12/2023', 'CP001', 1, 33000);
+
 -- --------------------------------------------------------
 
 --
@@ -49,6 +59,17 @@ CREATE TABLE `tbl_produk` (
   `kategori` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `tbl_produk`
+--
+
+INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `harga`, `stock`, `kategori`) VALUES
+('CP001', 'Sekar Jagat', 33000, 10, 'Car Parfume'),
+('CP002', 'Sido Asih', 40000, 10, 'Car Parfume'),
+('HP001', 'Sekar Jagat', 33000, 10, 'Homer Diffuser'),
+('HP002', 'Sido Asih', 33000, 10, 'Homer Diffuser'),
+('PP001', 'Anjani', 33000, 20, 'Personality Parfume');
+
 -- --------------------------------------------------------
 
 --
@@ -60,6 +81,19 @@ CREATE TABLE `tbl_transaksi` (
   `nama_pembeli` varchar(100) DEFAULT NULL,
   `total` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `tbl_transaksi`
+--
+
+INSERT INTO `tbl_transaksi` (`no_invoice`, `nama_pembeli`, `total`) VALUES
+('INV/001/12/2023', 'Op', 66000),
+('INV/002/12/2023', 'sari', 66000),
+('INV/003/12/2023', 'Ste', 132000),
+('INV/004/12/2023', 'dis', 66000),
+('INV/005/12/2023', 'ri', 66000),
+('INV/006/12/2023', 'rahmat', 66000),
+('INV/007/12/2023', 'ye', 219000);
 
 -- --------------------------------------------------------
 
@@ -80,9 +114,11 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id_user`, `username`, `email`, `user_password`, `role`) VALUES
-('ADM001', 'Dimas Admin', 'admin@gmail.com', 'admin1', 'Admin'),
+('ADM001', 'Dimas Admin', 'admin@gmail.com', 'admin', 'Admin'),
+('ADM002', 'Dimas Irmansyah', 'dimas@gmail.com', 'dimas1', 'Admin'),
 ('CSR001', 'Kasir', 'kasir@gmail.com', 'kasir', 'Kasir'),
-('OWN001', 'Dimas Irmannsyah', 'dummyowner@gmail.com', 'owner', 'Owner');
+('OWN001', 'Dimas Irmannsyah', 'dummyowner@gmail.com', 'owner', 'Owner'),
+('OWN002', 'Dimas Firmansyah', 'dimas@gmail.com', 'dimas1', 'Owner');
 
 --
 -- Indexes for dumped tables
@@ -122,7 +158,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT untuk tabel `tbl_detailtransaksi`
 --
 ALTER TABLE `tbl_detailtransaksi`
-  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
