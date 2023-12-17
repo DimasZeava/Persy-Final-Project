@@ -185,4 +185,8 @@ Public Class Admin_Form
             PersyModule.Show_Transaction(dgvRiwayat)
         End If
     End Sub
+
+    Private Sub lbRiwayatPembayaran_Click(sender As Object, e As EventArgs) Handles lbRiwayatPembayaran.Click
+
+    End Sub
 End Class

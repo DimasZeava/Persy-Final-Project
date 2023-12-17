@@ -63,7 +63,6 @@ Partial Class Admin_Form
         Me.tbxKategori = New Guna.UI2.WinForms.Guna2TextBox()
         Me.extendPage = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.shortenPage = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.panelRiwayat = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lbRiwayatPembayaran = New System.Windows.Forms.Label()
@@ -72,6 +71,7 @@ Partial Class Admin_Form
         Me.pelanggan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.hapusRiwayat = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.panelMenu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelControl.SuspendLayout()
@@ -634,12 +634,6 @@ Partial Class Admin_Form
         Me.shortenPage.UseTransparentBackground = True
         Me.shortenPage.Visible = False
         '
-        'Guna2DragControl1
-        '
-        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2DragControl1.TargetControl = Me
-        Me.Guna2DragControl1.UseTransparentDrag = True
-        '
         'panelRiwayat
         '
         Me.panelRiwayat.Controls.Add(Me.Guna2TextBox1)
@@ -761,6 +755,12 @@ Partial Class Admin_Form
         Me.hapusRiwayat.Name = "hapusRiwayat"
         Me.hapusRiwayat.Text = "Hapus"
         Me.hapusRiwayat.UseColumnTextForButtonValue = True
+        '
+        'Guna2DragControl1
+        '
+        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl1.TargetControl = Me
+        Me.Guna2DragControl1.UseTransparentDrag = True
         '
         'Admin_Form
         '

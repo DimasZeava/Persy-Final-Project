@@ -31,7 +31,6 @@ Partial Class Login
         Me.lkRegister = New System.Windows.Forms.LinkLabel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DragControlPicture = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.panelControl = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.btnClose = New Guna.UI2.WinForms.Guna2ControlBox()
@@ -41,11 +40,6 @@ Partial Class Login
         Me.UNPFalse = New System.Windows.Forms.Label()
         Me.userIsNot = New System.Windows.Forms.Label()
         Me.passwordIsNot = New System.Windows.Forms.Label()
-        Me.iconShow = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.iconHidenew = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.tbxPassLogin = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.tbxUserLogin = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.iconHide = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.panelRegister = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.emailCheckFalse = New System.Windows.Forms.Label()
         Me.roleIsNotReg = New System.Windows.Forms.Label()
@@ -53,47 +47,53 @@ Partial Class Login
         Me.mailIsNotReg = New System.Windows.Forms.Label()
         Me.userIsNotReg = New System.Windows.Forms.Label()
         Me.dataNotAcquire = New System.Windows.Forms.Label()
-        Me.iconShowReg = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.iconHideReg = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.cbRoles = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.btnBacklogin = New Guna.UI2.WinForms.Guna2Button()
-        Me.tbxCPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnRegister = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.tbxCEmail = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.tbxCUser = New Guna.UI2.WinForms.Guna2TextBox()
         Me.panelFPass = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.emailNotFound = New System.Windows.Forms.Label()
         Me.rpassIsNotFP = New System.Windows.Forms.Label()
         Me.passwordIsNotFP = New System.Windows.Forms.Label()
         Me.mailIsNotFP = New System.Windows.Forms.Label()
         Me.noTextFP = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnGanti = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.AnimateWindow = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
+        Me.DragControlPanel = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.iconShow = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.iconHidenew = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.tbxPassLogin = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbxUserLogin = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.iconHide = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.iconShowReg = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.iconHideReg = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.btnBacklogin = New Guna.UI2.WinForms.Guna2Button()
+        Me.tbxCPass = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbxCEmail = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbxCUser = New Guna.UI2.WinForms.Guna2TextBox()
         Me.iconShowRP = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.iconHideRP = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.tbxFPPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnFPBackLogin = New Guna.UI2.WinForms.Guna2Button()
         Me.iconShowNP = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.iconHideNP = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.btnGanti = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.tbxFPNewPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbxFPEmail = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.AnimateWindow = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
-        Me.DragControlPanel = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.panelControl.SuspendLayout()
         Me.panelLogin.SuspendLayout()
+        Me.panelRegister.SuspendLayout()
+        Me.panelFPass.SuspendLayout()
         CType(Me.iconShow, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.iconHidenew, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.iconHide, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panelRegister.SuspendLayout()
         CType(Me.iconShowReg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.iconHideReg, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panelFPass.SuspendLayout()
         CType(Me.iconShowRP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.iconHideRP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.iconShowNP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.iconHideNP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FormElipse
@@ -180,17 +180,6 @@ Partial Class Login
         Me.DragControlPicture.DockIndicatorTransparencyValue = 0.6R
         Me.DragControlPicture.TargetControl = Me.Guna2PictureBox1
         Me.DragControlPicture.TransparentWhileDrag = False
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Image = Global.Final_Project_Persy.My.Resources.Resources.rm222_mind_19
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(0, 38)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(821, 477)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 18
-        Me.Guna2PictureBox1.TabStop = False
         '
         'panelControl
         '
@@ -302,85 +291,6 @@ Partial Class Login
         Me.passwordIsNot.Text = "Mohon isi password anda"
         Me.passwordIsNot.Visible = False
         '
-        'iconShow
-        '
-        Me.iconShow.Image = Global.Final_Project_Persy.My.Resources.Resources.show
-        Me.iconShow.ImageRotate = 0!
-        Me.iconShow.Location = New System.Drawing.Point(255, 132)
-        Me.iconShow.Name = "iconShow"
-        Me.iconShow.Size = New System.Drawing.Size(25, 25)
-        Me.iconShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.iconShow.TabIndex = 9
-        Me.iconShow.TabStop = False
-        '
-        'iconHidenew
-        '
-        Me.iconHidenew.Image = Global.Final_Project_Persy.My.Resources.Resources.hide
-        Me.iconHidenew.ImageRotate = 0!
-        Me.iconHidenew.Location = New System.Drawing.Point(255, 132)
-        Me.iconHidenew.Name = "iconHidenew"
-        Me.iconHidenew.Size = New System.Drawing.Size(25, 25)
-        Me.iconHidenew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.iconHidenew.TabIndex = 11
-        Me.iconHidenew.TabStop = False
-        '
-        'tbxPassLogin
-        '
-        Me.tbxPassLogin.BorderRadius = 10
-        Me.tbxPassLogin.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbxPassLogin.DefaultText = ""
-        Me.tbxPassLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxPassLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxPassLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxPassLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxPassLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxPassLogin.Font = New System.Drawing.Font("Poppins", 9.75!)
-        Me.tbxPassLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxPassLogin.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.padlock
-        Me.tbxPassLogin.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.tbxPassLogin.Location = New System.Drawing.Point(43, 122)
-        Me.tbxPassLogin.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbxPassLogin.Name = "tbxPassLogin"
-        Me.tbxPassLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.tbxPassLogin.PlaceholderText = "Password"
-        Me.tbxPassLogin.SelectedText = ""
-        Me.tbxPassLogin.Size = New System.Drawing.Size(247, 44)
-        Me.tbxPassLogin.TabIndex = 2
-        '
-        'tbxUserLogin
-        '
-        Me.tbxUserLogin.BorderRadius = 10
-        Me.tbxUserLogin.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbxUserLogin.DefaultText = ""
-        Me.tbxUserLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxUserLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxUserLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxUserLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxUserLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxUserLogin.Font = New System.Drawing.Font("Poppins", 9.75!)
-        Me.tbxUserLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxUserLogin.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.user
-        Me.tbxUserLogin.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.tbxUserLogin.Location = New System.Drawing.Point(43, 70)
-        Me.tbxUserLogin.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbxUserLogin.Name = "tbxUserLogin"
-        Me.tbxUserLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbxUserLogin.PlaceholderText = "Username"
-        Me.tbxUserLogin.SelectedText = ""
-        Me.tbxUserLogin.Size = New System.Drawing.Size(247, 44)
-        Me.tbxUserLogin.TabIndex = 1
-        '
-        'iconHide
-        '
-        Me.iconHide.Image = Global.Final_Project_Persy.My.Resources.Resources.hide
-        Me.iconHide.ImageRotate = 0!
-        Me.iconHide.Location = New System.Drawing.Point(255, 132)
-        Me.iconHide.Name = "iconHide"
-        Me.iconHide.Size = New System.Drawing.Size(25, 25)
-        Me.iconHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.iconHide.TabIndex = 10
-        Me.iconHide.TabStop = False
-        '
         'panelRegister
         '
         Me.panelRegister.BackColor = System.Drawing.Color.Transparent
@@ -479,28 +389,6 @@ Partial Class Login
         Me.dataNotAcquire.Text = "Tolong lengkapi data anda"
         Me.dataNotAcquire.Visible = False
         '
-        'iconShowReg
-        '
-        Me.iconShowReg.Image = Global.Final_Project_Persy.My.Resources.Resources.show
-        Me.iconShowReg.ImageRotate = 0!
-        Me.iconShowReg.Location = New System.Drawing.Point(255, 183)
-        Me.iconShowReg.Name = "iconShowReg"
-        Me.iconShowReg.Size = New System.Drawing.Size(25, 25)
-        Me.iconShowReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.iconShowReg.TabIndex = 12
-        Me.iconShowReg.TabStop = False
-        '
-        'iconHideReg
-        '
-        Me.iconHideReg.Image = Global.Final_Project_Persy.My.Resources.Resources.hide
-        Me.iconHideReg.ImageRotate = 0!
-        Me.iconHideReg.Location = New System.Drawing.Point(255, 183)
-        Me.iconHideReg.Name = "iconHideReg"
-        Me.iconHideReg.Size = New System.Drawing.Size(25, 25)
-        Me.iconHideReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.iconHideReg.TabIndex = 13
-        Me.iconHideReg.TabStop = False
-        '
         'cbRoles
         '
         Me.cbRoles.AutoRoundedCorners = True
@@ -518,49 +406,6 @@ Partial Class Login
         Me.cbRoles.Name = "cbRoles"
         Me.cbRoles.Size = New System.Drawing.Size(247, 36)
         Me.cbRoles.TabIndex = 11
-        '
-        'btnBacklogin
-        '
-        Me.btnBacklogin.Animated = True
-        Me.btnBacklogin.AutoRoundedCorners = True
-        Me.btnBacklogin.BorderRadius = 21
-        Me.btnBacklogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnBacklogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnBacklogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnBacklogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnBacklogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(246, Byte), Integer))
-        Me.btnBacklogin.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnBacklogin.ForeColor = System.Drawing.Color.Black
-        Me.btnBacklogin.Image = Global.Final_Project_Persy.My.Resources.Resources.right_arrow
-        Me.btnBacklogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.btnBacklogin.Location = New System.Drawing.Point(79, 336)
-        Me.btnBacklogin.Name = "btnBacklogin"
-        Me.btnBacklogin.Size = New System.Drawing.Size(180, 45)
-        Me.btnBacklogin.TabIndex = 10
-        Me.btnBacklogin.Text = "Kembali ke Login"
-        '
-        'tbxCPass
-        '
-        Me.tbxCPass.BorderRadius = 10
-        Me.tbxCPass.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbxCPass.DefaultText = ""
-        Me.tbxCPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxCPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxCPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxCPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxCPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxCPass.Font = New System.Drawing.Font("Poppins", 9.75!)
-        Me.tbxCPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxCPass.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.padlock
-        Me.tbxCPass.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.tbxCPass.Location = New System.Drawing.Point(43, 175)
-        Me.tbxCPass.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbxCPass.Name = "tbxCPass"
-        Me.tbxCPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.tbxCPass.PlaceholderText = "Password"
-        Me.tbxCPass.SelectedText = ""
-        Me.tbxCPass.Size = New System.Drawing.Size(247, 44)
-        Me.tbxCPass.TabIndex = 9
         '
         'Label3
         '
@@ -588,52 +433,6 @@ Partial Class Login
         Me.btnRegister.Size = New System.Drawing.Size(180, 38)
         Me.btnRegister.TabIndex = 5
         Me.btnRegister.Text = "DAFTAR"
-        '
-        'tbxCEmail
-        '
-        Me.tbxCEmail.BorderRadius = 10
-        Me.tbxCEmail.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbxCEmail.DefaultText = ""
-        Me.tbxCEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxCEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxCEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxCEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxCEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxCEmail.Font = New System.Drawing.Font("Poppins", 9.75!)
-        Me.tbxCEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxCEmail.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.mail
-        Me.tbxCEmail.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.tbxCEmail.Location = New System.Drawing.Point(43, 122)
-        Me.tbxCEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbxCEmail.Name = "tbxCEmail"
-        Me.tbxCEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbxCEmail.PlaceholderText = "example@gmail.com"
-        Me.tbxCEmail.SelectedText = ""
-        Me.tbxCEmail.Size = New System.Drawing.Size(247, 44)
-        Me.tbxCEmail.TabIndex = 2
-        '
-        'tbxCUser
-        '
-        Me.tbxCUser.BorderRadius = 10
-        Me.tbxCUser.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbxCUser.DefaultText = ""
-        Me.tbxCUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxCUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxCUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxCUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxCUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxCUser.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbxCUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxCUser.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.user
-        Me.tbxCUser.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.tbxCUser.Location = New System.Drawing.Point(43, 70)
-        Me.tbxCUser.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbxCUser.Name = "tbxCUser"
-        Me.tbxCUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbxCUser.PlaceholderText = "Username"
-        Me.tbxCUser.SelectedText = ""
-        Me.tbxCUser.Size = New System.Drawing.Size(247, 44)
-        Me.tbxCUser.TabIndex = 1
         '
         'panelFPass
         '
@@ -720,6 +519,234 @@ Partial Class Login
         Me.noTextFP.TabIndex = 18
         Me.noTextFP.Text = "Tolong input data anda"
         Me.noTextFP.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label4.Location = New System.Drawing.Point(40, 18)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(251, 48)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Forgot Password"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'btnGanti
+        '
+        Me.btnGanti.Animated = True
+        Me.btnGanti.AutoRoundedCorners = True
+        Me.btnGanti.BorderRadius = 18
+        Me.btnGanti.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnGanti.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(16, Byte), Integer))
+        Me.btnGanti.Font = New System.Drawing.Font("Poppins SemiBold", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnGanti.ForeColor = System.Drawing.Color.White
+        Me.btnGanti.Location = New System.Drawing.Point(76, 292)
+        Me.btnGanti.Name = "btnGanti"
+        Me.btnGanti.Size = New System.Drawing.Size(180, 38)
+        Me.btnGanti.TabIndex = 5
+        Me.btnGanti.Text = "GANTI"
+        '
+        'AnimateWindow
+        '
+        Me.AnimateWindow.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_HIDE
+        Me.AnimateWindow.TargetForm = Me
+        '
+        'DragControlPanel
+        '
+        Me.DragControlPanel.DockIndicatorTransparencyValue = 0.6R
+        Me.DragControlPanel.TargetControl = Me.panelControl
+        Me.DragControlPanel.UseTransparentDrag = True
+        '
+        'iconShow
+        '
+        Me.iconShow.Image = Global.Final_Project_Persy.My.Resources.Resources.show
+        Me.iconShow.ImageRotate = 0!
+        Me.iconShow.Location = New System.Drawing.Point(255, 132)
+        Me.iconShow.Name = "iconShow"
+        Me.iconShow.Size = New System.Drawing.Size(25, 25)
+        Me.iconShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.iconShow.TabIndex = 9
+        Me.iconShow.TabStop = False
+        '
+        'iconHidenew
+        '
+        Me.iconHidenew.Image = Global.Final_Project_Persy.My.Resources.Resources.hide
+        Me.iconHidenew.ImageRotate = 0!
+        Me.iconHidenew.Location = New System.Drawing.Point(255, 132)
+        Me.iconHidenew.Name = "iconHidenew"
+        Me.iconHidenew.Size = New System.Drawing.Size(25, 25)
+        Me.iconHidenew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.iconHidenew.TabIndex = 11
+        Me.iconHidenew.TabStop = False
+        '
+        'tbxPassLogin
+        '
+        Me.tbxPassLogin.BorderRadius = 10
+        Me.tbxPassLogin.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbxPassLogin.DefaultText = ""
+        Me.tbxPassLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxPassLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxPassLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxPassLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxPassLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxPassLogin.Font = New System.Drawing.Font("Poppins", 9.75!)
+        Me.tbxPassLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxPassLogin.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.padlock
+        Me.tbxPassLogin.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.tbxPassLogin.Location = New System.Drawing.Point(43, 122)
+        Me.tbxPassLogin.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxPassLogin.Name = "tbxPassLogin"
+        Me.tbxPassLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.tbxPassLogin.PlaceholderText = "Password"
+        Me.tbxPassLogin.SelectedText = ""
+        Me.tbxPassLogin.Size = New System.Drawing.Size(247, 44)
+        Me.tbxPassLogin.TabIndex = 2
+        '
+        'tbxUserLogin
+        '
+        Me.tbxUserLogin.BorderRadius = 10
+        Me.tbxUserLogin.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbxUserLogin.DefaultText = ""
+        Me.tbxUserLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxUserLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxUserLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxUserLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxUserLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxUserLogin.Font = New System.Drawing.Font("Poppins", 9.75!)
+        Me.tbxUserLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxUserLogin.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.user
+        Me.tbxUserLogin.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.tbxUserLogin.Location = New System.Drawing.Point(43, 70)
+        Me.tbxUserLogin.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxUserLogin.Name = "tbxUserLogin"
+        Me.tbxUserLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxUserLogin.PlaceholderText = "Username"
+        Me.tbxUserLogin.SelectedText = ""
+        Me.tbxUserLogin.Size = New System.Drawing.Size(247, 44)
+        Me.tbxUserLogin.TabIndex = 1
+        '
+        'iconHide
+        '
+        Me.iconHide.Image = Global.Final_Project_Persy.My.Resources.Resources.hide
+        Me.iconHide.ImageRotate = 0!
+        Me.iconHide.Location = New System.Drawing.Point(255, 132)
+        Me.iconHide.Name = "iconHide"
+        Me.iconHide.Size = New System.Drawing.Size(25, 25)
+        Me.iconHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.iconHide.TabIndex = 10
+        Me.iconHide.TabStop = False
+        '
+        'iconShowReg
+        '
+        Me.iconShowReg.Image = Global.Final_Project_Persy.My.Resources.Resources.show
+        Me.iconShowReg.ImageRotate = 0!
+        Me.iconShowReg.Location = New System.Drawing.Point(255, 183)
+        Me.iconShowReg.Name = "iconShowReg"
+        Me.iconShowReg.Size = New System.Drawing.Size(25, 25)
+        Me.iconShowReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.iconShowReg.TabIndex = 12
+        Me.iconShowReg.TabStop = False
+        '
+        'iconHideReg
+        '
+        Me.iconHideReg.Image = Global.Final_Project_Persy.My.Resources.Resources.hide
+        Me.iconHideReg.ImageRotate = 0!
+        Me.iconHideReg.Location = New System.Drawing.Point(255, 183)
+        Me.iconHideReg.Name = "iconHideReg"
+        Me.iconHideReg.Size = New System.Drawing.Size(25, 25)
+        Me.iconHideReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.iconHideReg.TabIndex = 13
+        Me.iconHideReg.TabStop = False
+        '
+        'btnBacklogin
+        '
+        Me.btnBacklogin.Animated = True
+        Me.btnBacklogin.AutoRoundedCorners = True
+        Me.btnBacklogin.BorderRadius = 21
+        Me.btnBacklogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnBacklogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnBacklogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnBacklogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnBacklogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.btnBacklogin.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnBacklogin.ForeColor = System.Drawing.Color.Black
+        Me.btnBacklogin.Image = Global.Final_Project_Persy.My.Resources.Resources.right_arrow
+        Me.btnBacklogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.btnBacklogin.Location = New System.Drawing.Point(79, 336)
+        Me.btnBacklogin.Name = "btnBacklogin"
+        Me.btnBacklogin.Size = New System.Drawing.Size(180, 45)
+        Me.btnBacklogin.TabIndex = 10
+        Me.btnBacklogin.Text = "Kembali ke Login"
+        '
+        'tbxCPass
+        '
+        Me.tbxCPass.BorderRadius = 10
+        Me.tbxCPass.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbxCPass.DefaultText = ""
+        Me.tbxCPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxCPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxCPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxCPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxCPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxCPass.Font = New System.Drawing.Font("Poppins", 9.75!)
+        Me.tbxCPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxCPass.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.padlock
+        Me.tbxCPass.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.tbxCPass.Location = New System.Drawing.Point(43, 175)
+        Me.tbxCPass.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxCPass.Name = "tbxCPass"
+        Me.tbxCPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.tbxCPass.PlaceholderText = "Password"
+        Me.tbxCPass.SelectedText = ""
+        Me.tbxCPass.Size = New System.Drawing.Size(247, 44)
+        Me.tbxCPass.TabIndex = 9
+        '
+        'tbxCEmail
+        '
+        Me.tbxCEmail.BorderRadius = 10
+        Me.tbxCEmail.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbxCEmail.DefaultText = ""
+        Me.tbxCEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxCEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxCEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxCEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxCEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxCEmail.Font = New System.Drawing.Font("Poppins", 9.75!)
+        Me.tbxCEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxCEmail.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.mail
+        Me.tbxCEmail.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.tbxCEmail.Location = New System.Drawing.Point(43, 122)
+        Me.tbxCEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxCEmail.Name = "tbxCEmail"
+        Me.tbxCEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxCEmail.PlaceholderText = "example@gmail.com"
+        Me.tbxCEmail.SelectedText = ""
+        Me.tbxCEmail.Size = New System.Drawing.Size(247, 44)
+        Me.tbxCEmail.TabIndex = 2
+        '
+        'tbxCUser
+        '
+        Me.tbxCUser.BorderRadius = 10
+        Me.tbxCUser.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbxCUser.DefaultText = ""
+        Me.tbxCUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxCUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxCUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxCUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxCUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxCUser.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbxCUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxCUser.IconLeft = Global.Final_Project_Persy.My.Resources.Resources.user
+        Me.tbxCUser.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.tbxCUser.Location = New System.Drawing.Point(43, 70)
+        Me.tbxCUser.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxCUser.Name = "tbxCUser"
+        Me.tbxCUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxCUser.PlaceholderText = "Username"
+        Me.tbxCUser.SelectedText = ""
+        Me.tbxCUser.Size = New System.Drawing.Size(247, 44)
+        Me.tbxCUser.TabIndex = 1
         '
         'iconShowRP
         '
@@ -808,33 +835,6 @@ Partial Class Login
         Me.iconHideNP.TabIndex = 15
         Me.iconHideNP.TabStop = False
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label4.Location = New System.Drawing.Point(40, 18)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(251, 48)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Forgot Password"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'btnGanti
-        '
-        Me.btnGanti.Animated = True
-        Me.btnGanti.AutoRoundedCorners = True
-        Me.btnGanti.BorderRadius = 18
-        Me.btnGanti.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnGanti.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(16, Byte), Integer))
-        Me.btnGanti.Font = New System.Drawing.Font("Poppins SemiBold", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnGanti.ForeColor = System.Drawing.Color.White
-        Me.btnGanti.Location = New System.Drawing.Point(76, 292)
-        Me.btnGanti.Name = "btnGanti"
-        Me.btnGanti.Size = New System.Drawing.Size(180, 38)
-        Me.btnGanti.TabIndex = 5
-        Me.btnGanti.Text = "GANTI"
-        '
         'tbxFPNewPass
         '
         Me.tbxFPNewPass.BorderRadius = 10
@@ -881,16 +881,16 @@ Partial Class Login
         Me.tbxFPEmail.Size = New System.Drawing.Size(247, 44)
         Me.tbxFPEmail.TabIndex = 1
         '
-        'AnimateWindow
+        'Guna2PictureBox1
         '
-        Me.AnimateWindow.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_HIDE
-        Me.AnimateWindow.TargetForm = Me
-        '
-        'DragControlPanel
-        '
-        Me.DragControlPanel.DockIndicatorTransparencyValue = 0.6R
-        Me.DragControlPanel.TargetControl = Me.panelControl
-        Me.DragControlPanel.UseTransparentDrag = True
+        Me.Guna2PictureBox1.Image = Global.Final_Project_Persy.My.Resources.Resources.rm222_mind_19
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(0, 38)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(821, 477)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 18
+        Me.Guna2PictureBox1.TabStop = False
         '
         'Login
         '
@@ -908,23 +908,23 @@ Partial Class Login
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelControl.ResumeLayout(False)
         Me.panelLogin.ResumeLayout(False)
         Me.panelLogin.PerformLayout()
+        Me.panelRegister.ResumeLayout(False)
+        Me.panelRegister.PerformLayout()
+        Me.panelFPass.ResumeLayout(False)
+        Me.panelFPass.PerformLayout()
         CType(Me.iconShow, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.iconHidenew, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.iconHide, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panelRegister.ResumeLayout(False)
-        Me.panelRegister.PerformLayout()
         CType(Me.iconShowReg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.iconHideReg, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panelFPass.ResumeLayout(False)
-        Me.panelFPass.PerformLayout()
         CType(Me.iconShowRP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.iconHideRP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.iconShowNP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.iconHideNP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -936,7 +936,6 @@ Partial Class Login
     Friend WithEvents lkForgot As LinkLabel
     Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents tbxPassLogin As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents tbxUserLogin As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents panelControl As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents DragControlPicture As Guna.UI2.WinForms.Guna2DragControl
@@ -986,4 +985,5 @@ Partial Class Login
     Friend WithEvents noTextFP As Label
     Friend WithEvents emailNotFound As Label
     Friend WithEvents emailCheckFalse As Label
+    Public WithEvents tbxUserLogin As Guna.UI2.WinForms.Guna2TextBox
 End Class

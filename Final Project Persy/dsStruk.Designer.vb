@@ -295,7 +295,7 @@ Partial Public Class dsStruk
         
         Private columnharga As Global.System.Data.DataColumn
         
-        Private columntotal As Global.System.Data.DataColumn
+        Private columnsubtotal As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -382,9 +382,9 @@ Partial Public Class dsStruk
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property totalColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property subtotalColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columntotal
+                Return Me.columnsubtotal
             End Get
         End Property
         
@@ -425,9 +425,9 @@ Partial Public Class dsStruk
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtabel_strukRow(ByVal nama_pembeli As String, ByVal no_invoice As String, ByVal nama_produk As String, ByVal kategori As String, ByVal jumlah As String, ByVal harga As String, ByVal total As String) As tabel_strukRow
+        Public Overloads Function Addtabel_strukRow(ByVal nama_pembeli As String, ByVal no_invoice As String, ByVal nama_produk As String, ByVal kategori As String, ByVal jumlah As String, ByVal harga As String, ByVal subtotal As String) As tabel_strukRow
             Dim rowtabel_strukRow As tabel_strukRow = CType(Me.NewRow,tabel_strukRow)
-            Dim columnValuesArray() As Object = New Object() {nama_pembeli, no_invoice, nama_produk, kategori, jumlah, harga, total}
+            Dim columnValuesArray() As Object = New Object() {nama_pembeli, no_invoice, nama_produk, kategori, jumlah, harga, subtotal}
             rowtabel_strukRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtabel_strukRow)
             Return rowtabel_strukRow
@@ -456,7 +456,7 @@ Partial Public Class dsStruk
             Me.columnkategori = MyBase.Columns("kategori")
             Me.columnjumlah = MyBase.Columns("jumlah")
             Me.columnharga = MyBase.Columns("harga")
-            Me.columntotal = MyBase.Columns("total")
+            Me.columnsubtotal = MyBase.Columns("subtotal")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -474,8 +474,8 @@ Partial Public Class dsStruk
             MyBase.Columns.Add(Me.columnjumlah)
             Me.columnharga = New Global.System.Data.DataColumn("harga", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnharga)
-            Me.columntotal = New Global.System.Data.DataColumn("total", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columntotal)
+            Me.columnsubtotal = New Global.System.Data.DataColumn("subtotal", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsubtotal)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -712,16 +712,16 @@ Partial Public Class dsStruk
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property total() As String
+        Public Property subtotal() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletabel_struk.totalColumn),String)
+                    Return CType(Me(Me.tabletabel_struk.subtotalColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'total' in table 'tabel_struk' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'subtotal' in table 'tabel_struk' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletabel_struk.totalColumn) = value
+                Me(Me.tabletabel_struk.subtotalColumn) = value
             End Set
         End Property
         
@@ -799,14 +799,14 @@ Partial Public Class dsStruk
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IstotalNull() As Boolean
-            Return Me.IsNull(Me.tabletabel_struk.totalColumn)
+        Public Function IssubtotalNull() As Boolean
+            Return Me.IsNull(Me.tabletabel_struk.subtotalColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SettotalNull()
-            Me(Me.tabletabel_struk.totalColumn) = Global.System.Convert.DBNull
+        Public Sub SetsubtotalNull()
+            Me(Me.tabletabel_struk.subtotalColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

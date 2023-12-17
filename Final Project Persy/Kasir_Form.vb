@@ -93,6 +93,7 @@ Public Class Kasir_Form
             dgvBarang.Rows.Add(idproduk, produk, kategori, Jumlah, subtotal)
         End If
         numJumlah.Value = Nothing
+        tbxSubtotal.Text = Nothing
     End Sub
 
     Private Sub dgvBarang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBarang.CellContentClick
@@ -106,11 +107,30 @@ Public Class Kasir_Form
         panelPembayaran.Visible = True
         panelListBarang.Visible = False
         PersyModule.total_value(dgvBarang, tbxTotalPembayaran)
+        If dgvBarang.Rows.Count < 2 Then
+            dgvBarang.Visible = False
+            panelKeranjangKosong.Visible = True
+        Else
+            dgvBarang.Visible = True
+            panelKeranjangKosong.Visible = False
+        End If
     End Sub
 
     Private Sub btnKonfirmasi_Click(sender As Object, e As EventArgs) Handles btnKonfirmasi.Click
-        'Try
-        ds.Clear()
+        Dim check As Boolean = True
+
+        If tbxPelanggan.Text = "" Then
+            nodatacst.Visible = True
+            noData.Visible = False
+            check = False
+        ElseIf dgvBarang.Rows.Count < 2 Then
+            noData.Visible = True
+            nodatacst.Visible = False
+            check = False
+        End If
+
+        If check = True Then
+            ds.Clear()
             da = New MySqlDataAdapter("insert into tbl_transaksi values (?,?,?)", conn)
             da.SelectCommand.Parameters.AddWithValue("no_invoice", tbxInvoice.Text)
             da.SelectCommand.Parameters.AddWithValue("nama_pembeli", tbxPelanggan.Text)
@@ -118,32 +138,33 @@ Public Class Kasir_Form
             da.Fill(ds, "transaksi")
             ds.Clear()
 
-        For i As Integer = 0 To dgvBarang.Rows.Count - 1
-            Dim jumlahProduk As Integer = dgvBarang.Rows(i).Cells("jumlah").Value
-            Dim subtotalProduk As Integer = dgvBarang.Rows(i).Cells("subtotal").Value
-            Dim namaProduk As String = dgvBarang.Rows(i).Cells("produkPembeli").Value
-            Dim kategoriProduk As String = dgvBarang.Rows(i).Cells("kategoriProduk").Value
-            ds.Clear()
-            da = New MySqlDataAdapter("select id_produk from tbl_produk where nama_produk ='" & namaProduk & "' AND kategori = '" & kategoriProduk & "'", conn)
-            da.Fill(ds, "produk")
-            If ds.Tables("produk").Rows.Count > 0 Then
-                Dim id_item As String = ds.Tables("produk").Rows(0).Item(0)
-                If Not (jumlahProduk = 0 OrElse subtotalProduk = 0) Then
-                    ds.Clear()
-                    da = New MySqlDataAdapter("insert into tbl_detailtransaksi (no_invoice, id_produk, jumlah, subtotal) Values (?,?,?,?)", conn)
-                    da.SelectCommand.Parameters.AddWithValue("no_invoice", tbxInvoice.Text)
-                    da.SelectCommand.Parameters.AddWithValue("id_barang", id_item)
-                    da.SelectCommand.Parameters.AddWithValue("jumlah", jumlahProduk)
-                    da.SelectCommand.Parameters.AddWithValue("subtotal", subtotalProduk)
-                    da.Fill(ds, "detail")
+            For i As Integer = 0 To dgvBarang.Rows.Count - 1
+                Dim jumlahProduk As Integer = dgvBarang.Rows(i).Cells("jumlah").Value
+                Dim subtotalProduk As Integer = dgvBarang.Rows(i).Cells("subtotal").Value
+                Dim namaProduk As String = dgvBarang.Rows(i).Cells("produkPembeli").Value
+                Dim kategoriProduk As String = dgvBarang.Rows(i).Cells("kategoriProduk").Value
+                ds.Clear()
+                da = New MySqlDataAdapter("select id_produk from tbl_produk where nama_produk ='" & namaProduk & "' AND kategori = '" & kategoriProduk & "'", conn)
+                da.Fill(ds, "produk")
+                If ds.Tables("produk").Rows.Count > 0 Then
+                    Dim id_item As String = ds.Tables("produk").Rows(0).Item(0)
+                    If Not (jumlahProduk = 0 OrElse subtotalProduk = 0) Then
+                        ds.Clear()
+                        da = New MySqlDataAdapter("insert into tbl_detailtransaksi (no_invoice, id_produk, jumlah, subtotal) Values (?,?,?,?)", conn)
+                        da.SelectCommand.Parameters.AddWithValue("no_invoice", tbxInvoice.Text)
+                        da.SelectCommand.Parameters.AddWithValue("id_barang", id_item)
+                        da.SelectCommand.Parameters.AddWithValue("jumlah", jumlahProduk)
+                        da.SelectCommand.Parameters.AddWithValue("subtotal", subtotalProduk)
+                        da.Fill(ds, "detail")
+                    End If
                 End If
-            End If
-        Next
-        no_invoice = tbxInvoice.Text
-        PersyModule.ClearPanel(panelPembayaran)
-        dgvBarang.Rows.Clear()
-        Invoice()
-        Struk.Show()
+            Next
+            no_invoice = tbxInvoice.Text
+            PersyModule.ClearPanel(panelPembayaran)
+            dgvBarang.Rows.Clear()
+            Invoice()
+            Struk.Show()
+        End If
     End Sub
 
     Private Sub btnBersihkan_Click(sender As Object, e As EventArgs) Handles btnBersihkan.Click
@@ -156,6 +177,8 @@ Public Class Kasir_Form
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         panelPembayaran.Visible = False
         panelListBarang.Visible = True
+        nodatacst.Visible = False
+        noData.Visible = False
     End Sub
     Private Sub btnListBarang_Click(sender As Object, e As EventArgs) Handles btnListBarang.Click
         PersyModule.Clicked_Color(btnListBarang)
@@ -167,6 +190,10 @@ Public Class Kasir_Form
         panelListBarang.Visible = True
         panelPembayaran.Visible = False
         panelRiwayat.Visible = False
+        panelHome.Visible = False
+
+        nodatacst.Visible = False
+        noData.Visible = False
     End Sub
 
     Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
@@ -179,6 +206,10 @@ Public Class Kasir_Form
         panelListBarang.Visible = False
         panelPembayaran.Visible = False
         panelRiwayat.Visible = True
+        panelHome.Visible = False
+
+        nodatacst.Visible = False
+        noData.Visible = False
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -191,6 +222,11 @@ Public Class Kasir_Form
 
         panelListBarang.Visible = False
         panelPembayaran.Visible = False
+        panelRiwayat.Visible = False
+        panelHome.Visible = True
+
+        nodatacst.Visible = False
+        noData.Visible = False
         Me.Hide()
         Login.Show()
     End Sub
@@ -214,6 +250,8 @@ Public Class Kasir_Form
         dgvRiwayat.Width = 817
 
         btnPanelPembayaran.Location = New Point(660, 371)
+        panelPembayaranKosong.Width = 817
+        panelKeranjangKosong.Width = 502
 
         panelMenu.Visible = False
         panelMenu.Width = 46
@@ -240,6 +278,8 @@ Public Class Kasir_Form
         dgvRiwayat.Width = 626
 
         btnPanelPembayaran.Location = New Point(460, 371)
+        panelPembayaranKosong.Width = 626
+        panelKeranjangKosong.Width = 332
 
         panelMenu.Visible = False
         panelMenu.Width = 204
@@ -258,6 +298,12 @@ Public Class Kasir_Form
 
     Private Sub panelRiwayat_Paint(sender As Object, e As PaintEventArgs) Handles panelRiwayat.Paint
         PersyModule.Show_Transaction(dgvRiwayat)
+        If dgvRiwayat.Rows.Count < 1 Then
+            dgvRiwayat.Visible = False
+            panelPembayaranKosong.Visible = True
+        Else
+            dgvRiwayat.Visible = True
+            panelPembayaranKosong.Visible = False
+        End If
     End Sub
-
 End Class

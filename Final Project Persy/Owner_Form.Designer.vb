@@ -25,34 +25,31 @@ Partial Class Owner_Form
         Me.components = New System.ComponentModel.Container()
         Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Owner_Form))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelControl = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.btnClose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelMenu = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnReport = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.btnDetail = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.btnLogout = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.btnProfile = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.btnHome = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.transitionFormP = New Guna.UI2.WinForms.Guna2Transition()
         Me.panelRiwayat = New Guna.UI2.WinForms.Guna2Panel()
-        Me.panelDetail = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.tbxinvoice = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnClosePanel = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.dgvDetail = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.nama_produk = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kategori = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbxPemasukan = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
@@ -61,28 +58,44 @@ Partial Class Owner_Form
         Me.noinvoice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pelanggan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.panelDetail = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.tbxTotal = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.tbxinvoice = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbxPelanggan = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btnClosePanel = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.dgvDetail = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.nama_produk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.kategori = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.extendPage = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.shortenPage = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.btnReport = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.btnDetail = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.btnLogout = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.btnProfile = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.btnHome = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.Guna2DragControl2 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.panelReport = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnLaporan = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.Guna2DragControl2 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.panelUser = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblDatauser = New System.Windows.Forms.Label()
+        Me.dgvUser = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.iduser = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.email = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.role = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.hapusDataUser = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.panelControl.SuspendLayout()
         Me.panelMenu.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelRiwayat.SuspendLayout()
+        CType(Me.dgvRiwayat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelDetail.SuspendLayout()
         CType(Me.dgvDetail, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvRiwayat, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelReport.SuspendLayout()
+        Me.panelUser.SuspendLayout()
+        CType(Me.dgvUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -141,6 +154,68 @@ Partial Class Owner_Form
         Me.panelMenu.Size = New System.Drawing.Size(46, 548)
         Me.panelMenu.TabIndex = 11
         '
+        'btnReport
+        '
+        Me.btnReport.Animated = True
+        Me.btnReport.BackColor = System.Drawing.Color.Transparent
+        Me.btnReport.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.transitionFormP.SetDecoration(Me.btnReport, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnReport.FillColor = System.Drawing.Color.Transparent
+        Me.btnReport.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnReport.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnReport.ForeColor = System.Drawing.Color.White
+        Me.btnReport.HoverState.BorderColor = System.Drawing.Color.Black
+        Me.btnReport.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnReport.HoverState.FillColor2 = System.Drawing.Color.White
+        Me.btnReport.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.btnReport.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.report
+        Me.btnReport.Image = Global.Final_Project_Persy.My.Resources.Resources.Laporan
+        Me.btnReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnReport.Location = New System.Drawing.Point(3, 167)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Size = New System.Drawing.Size(202, 45)
+        Me.btnReport.TabIndex = 14
+        Me.btnReport.Text = "Laporan"
+        Me.btnReport.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnReport.TextOffset = New System.Drawing.Point(10, 0)
+        Me.btnReport.UseTransparentBackground = True
+        '
+        'btnDetail
+        '
+        Me.btnDetail.Animated = True
+        Me.btnDetail.BackColor = System.Drawing.Color.Transparent
+        Me.btnDetail.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.transitionFormP.SetDecoration(Me.btnDetail, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnDetail.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnDetail.FillColor = System.Drawing.Color.Transparent
+        Me.btnDetail.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnDetail.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnDetail.ForeColor = System.Drawing.Color.White
+        Me.btnDetail.HoverState.BorderColor = System.Drawing.Color.Black
+        Me.btnDetail.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnDetail.HoverState.FillColor2 = System.Drawing.Color.White
+        Me.btnDetail.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.btnDetail.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.history
+        Me.btnDetail.Image = Global.Final_Project_Persy.My.Resources.Resources.history_white
+        Me.btnDetail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnDetail.Location = New System.Drawing.Point(3, 218)
+        Me.btnDetail.Name = "btnDetail"
+        Me.btnDetail.Size = New System.Drawing.Size(202, 45)
+        Me.btnDetail.TabIndex = 6
+        Me.btnDetail.Text = "Detail Transaksi"
+        Me.btnDetail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnDetail.TextOffset = New System.Drawing.Point(10, 0)
+        Me.btnDetail.UseTransparentBackground = True
+        '
         'Guna2Separator1
         '
         Me.transitionFormP.SetDecoration(Me.Guna2Separator1, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -148,6 +223,111 @@ Partial Class Owner_Form
         Me.Guna2Separator1.Name = "Guna2Separator1"
         Me.Guna2Separator1.Size = New System.Drawing.Size(164, 10)
         Me.Guna2Separator1.TabIndex = 5
+        '
+        'btnLogout
+        '
+        Me.btnLogout.Animated = True
+        Me.btnLogout.BackColor = System.Drawing.Color.Transparent
+        Me.btnLogout.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.transitionFormP.SetDecoration(Me.btnLogout, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLogout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLogout.FillColor = System.Drawing.Color.Transparent
+        Me.btnLogout.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnLogout.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnLogout.ForeColor = System.Drawing.Color.White
+        Me.btnLogout.HoverState.BorderColor = System.Drawing.Color.Black
+        Me.btnLogout.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnLogout.HoverState.FillColor2 = System.Drawing.Color.White
+        Me.btnLogout.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.btnLogout.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.logout
+        Me.btnLogout.Image = Global.Final_Project_Persy.My.Resources.Resources.log_out
+        Me.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnLogout.Location = New System.Drawing.Point(3, 417)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(202, 45)
+        Me.btnLogout.TabIndex = 4
+        Me.btnLogout.Text = "Log Out"
+        Me.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnLogout.TextOffset = New System.Drawing.Point(10, 0)
+        Me.btnLogout.UseTransparentBackground = True
+        '
+        'btnProfile
+        '
+        Me.btnProfile.Animated = True
+        Me.btnProfile.BackColor = System.Drawing.Color.Transparent
+        Me.btnProfile.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.transitionFormP.SetDecoration(Me.btnProfile, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnProfile.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnProfile.FillColor = System.Drawing.Color.Transparent
+        Me.btnProfile.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnProfile.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnProfile.ForeColor = System.Drawing.Color.White
+        Me.btnProfile.HoverState.BorderColor = System.Drawing.Color.Black
+        Me.btnProfile.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnProfile.HoverState.FillColor2 = System.Drawing.Color.White
+        Me.btnProfile.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.btnProfile.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.user1
+        Me.btnProfile.Image = Global.Final_Project_Persy.My.Resources.Resources.output_onlinepngtools__1_
+        Me.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnProfile.Location = New System.Drawing.Point(3, 269)
+        Me.btnProfile.Name = "btnProfile"
+        Me.btnProfile.Size = New System.Drawing.Size(202, 45)
+        Me.btnProfile.TabIndex = 3
+        Me.btnProfile.Text = "Profie"
+        Me.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnProfile.TextOffset = New System.Drawing.Point(10, 0)
+        Me.btnProfile.UseTransparentBackground = True
+        '
+        'btnHome
+        '
+        Me.btnHome.Animated = True
+        Me.btnHome.BackColor = System.Drawing.Color.Transparent
+        Me.btnHome.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.transitionFormP.SetDecoration(Me.btnHome, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnHome.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnHome.FillColor = System.Drawing.Color.Transparent
+        Me.btnHome.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnHome.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.btnHome.ForeColor = System.Drawing.Color.White
+        Me.btnHome.HoverState.BorderColor = System.Drawing.Color.Black
+        Me.btnHome.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnHome.HoverState.FillColor2 = System.Drawing.Color.White
+        Me.btnHome.HoverState.ForeColor = System.Drawing.Color.Black
+        Me.btnHome.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.home
+        Me.btnHome.Image = Global.Final_Project_Persy.My.Resources.Resources.output_onlinepngtools
+        Me.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnHome.Location = New System.Drawing.Point(3, 116)
+        Me.btnHome.Name = "btnHome"
+        Me.btnHome.Size = New System.Drawing.Size(202, 45)
+        Me.btnHome.TabIndex = 1
+        Me.btnHome.Text = "Home"
+        Me.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnHome.TextOffset = New System.Drawing.Point(10, 0)
+        Me.btnHome.UseTransparentBackground = True
+        '
+        'Guna2PictureBox1
+        '
+        Me.transitionFormP.SetDecoration(Me.Guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Guna2PictureBox1.Image = Global.Final_Project_Persy.My.Resources.Resources.logo_persy
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(63, 12)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(103, 80)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 0
+        Me.Guna2PictureBox1.TabStop = False
         '
         'Guna2AnimateWindow1
         '
@@ -187,178 +367,6 @@ Partial Class Owner_Form
         Me.panelRiwayat.Size = New System.Drawing.Size(843, 419)
         Me.panelRiwayat.TabIndex = 20
         Me.panelRiwayat.Visible = False
-        '
-        'panelDetail
-        '
-        Me.panelDetail.BackColor = System.Drawing.Color.Transparent
-        Me.panelDetail.Controls.Add(Me.Label4)
-        Me.panelDetail.Controls.Add(Me.tbxTotal)
-        Me.panelDetail.Controls.Add(Me.Label3)
-        Me.panelDetail.Controls.Add(Me.Label2)
-        Me.panelDetail.Controls.Add(Me.tbxinvoice)
-        Me.panelDetail.Controls.Add(Me.tbxPelanggan)
-        Me.panelDetail.Controls.Add(Me.btnClosePanel)
-        Me.panelDetail.Controls.Add(Me.dgvDetail)
-        Me.transitionFormP.SetDecoration(Me.panelDetail, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.panelDetail.FillColor = System.Drawing.Color.White
-        Me.panelDetail.Location = New System.Drawing.Point(224, 48)
-        Me.panelDetail.Name = "panelDetail"
-        Me.panelDetail.ShadowColor = System.Drawing.Color.Black
-        Me.panelDetail.Size = New System.Drawing.Size(560, 375)
-        Me.panelDetail.TabIndex = 21
-        Me.panelDetail.Visible = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.transitionFormP.SetDecoration(Me.Label4, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(327, 304)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 22)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "Total"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.transitionFormP.SetDecoration(Me.Label3, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.Label3.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(285, 14)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 22)
-        Me.Label3.TabIndex = 12
-        Me.Label3.Text = "No invoice"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.transitionFormP.SetDecoration(Me.Label2, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(18, 14)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(114, 22)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Nama Pelanggan"
-        '
-        'tbxinvoice
-        '
-        Me.tbxinvoice.BorderRadius = 5
-        Me.tbxinvoice.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.transitionFormP.SetDecoration(Me.tbxinvoice, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.tbxinvoice.DefaultText = ""
-        Me.tbxinvoice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxinvoice.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxinvoice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxinvoice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxinvoice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxinvoice.Font = New System.Drawing.Font("Poppins", 10.0!)
-        Me.tbxinvoice.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxinvoice.Location = New System.Drawing.Point(289, 39)
-        Me.tbxinvoice.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tbxinvoice.Name = "tbxinvoice"
-        Me.tbxinvoice.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbxinvoice.PlaceholderText = "No Invoice"
-        Me.tbxinvoice.SelectedText = ""
-        Me.tbxinvoice.Size = New System.Drawing.Size(200, 37)
-        Me.tbxinvoice.TabIndex = 10
-        '
-        'btnClosePanel
-        '
-        Me.transitionFormP.SetDecoration(Me.btnClosePanel, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnClosePanel.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnClosePanel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnClosePanel.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnClosePanel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnClosePanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnClosePanel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnClosePanel.ForeColor = System.Drawing.Color.White
-        Me.btnClosePanel.Location = New System.Drawing.Point(512, 14)
-        Me.btnClosePanel.Name = "btnClosePanel"
-        Me.btnClosePanel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.btnClosePanel.Size = New System.Drawing.Size(35, 35)
-        Me.btnClosePanel.TabIndex = 8
-        Me.btnClosePanel.Text = "X"
-        '
-        'dgvDetail
-        '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.dgvDetail.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvDetail.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.dgvDetail.ColumnHeadersHeight = 4
-        Me.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvDetail.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nama_produk, Me.kategori, Me.jumlah, Me.harga, Me.subtotal})
-        Me.transitionFormP.SetDecoration(Me.dgvDetail, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDetail.DefaultCellStyle = DataGridViewCellStyle9
-        Me.dgvDetail.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvDetail.Location = New System.Drawing.Point(22, 83)
-        Me.dgvDetail.Name = "dgvDetail"
-        Me.dgvDetail.RowHeadersVisible = False
-        Me.dgvDetail.Size = New System.Drawing.Size(509, 205)
-        Me.dgvDetail.TabIndex = 0
-        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvDetail.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.dgvDetail.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvDetail.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvDetail.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvDetail.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvDetail.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dgvDetail.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvDetail.ThemeStyle.HeaderStyle.Height = 4
-        Me.dgvDetail.ThemeStyle.ReadOnly = False
-        Me.dgvDetail.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvDetail.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvDetail.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvDetail.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.dgvDetail.ThemeStyle.RowsStyle.Height = 22
-        Me.dgvDetail.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvDetail.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'nama_produk
-        '
-        Me.nama_produk.HeaderText = "Nama Produk"
-        Me.nama_produk.Name = "nama_produk"
-        '
-        'kategori
-        '
-        Me.kategori.HeaderText = "Kategori"
-        Me.kategori.Name = "kategori"
-        '
-        'jumlah
-        '
-        Me.jumlah.HeaderText = "Jumlah"
-        Me.jumlah.Name = "jumlah"
-        '
-        'harga
-        '
-        Me.harga.HeaderText = "Harga"
-        Me.harga.Name = "harga"
-        '
-        'subtotal
-        '
-        Me.subtotal.HeaderText = "Sub Total"
-        Me.subtotal.Name = "subtotal"
         '
         'Label1
         '
@@ -498,6 +506,38 @@ Partial Class Owner_Form
         Me.total.HeaderText = "Total Pembelian"
         Me.total.Name = "total"
         '
+        'panelDetail
+        '
+        Me.panelDetail.BackColor = System.Drawing.Color.Transparent
+        Me.panelDetail.Controls.Add(Me.Label4)
+        Me.panelDetail.Controls.Add(Me.tbxTotal)
+        Me.panelDetail.Controls.Add(Me.Label3)
+        Me.panelDetail.Controls.Add(Me.Label2)
+        Me.panelDetail.Controls.Add(Me.tbxinvoice)
+        Me.panelDetail.Controls.Add(Me.tbxPelanggan)
+        Me.panelDetail.Controls.Add(Me.btnClosePanel)
+        Me.panelDetail.Controls.Add(Me.dgvDetail)
+        Me.transitionFormP.SetDecoration(Me.panelDetail, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.panelDetail.FillColor = System.Drawing.Color.White
+        Me.panelDetail.Location = New System.Drawing.Point(224, 48)
+        Me.panelDetail.Name = "panelDetail"
+        Me.panelDetail.ShadowColor = System.Drawing.Color.Black
+        Me.panelDetail.Size = New System.Drawing.Size(560, 375)
+        Me.panelDetail.TabIndex = 21
+        Me.panelDetail.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.Label4, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Label4.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(327, 304)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 22)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "Total"
+        '
         'tbxTotal
         '
         Me.tbxTotal.BorderRadius = 5
@@ -521,6 +561,52 @@ Partial Class Owner_Form
         Me.tbxTotal.Size = New System.Drawing.Size(200, 37)
         Me.tbxTotal.TabIndex = 13
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.Label3, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Label3.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(285, 14)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 22)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "No invoice"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.Label2, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(18, 14)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(114, 22)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Nama Pelanggan"
+        '
+        'tbxinvoice
+        '
+        Me.tbxinvoice.BorderRadius = 5
+        Me.tbxinvoice.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.transitionFormP.SetDecoration(Me.tbxinvoice, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.tbxinvoice.DefaultText = ""
+        Me.tbxinvoice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbxinvoice.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbxinvoice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxinvoice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbxinvoice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxinvoice.Font = New System.Drawing.Font("Poppins", 10.0!)
+        Me.tbxinvoice.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbxinvoice.Location = New System.Drawing.Point(289, 39)
+        Me.tbxinvoice.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbxinvoice.Name = "tbxinvoice"
+        Me.tbxinvoice.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbxinvoice.PlaceholderText = "No Invoice"
+        Me.tbxinvoice.SelectedText = ""
+        Me.tbxinvoice.Size = New System.Drawing.Size(200, 37)
+        Me.tbxinvoice.TabIndex = 10
+        '
         'tbxPelanggan
         '
         Me.tbxPelanggan.BorderRadius = 5
@@ -543,6 +629,100 @@ Partial Class Owner_Form
         Me.tbxPelanggan.SelectedText = ""
         Me.tbxPelanggan.Size = New System.Drawing.Size(200, 37)
         Me.tbxPelanggan.TabIndex = 9
+        '
+        'btnClosePanel
+        '
+        Me.transitionFormP.SetDecoration(Me.btnClosePanel, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.btnClosePanel.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnClosePanel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnClosePanel.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnClosePanel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnClosePanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnClosePanel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnClosePanel.ForeColor = System.Drawing.Color.White
+        Me.btnClosePanel.Location = New System.Drawing.Point(512, 14)
+        Me.btnClosePanel.Name = "btnClosePanel"
+        Me.btnClosePanel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.btnClosePanel.Size = New System.Drawing.Size(35, 35)
+        Me.btnClosePanel.TabIndex = 8
+        Me.btnClosePanel.Text = "X"
+        '
+        'dgvDetail
+        '
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        Me.dgvDetail.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvDetail.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        Me.dgvDetail.ColumnHeadersHeight = 4
+        Me.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvDetail.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nama_produk, Me.kategori, Me.jumlah, Me.harga, Me.subtotal})
+        Me.transitionFormP.SetDecoration(Me.dgvDetail, Guna.UI2.AnimatorNS.DecorationType.None)
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDetail.DefaultCellStyle = DataGridViewCellStyle15
+        Me.dgvDetail.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDetail.Location = New System.Drawing.Point(22, 83)
+        Me.dgvDetail.Name = "dgvDetail"
+        Me.dgvDetail.RowHeadersVisible = False
+        Me.dgvDetail.Size = New System.Drawing.Size(509, 205)
+        Me.dgvDetail.TabIndex = 0
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvDetail.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvDetail.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvDetail.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDetail.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDetail.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvDetail.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvDetail.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvDetail.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvDetail.ThemeStyle.HeaderStyle.Height = 4
+        Me.dgvDetail.ThemeStyle.ReadOnly = False
+        Me.dgvDetail.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvDetail.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvDetail.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvDetail.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgvDetail.ThemeStyle.RowsStyle.Height = 22
+        Me.dgvDetail.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvDetail.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'nama_produk
+        '
+        Me.nama_produk.HeaderText = "Nama Produk"
+        Me.nama_produk.Name = "nama_produk"
+        '
+        'kategori
+        '
+        Me.kategori.HeaderText = "Kategori"
+        Me.kategori.Name = "kategori"
+        '
+        'jumlah
+        '
+        Me.jumlah.HeaderText = "Jumlah"
+        Me.jumlah.Name = "jumlah"
+        '
+        'harga
+        '
+        Me.harga.HeaderText = "Harga"
+        Me.harga.Name = "harga"
+        '
+        'subtotal
+        '
+        Me.subtotal.HeaderText = "Sub Total"
+        Me.subtotal.Name = "subtotal"
         '
         'extendPage
         '
@@ -587,185 +767,6 @@ Partial Class Owner_Form
         Me.shortenPage.UseTransparentBackground = True
         Me.shortenPage.Visible = False
         '
-        'btnReport
-        '
-        Me.btnReport.Animated = True
-        Me.btnReport.BackColor = System.Drawing.Color.Transparent
-        Me.btnReport.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.transitionFormP.SetDecoration(Me.btnReport, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnReport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnReport.FillColor = System.Drawing.Color.Transparent
-        Me.btnReport.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnReport.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnReport.ForeColor = System.Drawing.Color.White
-        Me.btnReport.HoverState.BorderColor = System.Drawing.Color.Black
-        Me.btnReport.HoverState.FillColor = System.Drawing.Color.White
-        Me.btnReport.HoverState.FillColor2 = System.Drawing.Color.White
-        Me.btnReport.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.btnReport.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.report
-        Me.btnReport.Image = Global.Final_Project_Persy.My.Resources.Resources.Laporan
-        Me.btnReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnReport.Location = New System.Drawing.Point(3, 167)
-        Me.btnReport.Name = "btnReport"
-        Me.btnReport.Size = New System.Drawing.Size(202, 45)
-        Me.btnReport.TabIndex = 14
-        Me.btnReport.Text = "Laporan"
-        Me.btnReport.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnReport.TextOffset = New System.Drawing.Point(10, 0)
-        Me.btnReport.UseTransparentBackground = True
-        '
-        'btnDetail
-        '
-        Me.btnDetail.Animated = True
-        Me.btnDetail.BackColor = System.Drawing.Color.Transparent
-        Me.btnDetail.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.transitionFormP.SetDecoration(Me.btnDetail, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnDetail.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnDetail.FillColor = System.Drawing.Color.Transparent
-        Me.btnDetail.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnDetail.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnDetail.ForeColor = System.Drawing.Color.White
-        Me.btnDetail.HoverState.BorderColor = System.Drawing.Color.Black
-        Me.btnDetail.HoverState.FillColor = System.Drawing.Color.White
-        Me.btnDetail.HoverState.FillColor2 = System.Drawing.Color.White
-        Me.btnDetail.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.btnDetail.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.history
-        Me.btnDetail.Image = Global.Final_Project_Persy.My.Resources.Resources.history_white
-        Me.btnDetail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnDetail.Location = New System.Drawing.Point(3, 218)
-        Me.btnDetail.Name = "btnDetail"
-        Me.btnDetail.Size = New System.Drawing.Size(202, 45)
-        Me.btnDetail.TabIndex = 6
-        Me.btnDetail.Text = "Detail Transaksi"
-        Me.btnDetail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnDetail.TextOffset = New System.Drawing.Point(10, 0)
-        Me.btnDetail.UseTransparentBackground = True
-        '
-        'btnLogout
-        '
-        Me.btnLogout.Animated = True
-        Me.btnLogout.BackColor = System.Drawing.Color.Transparent
-        Me.btnLogout.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.transitionFormP.SetDecoration(Me.btnLogout, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnLogout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnLogout.FillColor = System.Drawing.Color.Transparent
-        Me.btnLogout.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnLogout.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnLogout.ForeColor = System.Drawing.Color.White
-        Me.btnLogout.HoverState.BorderColor = System.Drawing.Color.Black
-        Me.btnLogout.HoverState.FillColor = System.Drawing.Color.White
-        Me.btnLogout.HoverState.FillColor2 = System.Drawing.Color.White
-        Me.btnLogout.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.btnLogout.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.logout
-        Me.btnLogout.Image = Global.Final_Project_Persy.My.Resources.Resources.log_out
-        Me.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnLogout.Location = New System.Drawing.Point(3, 417)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(202, 45)
-        Me.btnLogout.TabIndex = 4
-        Me.btnLogout.Text = "Log Out"
-        Me.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnLogout.TextOffset = New System.Drawing.Point(10, 0)
-        Me.btnLogout.UseTransparentBackground = True
-        '
-        'btnProfile
-        '
-        Me.btnProfile.Animated = True
-        Me.btnProfile.BackColor = System.Drawing.Color.Transparent
-        Me.btnProfile.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.transitionFormP.SetDecoration(Me.btnProfile, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnProfile.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnProfile.FillColor = System.Drawing.Color.Transparent
-        Me.btnProfile.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnProfile.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnProfile.ForeColor = System.Drawing.Color.White
-        Me.btnProfile.HoverState.BorderColor = System.Drawing.Color.Black
-        Me.btnProfile.HoverState.FillColor = System.Drawing.Color.White
-        Me.btnProfile.HoverState.FillColor2 = System.Drawing.Color.White
-        Me.btnProfile.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.btnProfile.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.user1
-        Me.btnProfile.Image = Global.Final_Project_Persy.My.Resources.Resources.output_onlinepngtools__1_
-        Me.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnProfile.Location = New System.Drawing.Point(3, 269)
-        Me.btnProfile.Name = "btnProfile"
-        Me.btnProfile.Size = New System.Drawing.Size(202, 45)
-        Me.btnProfile.TabIndex = 3
-        Me.btnProfile.Text = "Profie"
-        Me.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnProfile.TextOffset = New System.Drawing.Point(10, 0)
-        Me.btnProfile.UseTransparentBackground = True
-        '
-        'btnHome
-        '
-        Me.btnHome.Animated = True
-        Me.btnHome.BackColor = System.Drawing.Color.Transparent
-        Me.btnHome.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.transitionFormP.SetDecoration(Me.btnHome, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnHome.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnHome.FillColor = System.Drawing.Color.Transparent
-        Me.btnHome.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnHome.Font = New System.Drawing.Font("Poppins", 9.0!)
-        Me.btnHome.ForeColor = System.Drawing.Color.White
-        Me.btnHome.HoverState.BorderColor = System.Drawing.Color.Black
-        Me.btnHome.HoverState.FillColor = System.Drawing.Color.White
-        Me.btnHome.HoverState.FillColor2 = System.Drawing.Color.White
-        Me.btnHome.HoverState.ForeColor = System.Drawing.Color.Black
-        Me.btnHome.HoverState.Image = Global.Final_Project_Persy.My.Resources.Resources.home
-        Me.btnHome.Image = Global.Final_Project_Persy.My.Resources.Resources.output_onlinepngtools
-        Me.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnHome.Location = New System.Drawing.Point(3, 116)
-        Me.btnHome.Name = "btnHome"
-        Me.btnHome.Size = New System.Drawing.Size(202, 45)
-        Me.btnHome.TabIndex = 1
-        Me.btnHome.Text = "Home"
-        Me.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnHome.TextOffset = New System.Drawing.Point(10, 0)
-        Me.btnHome.UseTransparentBackground = True
-        '
-        'Guna2PictureBox1
-        '
-        Me.transitionFormP.SetDecoration(Me.Guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.Guna2PictureBox1.Image = Global.Final_Project_Persy.My.Resources.Resources.logo_persy
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(63, 12)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(103, 80)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 0
-        Me.Guna2PictureBox1.TabStop = False
-        '
-        'Guna2DragControl1
-        '
-        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2DragControl1.TargetControl = Me.panelControl
-        Me.Guna2DragControl1.UseTransparentDrag = True
-        '
-        'Guna2DragControl2
-        '
-        Me.Guna2DragControl2.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2DragControl2.TargetControl = Me.panelDetail
-        Me.Guna2DragControl2.UseTransparentDrag = True
-        '
         'panelReport
         '
         Me.panelReport.Controls.Add(Me.btnLaporan)
@@ -804,6 +805,120 @@ Partial Class Owner_Form
         Me.btnLaporan.Text = "Lihat Laporan"
         Me.btnLaporan.UseTransparentBackground = True
         '
+        'Guna2DragControl1
+        '
+        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl1.TargetControl = Me.panelControl
+        Me.Guna2DragControl1.UseTransparentDrag = True
+        '
+        'Guna2DragControl2
+        '
+        Me.Guna2DragControl2.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl2.TargetControl = Me.panelDetail
+        Me.Guna2DragControl2.UseTransparentDrag = True
+        '
+        'panelUser
+        '
+        Me.panelUser.Controls.Add(Me.lblDatauser)
+        Me.panelUser.Controls.Add(Me.dgvUser)
+        Me.transitionFormP.SetDecoration(Me.panelUser, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.panelUser.Location = New System.Drawing.Point(63, 60)
+        Me.panelUser.Name = "panelUser"
+        Me.panelUser.Size = New System.Drawing.Size(843, 419)
+        Me.panelUser.TabIndex = 31
+        Me.panelUser.Visible = False
+        '
+        'lblDatauser
+        '
+        Me.lblDatauser.AutoSize = True
+        Me.transitionFormP.SetDecoration(Me.lblDatauser, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.lblDatauser.Font = New System.Drawing.Font("Poppins", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatauser.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.lblDatauser.Location = New System.Drawing.Point(319, 8)
+        Me.lblDatauser.Name = "lblDatauser"
+        Me.lblDatauser.Size = New System.Drawing.Size(199, 62)
+        Me.lblDatauser.TabIndex = 3
+        Me.lblDatauser.Text = "Data User"
+        '
+        'dgvUser
+        '
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
+        Me.dgvUser.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvUser.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        Me.dgvUser.ColumnHeadersHeight = 15
+        Me.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvUser.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.iduser, Me.username, Me.email, Me.role, Me.hapusDataUser})
+        Me.transitionFormP.SetDecoration(Me.dgvUser, Guna.UI2.AnimatorNS.DecorationType.None)
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvUser.DefaultCellStyle = DataGridViewCellStyle18
+        Me.dgvUser.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvUser.Location = New System.Drawing.Point(14, 73)
+        Me.dgvUser.Name = "dgvUser"
+        Me.dgvUser.RowHeadersVisible = False
+        Me.dgvUser.Size = New System.Drawing.Size(815, 337)
+        Me.dgvUser.TabIndex = 2
+        Me.dgvUser.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvUser.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvUser.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvUser.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvUser.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvUser.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvUser.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvUser.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.dgvUser.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvUser.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvUser.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvUser.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvUser.ThemeStyle.HeaderStyle.Height = 15
+        Me.dgvUser.ThemeStyle.ReadOnly = False
+        Me.dgvUser.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvUser.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvUser.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvUser.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgvUser.ThemeStyle.RowsStyle.Height = 22
+        Me.dgvUser.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvUser.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'iduser
+        '
+        Me.iduser.HeaderText = "ID Pengguna"
+        Me.iduser.Name = "iduser"
+        '
+        'username
+        '
+        Me.username.HeaderText = "Username"
+        Me.username.Name = "username"
+        '
+        'email
+        '
+        Me.email.HeaderText = "Email"
+        Me.email.Name = "email"
+        '
+        'role
+        '
+        Me.role.HeaderText = "Role"
+        Me.role.Name = "role"
+        '
+        'hapusDataUser
+        '
+        Me.hapusDataUser.HeaderText = ""
+        Me.hapusDataUser.Name = "hapusDataUser"
+        Me.hapusDataUser.Text = "Hapus"
+        Me.hapusDataUser.UseColumnTextForButtonValue = True
+        '
         'Owner_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -817,6 +932,7 @@ Partial Class Owner_Form
         Me.Controls.Add(Me.panelControl)
         Me.Controls.Add(Me.panelDetail)
         Me.Controls.Add(Me.panelRiwayat)
+        Me.Controls.Add(Me.panelUser)
         Me.transitionFormP.SetDecoration(Me, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Owner_Form"
@@ -824,14 +940,17 @@ Partial Class Owner_Form
         Me.Text = "Pelanggan_Form"
         Me.panelControl.ResumeLayout(False)
         Me.panelMenu.ResumeLayout(False)
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelRiwayat.ResumeLayout(False)
         Me.panelRiwayat.PerformLayout()
+        CType(Me.dgvRiwayat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelDetail.ResumeLayout(False)
         Me.panelDetail.PerformLayout()
         CType(Me.dgvDetail, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvRiwayat, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelReport.ResumeLayout(False)
+        Me.panelUser.ResumeLayout(False)
+        Me.panelUser.PerformLayout()
+        CType(Me.dgvUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -880,4 +999,12 @@ Partial Class Owner_Form
     Friend WithEvents Guna2DragControl2 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents panelReport As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnLaporan As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents panelUser As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblDatauser As Label
+    Friend WithEvents dgvUser As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents iduser As DataGridViewTextBoxColumn
+    Friend WithEvents username As DataGridViewTextBoxColumn
+    Friend WithEvents email As DataGridViewTextBoxColumn
+    Friend WithEvents role As DataGridViewTextBoxColumn
+    Friend WithEvents hapusDataUser As DataGridViewButtonColumn
 End Class

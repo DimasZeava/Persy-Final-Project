@@ -1,4 +1,5 @@
-﻿Public Class Owner_Form
+﻿Imports MySql.Data.MySqlClient
+Public Class Owner_Form
     Dim invoice As String
     Dim nama_pembeli As String
 
@@ -29,6 +30,19 @@
 
     End Sub
 
+    Sub Show_User()
+        ds.Clear()
+        da = New MySqlDataAdapter("Select id_user, username, email, role from tbl_user", conn)
+        da.Fill(ds, "data_user")
+        dgvUser.Rows.Clear()
+        For i As Integer = 0 To ds.Tables("data_user").Rows.Count - 1
+            dgvUser.Rows.Add(ds.Tables("data_user").Rows(i).Item(0).ToString,
+                             ds.Tables("data_user").Rows(i).Item(1).ToString,
+                             ds.Tables("data_user").Rows(i).Item(2).ToString,
+                             ds.Tables("data_user").Rows(i).Item(3).ToString)
+        Next
+    End Sub
+
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         PersyModule.Clicked_Color(btnHome)
 
@@ -43,6 +57,7 @@
 
         panelRiwayat.Visible = False
         panelReport.Visible = False
+        panelUser.Visible = False
     End Sub
 
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
@@ -59,6 +74,7 @@
 
         panelRiwayat.Visible = False
         panelReport.Visible = True
+        panelUser.Visible = False
     End Sub
 
     Private Sub btnProfile_Click(sender As Object, e As EventArgs) Handles btnProfile.Click
@@ -75,6 +91,7 @@
 
         panelRiwayat.Visible = False
         panelReport.Visible = False
+        panelUser.Visible = True
     End Sub
 
     Private Sub btnDetail_Click(sender As Object, e As EventArgs) Handles btnDetail.Click
@@ -91,6 +108,7 @@
 
         panelRiwayat.Visible = True
         panelReport.Visible = False
+        panelUser.Visible = False
     End Sub
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         PersyModule.Restore_Color(btnHome)
@@ -106,6 +124,7 @@
 
         panelRiwayat.Visible = False
         panelReport.Visible = False
+        panelUser.Visible = False
 
         Me.Hide()
         Login.Show()
@@ -121,6 +140,13 @@
         panelRiwayat.Width = 843
         dgvRiwayat.Width = 817
 
+        panelUser.Location = New Point(63, 60)
+        panelUser.Width = 843
+        dgvUser.Width = 817
+
+        panelReport.Location = New Point(63, 60)
+        panelReport.Width = 843
+
         transitionFormP.ShowSync(panelMenu)
     End Sub
 
@@ -133,6 +159,13 @@
         panelRiwayat.Location = New Point(211, 60)
         panelRiwayat.Width = 673
         dgvRiwayat.Width = 626
+
+        panelUser.Location = New Point(211, 60)
+        panelUser.Width = 673
+        dgvUser.Width = 626
+
+        panelReport.Location = New Point(211, 60)
+        panelReport.Width = 673
 
         transitionFormP.ShowSync(panelMenu)
     End Sub
@@ -177,5 +210,22 @@
 
     Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
         CrystalReport.Show()
+    End Sub
+
+    Private Sub dgvUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvUser.CellContentClick
+        If e.ColumnIndex = dgvUser.Columns("hapusDataUser").Index AndAlso e.RowIndex >= 0 Then
+            Dim idPengguna As String = dgvUser.Rows(e.RowIndex).Cells("iduser").Value.ToString()
+
+            ds.Clear()
+            da = New MySqlDataAdapter("Delete from tbl_user where id_user = @id_user", conn)
+            da.SelectCommand.Parameters.AddWithValue("@id_user", idPengguna)
+            da.Fill(ds, "data_user")
+
+            Show_User()
+        End If
+    End Sub
+
+    Private Sub panelUser_Paint(sender As Object, e As PaintEventArgs) Handles panelUser.Paint
+        Show_User()
     End Sub
 End Class

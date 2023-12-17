@@ -12,7 +12,7 @@
   <xs:element name="dsStruk" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsStruk" msprop:Generator_UserDSName="dsStruk">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tabel_struk" msprop:Generator_TableClassName="tabel_strukDataTable" msprop:Generator_TableVarName="tabletabel_struk" msprop:Generator_TablePropName="tabel_struk" msprop:Generator_RowDeletingName="tabel_strukRowDeleting" msprop:Generator_RowChangingName="tabel_strukRowChanging" msprop:Generator_RowEvHandlerName="tabel_strukRowChangeEventHandler" msprop:Generator_RowDeletedName="tabel_strukRowDeleted" msprop:Generator_UserTableName="tabel_struk" msprop:Generator_RowChangedName="tabel_strukRowChanged" msprop:Generator_RowEvArgName="tabel_strukRowChangeEvent" msprop:Generator_RowClassName="tabel_strukRow">
+        <xs:element name="tabel_struk" msprop:Generator_TableClassName="tabel_strukDataTable" msprop:Generator_TableVarName="tabletabel_struk" msprop:Generator_RowChangedName="tabel_strukRowChanged" msprop:Generator_TablePropName="tabel_struk" msprop:Generator_RowDeletingName="tabel_strukRowDeleting" msprop:Generator_RowChangingName="tabel_strukRowChanging" msprop:Generator_RowEvHandlerName="tabel_strukRowChangeEventHandler" msprop:Generator_RowDeletedName="tabel_strukRowDeleted" msprop:Generator_RowClassName="tabel_strukRow" msprop:Generator_UserTableName="tabel_struk" msprop:Generator_RowEvArgName="tabel_strukRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nama_pembeli" msprop:Generator_ColumnVarNameInTable="columnnama_pembeli" msprop:Generator_ColumnPropNameInRow="nama_pembeli" msprop:Generator_ColumnPropNameInTable="nama_pembeliColumn" msprop:Generator_UserColumnName="nama_pembeli" type="xs:string" minOccurs="0" />
@@ -21,7 +21,7 @@
               <xs:element name="kategori" msprop:Generator_ColumnVarNameInTable="columnkategori" msprop:Generator_ColumnPropNameInRow="kategori" msprop:Generator_ColumnPropNameInTable="kategoriColumn" msprop:Generator_UserColumnName="kategori" type="xs:string" minOccurs="0" />
               <xs:element name="jumlah" msprop:Generator_ColumnVarNameInTable="columnjumlah" msprop:Generator_ColumnPropNameInRow="jumlah" msprop:Generator_ColumnPropNameInTable="jumlahColumn" msprop:Generator_UserColumnName="jumlah" type="xs:string" minOccurs="0" />
               <xs:element name="harga" msprop:Generator_ColumnVarNameInTable="columnharga" msprop:Generator_ColumnPropNameInRow="harga" msprop:Generator_ColumnPropNameInTable="hargaColumn" msprop:Generator_UserColumnName="harga" type="xs:string" minOccurs="0" />
-              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:string" minOccurs="0" />
+              <xs:element name="subtotal" msprop:Generator_ColumnVarNameInTable="columnsubtotal" msprop:Generator_ColumnPropNameInRow="subtotal" msprop:Generator_ColumnPropNameInTable="subtotalColumn" msprop:Generator_UserColumnName="subtotal" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

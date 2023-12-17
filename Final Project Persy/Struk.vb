@@ -5,7 +5,7 @@ Public Class Struk
             dt.no_invoice, 
             dt.jumlah, 
             t.nama_pembeli, 
-            t.total, 
+            dt.subtotal, 
             p.nama_produk,
             p.kategori,
             p.harga
