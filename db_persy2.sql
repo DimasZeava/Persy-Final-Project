@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Des 2023 pada 08.57
+-- Waktu pembuatan: 18 Des 2023 pada 06.57
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -40,10 +40,7 @@ CREATE TABLE `tbl_detailtransaksi` (
 --
 
 INSERT INTO `tbl_detailtransaksi` (`id_detail`, `no_invoice`, `id_produk`, `jumlah`, `subtotal`) VALUES
-(28, 'INV/001/12/2023', 'CP001', 1, 33000),
-(29, 'INV/002/12/2023', 'CP001', 1, 33000),
-(30, 'INV/006/12/2023', 'CP001', 1, 33000),
-(31, 'INV/007/12/2023', 'CP001', 1, 33000);
+(0, 'INV/001/12/2023', 'CP001', 3, 99000);
 
 -- --------------------------------------------------------
 
@@ -87,13 +84,7 @@ CREATE TABLE `tbl_transaksi` (
 --
 
 INSERT INTO `tbl_transaksi` (`no_invoice`, `nama_pembeli`, `total`) VALUES
-('INV/001/12/2023', 'Op', 66000),
-('INV/002/12/2023', 'sari', 66000),
-('INV/003/12/2023', 'Ste', 132000),
-('INV/004/12/2023', 'dis', 66000),
-('INV/005/12/2023', 'ri', 66000),
-('INV/006/12/2023', 'rahmat', 66000),
-('INV/007/12/2023', 'ye', 219000);
+('INV/001/12/2023', 'Dimas', 99000);
 
 -- --------------------------------------------------------
 
@@ -119,57 +110,6 @@ INSERT INTO `tbl_user` (`id_user`, `username`, `email`, `user_password`, `role`)
 ('CSR001', 'Kasir', 'kasir@gmail.com', 'kasir', 'Kasir'),
 ('OWN001', 'Dimas Irmannsyah', 'dummyowner@gmail.com', 'owner', 'Owner'),
 ('OWN002', 'Dimas Firmansyah', 'dimas@gmail.com', 'dimas1', 'Owner');
-
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `tbl_detailtransaksi`
---
-ALTER TABLE `tbl_detailtransaksi`
-  ADD PRIMARY KEY (`id_detail`),
-  ADD KEY `no_invoice` (`no_invoice`),
-  ADD KEY `id_produk` (`id_produk`);
-
---
--- Indeks untuk tabel `tbl_produk`
---
-ALTER TABLE `tbl_produk`
-  ADD PRIMARY KEY (`id_produk`);
-
---
--- Indeks untuk tabel `tbl_transaksi`
---
-ALTER TABLE `tbl_transaksi`
-  ADD PRIMARY KEY (`no_invoice`);
-
---
--- Indeks untuk tabel `tbl_user`
---
-ALTER TABLE `tbl_user`
-  ADD PRIMARY KEY (`id_user`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `tbl_detailtransaksi`
---
-ALTER TABLE `tbl_detailtransaksi`
-  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
-
---
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `tbl_detailtransaksi`
---
-ALTER TABLE `tbl_detailtransaksi`
-  ADD CONSTRAINT `tbl_detailtransaksi_ibfk_1` FOREIGN KEY (`no_invoice`) REFERENCES `tbl_transaksi` (`no_invoice`),
-  ADD CONSTRAINT `tbl_detailtransaksi_ibfk_2` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produk` (`id_produk`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
