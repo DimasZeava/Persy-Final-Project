@@ -68,101 +68,98 @@ Public Class Login
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        Try
-            Dim check As Boolean = True
-            If tbxCUser.Text = "" AndAlso tbxCEmail.Text = "" AndAlso tbxCPass.Text = "" AndAlso cbRoles IsNot Nothing Then
-                dataNotAcquire.Visible = True
-                userIsNotReg.Visible = False
-                mailIsNotReg.Visible = False
-                passwordIsNotReg.Visible = False
-                roleIsNotReg.Visible = False
-                emailCheckFalse.Visible = False
-                check = False
-            ElseIf tbxCUser.Text = "" Then
-                dataNotAcquire.Visible = False
-                userIsNotReg.Visible = True
-                mailIsNotReg.Visible = False
-                passwordIsNotReg.Visible = False
-                roleIsNotReg.Visible = False
-                emailCheckFalse.Visible = False
-                check = False
-            ElseIf tbxCEmail.Text = "" Then
-                dataNotAcquire.Visible = False
-                userIsNotReg.Visible = False
-                mailIsNotReg.Visible = True
-                passwordIsNotReg.Visible = False
-                roleIsNotReg.Visible = False
-                emailCheckFalse.Visible = False
-                check = False
-            ElseIf tbxCPass.Text = "" Then
-                dataNotAcquire.Visible = False
-                userIsNotReg.Visible = False
-                mailIsNotReg.Visible = False
-                passwordIsNotReg.Visible = True
-                roleIsNotReg.Visible = False
-                emailCheckFalse.Visible = False
-                check = False
-            ElseIf cbRoles.Text = "" Then
-                dataNotAcquire.Visible = False
-                userIsNotReg.Visible = False
-                mailIsNotReg.Visible = False
-                passwordIsNotReg.Visible = False
-                roleIsNotReg.Visible = True
-                emailCheckFalse.Visible = False
-                check = False
+        Dim check As Boolean = True
+        If tbxCUser.Text = "" AndAlso tbxCEmail.Text = "" AndAlso tbxCPass.Text = "" AndAlso cbRoles IsNot Nothing Then
+            dataNotAcquire.Visible = True
+            userIsNotReg.Visible = False
+            mailIsNotReg.Visible = False
+            passwordIsNotReg.Visible = False
+            roleIsNotReg.Visible = False
+            emailCheckFalse.Visible = False
+            check = False
+        ElseIf tbxCUser.Text = "" Then
+            dataNotAcquire.Visible = False
+            userIsNotReg.Visible = True
+            mailIsNotReg.Visible = False
+            passwordIsNotReg.Visible = False
+            roleIsNotReg.Visible = False
+            emailCheckFalse.Visible = False
+            check = False
+        ElseIf tbxCEmail.Text = "" Then
+            dataNotAcquire.Visible = False
+            userIsNotReg.Visible = False
+            mailIsNotReg.Visible = True
+            passwordIsNotReg.Visible = False
+            roleIsNotReg.Visible = False
+            emailCheckFalse.Visible = False
+            check = False
+        ElseIf tbxCPass.Text = "" Then
+            dataNotAcquire.Visible = False
+            userIsNotReg.Visible = False
+            mailIsNotReg.Visible = False
+            passwordIsNotReg.Visible = True
+            roleIsNotReg.Visible = False
+            emailCheckFalse.Visible = False
+            check = False
+        ElseIf cbRoles.Text = "" Then
+            dataNotAcquire.Visible = False
+            userIsNotReg.Visible = False
+            mailIsNotReg.Visible = False
+            passwordIsNotReg.Visible = False
+            roleIsNotReg.Visible = True
+            emailCheckFalse.Visible = False
+            check = False
+        End If
+
+        ds.Clear()
+        Dim emailAvailability As String
+        da = New MySqlDataAdapter("Select * From tbl_user Where email ='" & tbxCEmail.Text & "'", conn)
+        da.Fill(ds, "EmailCheck")
+        If ds.Tables("EmailCheck").Rows.Count > 0 Then
+            emailAvailability = ds.Tables("EmailCheck").Rows(0)("email").ToString()
+        End If
+        If emailAvailability = tbxCEmail.Text Then
+            emailCheckFalse.Visible = True
+            check = False
+        End If
+
+        If check = True Then
+            Dim code As String
+            If cbRoles.SelectedItem = "Kasir" Then
+                code = "CSR"
+            ElseIf cbRoles.SelectedItem = "Admin" Then
+                code = "ADM"
+            ElseIf cbRoles.SelectedItem = "Owner" Then
+                code = "OWN"
             End If
 
             ds.Clear()
-            Dim emailAvailability As String
-            da = New MySqlDataAdapter("Select * From tbl_user Where email ='" & tbxCEmail.Text & "'", conn)
-            da.Fill(ds, "EmailCheck")
-            emailAvailability = ds.Tables("EmailCheck").Rows(0)("email").ToString()
-            If emailAvailability = tbxCEmail.Text Then
-                emailCheckFalse.Visible = True
-                check = False
-            End If
-
-            If check = True Then
-                Dim code As String
-                If cbRoles.SelectedItem = "Kasir" Then
-                    code = "CSR"
-                ElseIf cbRoles.SelectedItem = "Admin" Then
-                    code = "ADM"
-                ElseIf cbRoles.SelectedItem = "Owner" Then
-                    code = "OWN"
-                End If
-
-                ds.Clear()
-                da = New MySqlDataAdapter("SELECT
+            da = New MySqlDataAdapter("SELECT
                                         CASE
                                             WHEN MAX(CAST(SUBSTRING(id_user, 4, 3)AS UNSIGNED)) IS NULL THEN '" & code & "001'
                                             ELSE CONCAT('" & code & "',LPAD(MAX(CAST(SUBSTRING(id_user, 4, 3)AS UNSIGNED)) + 1, 3, '0'))
                                         END AS nomor
                                        FROM tbl_user
                                        WHERE id_user LIKE '" & code & "%';", conn)
-                da.Fill(ds, "Data")
-                id_user = ds.Tables("Data").Rows(0).Item(0).ToString
+            da.Fill(ds, "Data")
+            id_user = ds.Tables("Data").Rows(0).Item(0).ToString
 
-                ds.Clear()
-                da = New MySqlDataAdapter("INSERT INTO tbl_user VALUES (?,?,?,?,?)", conn)
-                da.SelectCommand.Parameters.AddWithValue("id_user", id_user)
-                da.SelectCommand.Parameters.AddWithValue("username", tbxCUser.Text)
-                da.SelectCommand.Parameters.AddWithValue("email", tbxCEmail.Text)
-                da.SelectCommand.Parameters.AddWithValue("user_password", tbxCPass.Text)
-                da.SelectCommand.Parameters.AddWithValue("role", cbRoles.Text)
+            ds.Clear()
+            da = New MySqlDataAdapter("INSERT INTO tbl_user VALUES (?,?,?,?,?)", conn)
+            da.SelectCommand.Parameters.AddWithValue("id_user", id_user)
+            da.SelectCommand.Parameters.AddWithValue("username", tbxCUser.Text)
+            da.SelectCommand.Parameters.AddWithValue("email", tbxCEmail.Text)
+            da.SelectCommand.Parameters.AddWithValue("user_password", tbxCPass.Text)
+            da.SelectCommand.Parameters.AddWithValue("role", cbRoles.Text)
+            da.Fill(ds, "Data")
 
-                da.Fill(ds, "Data")
+            PersyModule.ClearShadowPanel(panelRegister)
+            panelFPass.Hide()
+            panelRegister.Hide()
+            panelLogin.Show()
+        End If
 
-                PersyModule.ClearShadowPanel(panelRegister)
-                panelFPass.Hide()
-                panelRegister.Hide()
-                panelLogin.Show()
-            End If
-
-            PersyModule.HideErrorLogin()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        PersyModule.HideErrorLogin()
     End Sub
 
     Private Sub btnGanti_Click(sender As Object, e As EventArgs) Handles btnGanti.Click
@@ -296,5 +293,4 @@ Public Class Login
         iconShowRP.Hide()
         iconHideRP.Show()
     End Sub
-
 End Class
