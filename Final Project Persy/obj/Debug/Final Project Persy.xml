@@ -22,6 +22,11 @@ Final Project Persy
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Final_Project_Persy.My.Resources.Resources.Admin_rafiki">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Final_Project_Persy.My.Resources.Resources.Barang">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -48,6 +53,16 @@ Final Project Persy
 </summary>
 </member>
 <member name="P:Final_Project_Persy.My.Resources.Resources.Empty_cuate">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Final_Project_Persy.My.Resources.Resources.Empty_cuate1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Final_Project_Persy.My.Resources.Resources.Empty_cuate2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -157,6 +172,16 @@ Final Project Persy
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Final_Project_Persy.My.Resources.Resources.Report_bro">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Final_Project_Persy.My.Resources.Resources.Research_paper_amico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Final_Project_Persy.My.Resources.Resources.right_arrow">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -183,6 +208,11 @@ Final Project Persy
 </summary>
 </member>
 <member name="P:Final_Project_Persy.My.Resources.Resources.show">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Final_Project_Persy.My.Resources.Resources.Speed_test_amico">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -58,6 +58,8 @@ Public Class Owner_Form
         panelRiwayat.Visible = False
         panelReport.Visible = False
         panelUser.Visible = False
+        panelWelcoming.Visible = False
+        panelHome.Visible = True
     End Sub
 
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
@@ -75,6 +77,8 @@ Public Class Owner_Form
         panelRiwayat.Visible = False
         panelReport.Visible = True
         panelUser.Visible = False
+        panelWelcoming.Visible = False
+        panelHome.Visible = False
     End Sub
 
     Private Sub btnProfile_Click(sender As Object, e As EventArgs) Handles btnProfile.Click
@@ -92,6 +96,8 @@ Public Class Owner_Form
         panelRiwayat.Visible = False
         panelReport.Visible = False
         panelUser.Visible = True
+        panelWelcoming.Visible = False
+        panelHome.Visible = False
     End Sub
 
     Private Sub btnDetail_Click(sender As Object, e As EventArgs) Handles btnDetail.Click
@@ -109,6 +115,8 @@ Public Class Owner_Form
         panelRiwayat.Visible = True
         panelReport.Visible = False
         panelUser.Visible = False
+        panelWelcoming.Visible = False
+        panelHome.Visible = False
     End Sub
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         PersyModule.Restore_Color(btnHome)
@@ -125,6 +133,8 @@ Public Class Owner_Form
         panelRiwayat.Visible = False
         panelReport.Visible = False
         panelUser.Visible = False
+        panelWelcoming.Visible = True
+        panelHome.Visible = False
 
         Me.Hide()
         Login.Show()

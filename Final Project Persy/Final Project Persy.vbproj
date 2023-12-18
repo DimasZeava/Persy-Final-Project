@@ -406,5 +406,23 @@
   <ItemGroup>
     <None Include="Resources\Barcode-pana.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty-cuate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty-cuate2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin-rafiki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Research paper-amico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report-bro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Speed test-amico.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
